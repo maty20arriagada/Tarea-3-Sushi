@@ -1,0 +1,136 @@
+
+=== HW03 - Understanding Consumer Behavior.pdf - PÁGINA 1 ===
+Departamento de Ingeniería Industrial 
+Universidad de Concepción 
+Understanding Consumer Behavior through Discrete Choice Models 
+ 
+Homework Assignment No. 3 
+ 
+Academic integrity policy 
+• 
+This assignment is in groups of 1 or 2 people. While you may discuss general 
+concepts with other groups, the coding, modeling, and written report must be 
+entirely your own original work. 
+• 
+Any form of plagiarism—including copying code or text from classmates, 
+previous years' assignments, or online sources—will be heavily penalized and 
+reported to the corresponding department authorities according to university 
+regulations. 
+• 
+The use of Generative AI tools (e.g., ChatGPT, Gemini, Claude) to write, draft, 
+or generate the text of your report is strictly prohibited. Your interpretations 
+and conclusions must reflect your own critical thinking and genuine 
+understanding of the subject matter. 
+Deadline: Monday, June 22nd at 13:59 hrs (before class). 
+Format: Written report (50%) and presentation (50%). 
+ 
+The objective of this final assignment is to build upon the estimation sample you prepared in 
+Assignment 2. You will estimate discrete choice models based on utility maximization, 
+interpret the behavioral insights, conduct predictive scenario analyses, and deliver actionable 
+recommendations for policymakers or key industry stakeholders. 
+ 
+Written report (50%) 
+You must structure your report covering the following fundamental points: 
+A. Model specification and estimation: Formulate and estimate at least two discrete choice 
+models (e.g., a base Multinomial Logit Model and an advanced specification including 
+interaction terms or latent variables). Clearly define the utility functions for your alternatives. 
+Present your estimation results in a clean, professional table and discuss the goodness-of-fit 
+measures (e.g., Log-Likelihood, Rho-squared) to justify your preferred model. 
+ 
+
+=== HW03 - Understanding Consumer Behavior.pdf - PÁGINA 2 ===
+B. Parameter interpretation and behavioral insights: Analyze the estimated coefficients 
+of your preferred model. Are the signs intuitive and theoretically correct? Are the parameters 
+statistically significant? Discuss what these values reveal about consumer preferences in your 
+specific market. 
+C. Scenario analysis and prediction: Using your preferred model, design and simulate at 
+least two realistic "what-if" scenarios (e.g., a 20% price increase by a competitor, the 
+introduction of a new policy, an improvement in service quality, or a shift in user 
+demographics). Calculate the new predicted market shares and compare them with the 
+baseline scenario. 
+D. Strategic and public policy recommendations: Translate your mathematical findings 
+into the real world. Based on your calculations and scenario analyses, provide highly specific, 
+actionable recommendations directed at key stakeholders (e.g., a company CEO, a city 
+mayor, a public transit authority, or a marketing manager). Explain how your model supports 
+these decisions. 
+ 
+You must include a link to a shared folder with your data and scripts (codes). 
+ 
+Presentation (50%) 
+The presentation must be uploaded to Canvas by the specified deadline (Monday, June 22nd, 
+13:59 hrs). The oral presentation should not exceed 8 minutes and should preferably be 
+delivered in English. This is an executive-style pitch: do not spend time explaining basic 
+code. Focus strictly on your behavioral findings, the impact of your simulated scenarios, and 
+your final recommendations. Come prepared to confidently answer technical and strategic 
+questions from the professor and your peers. 
+ 
+Rubric 1: Written Report  
+ 
+Criterion 
+Weight Description of Excellence 
+1. Model estimation 20% 
+Accurately specifies and estimates the models. Correctly 
+interprets goodness-of-fit metrics and uses likelihood ratio 
+tests to rigorously justify the selection of the preferred 
+model. 
+
+=== HW03 - Understanding Consumer Behavior.pdf - PÁGINA 3 ===
+Criterion 
+Weight Description of Excellence 
+2. Interpretation 
+25% 
+Deeply analyzes parameter signs, magnitude, and statistical 
+significance. Accurately calculates Willingness-to-Pay (or 
+other measures), providing a sophisticated behavioral 
+interpretation of the trade-offs. 
+3. Scenario analysis  25% 
+Designs highly creative, realistic, and relevant simulation 
+scenarios. The predictive calculations are mathematically 
+flawless, and the shifts in market share are logically 
+explained.. 
+4.Strategic 
+recommendations 
+20% 
+Delivers highly actionable, realistic advice tailored to 
+specific stakeholders. The recommendations are directly 
+and explicitly backed by the model's empirical evidence. 
+5. 
+Code 
+and 
+formatting 
+10% 
+The script is functional, reproducible, and well-commented. 
+The report has an impeccable structure, appropriate 
+academic tone, and no spelling/grammatical errors. 
+ 
+Rubric 2: Oral Presentation 
+Criterion 
+Weight Description of Excellence (Full Score) 
+1. 
+Executive 
+synthesis 
+25% 
+The presentation is focused entirely on insights, scenario 
+impacts, and recommendations. Avoids getting bogged 
+down in unnecessary methodological or coding details. 
+2. Subject Mastery 
+and Q&A 
+35% 
+Demonstrates absolute mastery over the econometrics and 
+the business/policy context. Answers complex questions 
+confidently, relying on data and model results. 
+4. 
+Supporting 
+Material 
+20% 
+Slides are visually impactful, utilizing clean tables for 
+results and clear charts for scenario analyses. Text is kept to 
+a minimum. 
+5. 
+Communication 
+and Language 
+20% 
+Maintains excellent eye contact, an engaging pace, and an 
+appropriate voice volume. Adapts to the English 
+presentation requirement with fluency and professionalism. 
+ 

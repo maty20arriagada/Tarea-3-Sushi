@@ -1,0 +1,2278 @@
+Model run by Matias Arriagada R using Apollo 0.3.7 on R 4.5.3 for Windows.
+Please acknowledge the use of Apollo by citing Hess & Palma (2019)
+  DOI 10.1016/j.jocm.2019.100170
+  www.ApolloChoiceModelling.com
+
+Model name                                  : APOLLO_M5_LC3
+Model description                           : Latent Class MNL, 3 classes, exploded ranks 1-3
+Model run at                                : 2026-07-04 22:54:06.593883
+Estimation method                           : bgw
+Estimation diagnosis                        : Relative function convergence (favorable)
+Optimisation diagnosis                      : Maximum found
+     hessian properties                     : Negative definite
+     maximum eigenvalue                     : -6.711272
+     reciprocal of condition number         : 0.00108367
+Number of individuals                       : 5000
+Number of rows in database                  : 15000
+Number of modelled outcomes                 : 15000
+
+Number of cores used                        :  1 
+Model without mixing
+
+LL(start)                                   : -29292.64
+LL (whole model) at equal shares, LL(0)     : -32896.26
+LL (whole model) at observed shares, LL(C)  : -29446.46
+LL(final, whole model)                      : -28513.74
+Rho-squared vs equal shares                  :  0.1332 
+Adj.Rho-squared vs equal shares              :  0.1321 
+Rho-squared vs observed shares               :  0.0317 
+Adj.Rho-squared vs observed shares           :  0.0313 
+AIC                                         :  57101.48 
+BIC                                         :  57383.26 
+
+LL(0,class_a)                    : -32896.26
+LL(final,class_a)                : -34346.7
+LL(0,class_b)                    : -32896.26
+LL(final,class_b)                : -33884.49
+LL(0,class_c)                    : -32896.26
+LL(final,class_c)                : -33406.9
+
+Estimated parameters                        : 37
+Time taken (hh:mm:ss)                       :  00:04:50.65 
+     pre-estimation                         :  00:00:4.07 
+     estimation                             :  00:00:24.18 
+     post-estimation                        :  00:04:22.4 
+Iterations                                  :  14  
+
+Unconstrained optimisation.
+
+Estimates:
+                    Estimate        s.e.   t.rat.(0)    Rob.s.e. Rob.t.rat.(0)
+asc_anago_a          0.34553     0.08055      4.2894     0.08342        4.1419
+asc_maguro_a        -0.55440     0.13371     -4.1462     0.15390       -3.6023
+asc_ika_a           -0.84707     0.11337     -7.4717     0.11118       -7.6192
+asc_uni_a            1.85034     0.10059     18.3947     0.10278       18.0035
+asc_ikura_a          0.91679     0.07804     11.7470     0.07795       11.7620
+asc_tamago_a        -2.17586     0.23636     -9.2059     0.24144       -9.0120
+asc_toro_a           1.40751     0.09037     15.5747     0.11499       12.2402
+asc_tekka_maki_a    -2.08302     0.23242     -8.9622     0.23540       -8.8487
+asc_kappa_maki_a    -3.36591     0.36784     -9.1505     0.37658       -8.9382
+asc_anago_b         -0.38025     0.06893     -5.5164     0.07687       -4.9463
+asc_maguro_b        -0.57598     0.08403     -6.8543     0.10730       -5.3682
+asc_ika_b           -0.49254     0.06520     -7.5541     0.06023       -8.1770
+asc_uni_b           -2.18676     0.25165     -8.6898     0.27914       -7.8340
+asc_ikura_b         -0.73696     0.07911     -9.3151     0.08929       -8.2537
+asc_tamago_b        -0.65953     0.06995     -9.4288     0.07322       -9.0075
+asc_toro_b          -0.59982     0.12075     -4.9673     0.15085       -3.9764
+asc_tekka_maki_b    -1.13172     0.08605    -13.1513     0.10257      -11.0337
+asc_kappa_maki_b    -1.72961     0.09141    -18.9216     0.09223      -18.7522
+asc_anago_c          0.30157     0.09664      3.1204     0.10149        2.9714
+asc_maguro_c         1.46398     0.10206     14.3437     0.10828       13.5199
+asc_ika_c           -0.49442     0.11457     -4.3153     0.11481       -4.3064
+asc_uni_c           -0.08069     0.15379     -0.5247     0.19757       -0.4084
+asc_ikura_c          0.29393     0.09943      2.9560     0.10423        2.8199
+asc_tamago_c        -1.21924     0.16299     -7.4807     0.17646       -6.9093
+asc_toro_c           2.83793     0.13367     21.2310     0.16583       17.1139
+asc_tekka_maki_c     0.15006     0.10246      1.4646     0.11148        1.3461
+asc_kappa_maki_c    -2.84158     0.31955     -8.8924     0.32474       -8.7504
+delta_a             -0.62997     0.16251     -3.8766     0.18058       -3.4886
+gamma_age_a          0.17626     0.04699      3.7514     0.05346        3.2969
+gamma_west_a         0.12827     0.10429      1.2299     0.10682        1.2008
+gamma_female_a       0.38362     0.09956      3.8530     0.10772        3.5611
+gamma_moved_a        0.03720     0.09702      0.3834     0.09893        0.3760
+delta_b             -0.34823     0.17068     -2.0402     0.21277       -1.6366
+gamma_age_b         -0.11744     0.05164     -2.2742     0.06114       -1.9207
+gamma_west_b         0.35596     0.10643      3.3445     0.10831        3.2864
+gamma_female_b       0.81059     0.10259      7.9014     0.10758        7.5347
+gamma_moved_b       -0.27307     0.10499     -2.6010     0.10692       -2.5540
+
+
+Summary of class allocation for model component :
+         Mean prob.
+class_a      0.3373
+class_b      0.3132
+class_c      0.3494
+
+
+Overview of choices for MNL model component class_a:
+                                      ebi    anago   maguro      ika      uni
+Times available                  13539.00 13371.00 13419.00 14222.00 12855.00
+Times chosen                      1610.00  1648.00  1974.00   992.00  1878.00
+Percentage chosen overall           10.73    10.99    13.16     6.61    12.52
+Percentage chosen when available    11.89    12.33    14.71     6.98    14.61
+                                   ikura   tamago     toro tekka_maki
+Times available                  13258.0 14409.00 10546.00   14519.00
+Times chosen                      1830.0   659.00  3379.00     805.00
+Percentage chosen overall           12.2     4.39    22.53       5.37
+Percentage chosen when available    13.8     4.57    32.04       5.54
+                                 kappa_maki
+Times available                    14862.00
+Times chosen                         225.00
+Percentage chosen overall              1.50
+Percentage chosen when available       1.51
+
+
+
+Overview of choices for MNL model component class_b:
+                                      ebi    anago   maguro      ika      uni
+Times available                  13539.00 13371.00 13419.00 14222.00 12855.00
+Times chosen                      1610.00  1648.00  1974.00   992.00  1878.00
+Percentage chosen overall           10.73    10.99    13.16     6.61    12.52
+Percentage chosen when available    11.89    12.33    14.71     6.98    14.61
+                                   ikura   tamago     toro tekka_maki
+Times available                  13258.0 14409.00 10546.00   14519.00
+Times chosen                      1830.0   659.00  3379.00     805.00
+Percentage chosen overall           12.2     4.39    22.53       5.37
+Percentage chosen when available    13.8     4.57    32.04       5.54
+                                 kappa_maki
+Times available                    14862.00
+Times chosen                         225.00
+Percentage chosen overall              1.50
+Percentage chosen when available       1.51
+
+
+
+Overview of choices for MNL model component class_c:
+                                      ebi    anago   maguro      ika      uni
+Times available                  13539.00 13371.00 13419.00 14222.00 12855.00
+Times chosen                      1610.00  1648.00  1974.00   992.00  1878.00
+Percentage chosen overall           10.73    10.99    13.16     6.61    12.52
+Percentage chosen when available    11.89    12.33    14.71     6.98    14.61
+                                   ikura   tamago     toro tekka_maki
+Times available                  13258.0 14409.00 10546.00   14519.00
+Times chosen                      1830.0   659.00  3379.00     805.00
+Percentage chosen overall           12.2     4.39    22.53       5.37
+Percentage chosen when available    13.8     4.57    32.04       5.54
+                                 kappa_maki
+Times available                    14862.00
+Times chosen                         225.00
+Percentage chosen overall              1.50
+Percentage chosen when available       1.51
+
+
+
+Classical covariance matrix:
+                      asc_anago_a     asc_maguro_a        asc_ika_a
+asc_anago_a              0.006489         0.004141         0.003052
+asc_maguro_a             0.004141         0.017879         0.003952
+asc_ika_a                0.003052         0.003952         0.012853
+asc_uni_a                0.004227         0.003003         0.002614
+asc_ikura_a              0.004017         0.003520         0.002714
+asc_tamago_a             0.003112         0.002575         0.004015
+asc_toro_a               0.004541         0.007337         0.003013
+asc_tekka_maki_a         0.003443         0.008395         0.005501
+asc_kappa_maki_a         0.001912         0.001040         0.005673
+asc_anago_b           -4.6990e-04      -1.6216e-04      -2.4329e-04
+asc_maguro_b          -4.9461e-04        -0.001209       -7.027e-05
+asc_ika_b             -3.0241e-04      -2.8016e-04      -8.6974e-04
+asc_uni_b                0.003859         0.003616        -0.004491
+asc_ikura_b             2.411e-05      -1.1630e-04      -3.5935e-04
+asc_tamago_b          -5.9572e-04      -4.3032e-04        2.770e-07
+asc_toro_b            -1.8613e-04      -4.6541e-04       -7.212e-05
+asc_tekka_maki_b      -4.9815e-04      -4.6750e-04      -1.1402e-04
+asc_kappa_maki_b      -5.1150e-04      -4.0996e-04      -1.9805e-04
+asc_anago_c             -0.001447        -0.001480      -6.5762e-04
+asc_maguro_c          -6.1311e-04        5.974e-05      -2.3594e-04
+asc_ika_c             -6.2431e-04      -6.7051e-04        -0.002246
+asc_uni_c               -0.001457        -0.009641        -0.001555
+asc_ikura_c           -8.1968e-04        -0.002253      -7.1741e-04
+asc_tamago_c          -6.7512e-04       7.2299e-04      -6.4320e-04
+asc_toro_c            -6.7746e-04        9.090e-05      -2.3342e-04
+asc_tekka_maki_c      -6.5345e-04       6.3787e-04      -4.1951e-04
+asc_kappa_maki_c      -4.2091e-04         0.001199      -6.1394e-04
+delta_a               -1.7698e-04         0.005084       8.3182e-04
+gamma_age_a            1.2013e-04       6.6412e-04       1.4806e-04
+gamma_west_a            2.960e-05        4.468e-07       5.1694e-04
+gamma_female_a        -5.6304e-04        -0.001342        2.080e-05
+gamma_moved_a          2.3251e-04      -5.1046e-04       2.4797e-04
+delta_b                3.1934e-04         0.001529       3.0249e-04
+gamma_age_b            1.3884e-04       7.4359e-04       -6.297e-05
+gamma_west_b            3.810e-05       3.5898e-04        9.026e-05
+gamma_female_b         -6.334e-05        7.317e-05        6.266e-06
+gamma_moved_b          2.5638e-04       -1.392e-05      -2.2207e-04
+                        asc_uni_a      asc_ikura_a     asc_tamago_a
+asc_anago_a              0.004227         0.004017         0.003112
+asc_maguro_a             0.003003         0.003520         0.002575
+asc_ika_a                0.002614         0.002714         0.004015
+asc_uni_a                0.010119         0.005050      -4.2598e-04
+asc_ikura_a              0.005050         0.006091         0.001399
+asc_tamago_a          -4.2598e-04         0.001399         0.055864
+asc_toro_a               0.004851         0.004607       7.8063e-04
+asc_tekka_maki_a         0.001418         0.002030         0.006578
+asc_kappa_maki_a         0.002043         0.001652         0.008533
+asc_anago_b             3.239e-05      -1.6335e-04        -0.001326
+asc_maguro_b          -8.2168e-04      -6.5673e-04       6.3932e-04
+asc_ika_b             -5.2788e-04      -3.3960e-04        2.511e-05
+asc_uni_b                0.007881         0.006849        -0.018880
+asc_ikura_b              0.001023       -3.725e-05        -0.001898
+asc_tamago_b            -0.001070      -7.1762e-04        -0.001427
+asc_toro_b             3.2954e-04      -3.0286e-04      -5.8640e-04
+asc_tekka_maki_b        -0.001089      -6.5982e-04       5.5185e-04
+asc_kappa_maki_b        -0.001074      -6.6609e-04       3.5316e-04
+asc_anago_c           -4.3398e-04      -6.9967e-04      -8.6716e-04
+asc_maguro_c            -0.002578        -0.001143       5.5666e-04
+asc_ika_c               -0.001001      -6.3511e-04      -4.8607e-04
+asc_uni_c              -7.567e-05      -2.9268e-04      -7.3845e-04
+asc_ikura_c            3.5925e-04        -0.001110      -9.0801e-04
+asc_tamago_c            -0.001229      -5.9720e-04        -0.005400
+asc_toro_c              -0.001864        -0.001063       5.0383e-04
+asc_tekka_maki_c        -0.002185        -0.001018        7.014e-05
+asc_kappa_maki_c        -0.002024      -7.4887e-04      -6.4564e-04
+delta_a                 -0.005216        -0.001550         0.005240
+gamma_age_a            5.6510e-04        6.438e-05      -8.8107e-04
+gamma_west_a           3.5621e-04      -2.1010e-04       1.6197e-04
+gamma_female_a        -9.4201e-04      -3.1636e-04       8.6132e-04
+gamma_moved_a         -1.6664e-04        9.364e-05        3.287e-05
+delta_b               -4.1164e-04        7.059e-05      -4.0732e-04
+gamma_age_b            2.3009e-04       1.3263e-04      -4.5265e-04
+gamma_west_b            5.218e-05       -6.835e-05       3.5574e-04
+gamma_female_b        -5.0705e-04      -1.2917e-04       8.1125e-04
+gamma_moved_b          3.0983e-04       3.3949e-04      -6.8576e-04
+                       asc_toro_a asc_tekka_maki_a asc_kappa_maki_a
+asc_anago_a              0.004541         0.003443         0.001912
+asc_maguro_a             0.007337         0.008395         0.001040
+asc_ika_a                0.003013         0.005501         0.005673
+asc_uni_a                0.004851         0.001418         0.002043
+asc_ikura_a              0.004607         0.002030         0.001652
+asc_tamago_a           7.8063e-04         0.006578         0.008533
+asc_toro_a               0.008167         0.004458      -2.4186e-04
+asc_tekka_maki_a         0.004458         0.054021         0.008191
+asc_kappa_maki_a      -2.4186e-04         0.008191         0.135307
+asc_anago_b           -1.1820e-04      -3.2086e-04      -4.4574e-04
+asc_maguro_b            -0.001134       2.9377e-04       5.8815e-04
+asc_ika_b             -3.7607e-04      -3.5411e-04      -6.5338e-04
+asc_uni_b                0.009723        -0.010654        -0.019716
+asc_ikura_b            2.9751e-04      -5.3029e-04        -0.001518
+asc_tamago_b          -8.4285e-04       1.5667e-04       3.7820e-04
+asc_toro_b            -6.0153e-04       7.7255e-04       -1.927e-05
+asc_tekka_maki_b      -9.2365e-04        -0.001421        1.639e-05
+asc_kappa_maki_b      -7.6209e-04      -2.4512e-04        -0.003353
+asc_anago_c             -0.001239        -0.001299      -1.6949e-04
+asc_maguro_c           -8.857e-05         0.001616      -7.7398e-04
+asc_ika_c             -5.5677e-04      -9.8082e-04      -8.2948e-04
+asc_uni_c               -0.005481        -0.007633         0.001569
+asc_ikura_c             -0.001603        -0.001816        4.042e-05
+asc_tamago_c           3.3607e-04      -5.7548e-04        -0.001777
+asc_toro_c              -0.001125         0.001931      -2.8193e-04
+asc_tekka_maki_c       -1.126e-05        -0.001221        -0.001104
+asc_kappa_maki_c       6.1096e-04      -3.2791e-04        -0.014118
+delta_a                  0.001155         0.005661       -5.428e-05
+gamma_age_a            4.5591e-04       7.7975e-04       -8.262e-05
+gamma_west_a          -1.9596e-04       8.6071e-04       9.2562e-04
+gamma_female_a          -0.001197      -2.2046e-04         0.001335
+gamma_moved_a           4.087e-05      -6.7464e-04       3.8507e-04
+delta_b                8.8781e-04         0.002301      -4.9567e-04
+gamma_age_b            5.4792e-04       2.2328e-04      -6.1434e-04
+gamma_west_b            7.815e-05       1.3266e-04      -1.8801e-04
+gamma_female_b         -9.724e-05       3.6859e-04       3.7121e-04
+gamma_moved_b          4.9552e-04      -8.6923e-04        -0.001610
+                      asc_anago_b     asc_maguro_b        asc_ika_b
+asc_anago_a           -4.6990e-04      -4.9461e-04      -3.0241e-04
+asc_maguro_a          -1.6216e-04        -0.001209      -2.8016e-04
+asc_ika_a             -2.4329e-04       -7.027e-05      -8.6974e-04
+asc_uni_a               3.239e-05      -8.2168e-04      -5.2788e-04
+asc_ikura_a           -1.6335e-04      -6.5673e-04      -3.3960e-04
+asc_tamago_a            -0.001326       6.3932e-04        2.511e-05
+asc_toro_a            -1.1820e-04        -0.001134      -3.7607e-04
+asc_tekka_maki_a      -3.2086e-04       2.9377e-04      -3.5411e-04
+asc_kappa_maki_a      -4.4574e-04       5.8815e-04      -6.5338e-04
+asc_anago_b              0.004751         0.002537         0.001845
+asc_maguro_b             0.002537         0.007061         0.002039
+asc_ika_b                0.001845         0.002039         0.004251
+asc_uni_b                0.002820        6.408e-05         0.001670
+asc_ikura_b              0.002311         0.002770         0.001761
+asc_tamago_b             0.002070         0.001979         0.001841
+asc_toro_b               0.003345         0.006021         0.001851
+asc_tekka_maki_b         0.002430         0.003717         0.002139
+asc_kappa_maki_b         0.001665         0.001566         0.001891
+asc_anago_c             -0.001339        6.027e-05      -6.9334e-04
+asc_maguro_c           -7.252e-05         0.001188      -6.0237e-04
+asc_ika_c             -7.3117e-04      -9.5993e-04        -0.001709
+asc_uni_c             -1.3870e-04         0.002409      -6.3805e-04
+asc_ikura_c           -4.1907e-04       4.8843e-04      -6.6278e-04
+asc_tamago_c            -0.001968        -0.002773      -6.9352e-04
+asc_toro_c             7.7999e-04         0.004607      -2.9243e-04
+asc_tekka_maki_c      -4.8699e-04       3.5180e-04      -7.4377e-04
+asc_kappa_maki_c        -0.001005        -0.002826      -7.1106e-04
+delta_a                5.3983e-04         0.002465       1.9254e-04
+gamma_age_a            -4.018e-05      -3.8949e-04        2.090e-05
+gamma_west_a           1.2673e-04       4.6520e-04        9.992e-05
+gamma_female_a          8.946e-05       9.8341e-04        7.640e-06
+gamma_moved_a          -5.456e-05      -4.7975e-04       -7.372e-05
+delta_b                  0.001765         0.005012      -1.4327e-04
+gamma_age_b            -3.396e-05      -3.8345e-04       1.6820e-04
+gamma_west_b            1.743e-05       -3.482e-05       2.5977e-04
+gamma_female_b        -4.7783e-04      -2.7023e-04      -1.6099e-04
+gamma_moved_b          1.7160e-04      -5.7405e-04       -1.544e-05
+                        asc_uni_b      asc_ikura_b     asc_tamago_b
+asc_anago_a              0.003859        2.411e-05      -5.9572e-04
+asc_maguro_a             0.003616      -1.1630e-04      -4.3032e-04
+asc_ika_a               -0.004491      -3.5935e-04        2.770e-07
+asc_uni_a                0.007881         0.001023        -0.001070
+asc_ikura_a              0.006849       -3.725e-05      -7.1762e-04
+asc_tamago_a            -0.018880        -0.001898        -0.001427
+asc_toro_a               0.009723       2.9751e-04      -8.4285e-04
+asc_tekka_maki_a        -0.010654      -5.3029e-04       1.5667e-04
+asc_kappa_maki_a        -0.019716        -0.001518       3.7820e-04
+asc_anago_b              0.002820         0.002311         0.002070
+asc_maguro_b            6.408e-05         0.002770         0.001979
+asc_ika_b                0.001670         0.001761         0.001841
+asc_uni_b                0.063326         0.004215      -3.6520e-04
+asc_ikura_b              0.004215         0.006259         0.001794
+asc_tamago_b          -3.6520e-04         0.001794         0.004893
+asc_toro_b               0.001757         0.004459         0.001828
+asc_tekka_maki_b       5.1917e-04         0.002415         0.002152
+asc_kappa_maki_b      -1.6302e-04         0.001484         0.002121
+asc_anago_c             -0.001369      -3.4526e-04        -0.001023
+asc_maguro_c            -0.001849       2.6683e-04      -7.3474e-04
+asc_ika_c             -6.8809e-04      -7.0179e-04      -6.1748e-04
+asc_uni_c               -0.003352       4.5812e-04      -8.5118e-04
+asc_ikura_c             -0.001279      -9.2430e-04      -9.6190e-04
+asc_tamago_c           7.3798e-04        -0.002116        -0.002998
+asc_toro_c              -0.001396         0.001421      -8.3749e-04
+asc_tekka_maki_c        -0.001396      -2.6238e-04      -8.4747e-04
+asc_kappa_maki_c       3.1385e-04        -0.001926      -8.2295e-04
+delta_a                 -0.006138       4.8586e-04       5.6588e-04
+gamma_age_a            9.8116e-04      -1.1165e-04       -8.947e-05
+gamma_west_a            -0.001232       1.0157e-04        1.811e-05
+gamma_female_a          -0.002849       2.7464e-04       1.3369e-04
+gamma_moved_a          2.1462e-04      -2.4414e-04       -1.271e-05
+delta_b                  0.002334         0.003107       1.3463e-04
+gamma_age_b              0.001428      -3.4927e-04      -1.4680e-04
+gamma_west_b           -9.879e-05      -2.6934e-04       -7.465e-05
+gamma_female_b          -0.001332       2.7222e-04      -1.3192e-04
+gamma_moved_b            0.002130      -1.5999e-04      -1.4236e-04
+                       asc_toro_b asc_tekka_maki_b asc_kappa_maki_b
+asc_anago_a           -1.8613e-04      -4.9815e-04      -5.1150e-04
+asc_maguro_a          -4.6541e-04      -4.6750e-04      -4.0996e-04
+asc_ika_a              -7.212e-05      -1.1402e-04      -1.9805e-04
+asc_uni_a              3.2954e-04        -0.001089        -0.001074
+asc_ikura_a           -3.0286e-04      -6.5982e-04      -6.6609e-04
+asc_tamago_a          -5.8640e-04       5.5185e-04       3.5316e-04
+asc_toro_a            -6.0153e-04      -9.2365e-04      -7.6209e-04
+asc_tekka_maki_a       7.7255e-04        -0.001421      -2.4512e-04
+asc_kappa_maki_a       -1.927e-05        1.639e-05        -0.003353
+asc_anago_b              0.003345         0.002430         0.001665
+asc_maguro_b             0.006021         0.003717         0.001566
+asc_ika_b                0.001851         0.002139         0.001891
+asc_uni_b                0.001757       5.1917e-04      -1.6302e-04
+asc_ikura_b              0.004459         0.002415         0.001484
+asc_tamago_b             0.001828         0.002152         0.002121
+asc_toro_b               0.014581         0.004165       7.1450e-04
+asc_tekka_maki_b         0.004165         0.007405         0.001983
+asc_kappa_maki_b       7.1450e-04         0.001983         0.008356
+asc_anago_c              0.001113      -5.7955e-04      -9.1384e-04
+asc_maguro_c             0.004758       4.1354e-04        -0.001188
+asc_ika_c             -6.3745e-04        -0.001104      -6.7398e-04
+asc_uni_c                0.005192       7.1877e-04        -0.001248
+asc_ikura_c              0.001845      -3.2381e-04        -0.001068
+asc_tamago_c            -0.005443        -0.002188      -6.1629e-04
+asc_toro_c               0.008248         0.002635        -0.001598
+asc_tekka_maki_c         0.002768      -9.3428e-04        -0.001141
+asc_kappa_maki_c        -0.004872        -0.002677        -0.005359
+delta_a                  0.004703         0.001815       -5.533e-05
+gamma_age_a           -7.5376e-04      -2.2373e-04        3.822e-05
+gamma_west_a           9.1610e-04       2.8005e-04       -8.072e-05
+gamma_female_a           0.002044       6.4298e-04        1.009e-05
+gamma_moved_a         -8.1254e-04      -3.0468e-04        1.257e-05
+delta_b                  0.010966         0.002648        -0.001442
+gamma_age_b             -0.001051       -6.576e-05       1.3927e-04
+gamma_west_b           1.7309e-04       1.2319e-04        2.305e-05
+gamma_female_b         6.5168e-04      -1.6862e-04        3.823e-05
+gamma_moved_b         -6.7203e-04      -3.4437e-04       -2.548e-06
+                      asc_anago_c     asc_maguro_c        asc_ika_c
+asc_anago_a             -0.001447      -6.1311e-04      -6.2431e-04
+asc_maguro_a            -0.001480        5.974e-05      -6.7051e-04
+asc_ika_a             -6.5762e-04      -2.3594e-04        -0.002246
+asc_uni_a             -4.3398e-04        -0.002578        -0.001001
+asc_ikura_a           -6.9967e-04        -0.001143      -6.3511e-04
+asc_tamago_a          -8.6716e-04       5.5666e-04      -4.8607e-04
+asc_toro_a              -0.001239       -8.857e-05      -5.5677e-04
+asc_tekka_maki_a        -0.001299         0.001616      -9.8082e-04
+asc_kappa_maki_a      -1.6949e-04      -7.7398e-04      -8.2948e-04
+asc_anago_b             -0.001339       -7.252e-05      -7.3117e-04
+asc_maguro_b            6.027e-05         0.001188      -9.5993e-04
+asc_ika_b             -6.9334e-04      -6.0237e-04        -0.001709
+asc_uni_b               -0.001369        -0.001849      -6.8809e-04
+asc_ikura_b           -3.4526e-04       2.6683e-04      -7.0179e-04
+asc_tamago_b            -0.001023      -7.3474e-04      -6.1748e-04
+asc_toro_b               0.001113         0.004758      -6.3745e-04
+asc_tekka_maki_b      -5.7955e-04       4.1354e-04        -0.001104
+asc_kappa_maki_b      -9.1384e-04        -0.001188      -6.7398e-04
+asc_anago_c              0.009340         0.005561         0.004809
+asc_maguro_c             0.005561         0.010417         0.005128
+asc_ika_c                0.004809         0.005128         0.013127
+asc_uni_c                0.007103         0.005621         0.004931
+asc_ikura_c              0.005635         0.005382         0.004645
+asc_tamago_c             0.005317         0.003883         0.004588
+asc_toro_c               0.006169         0.010045         0.004404
+asc_tekka_maki_c         0.005557         0.007939         0.005337
+asc_kappa_maki_c         0.003883         0.004857         0.004912
+delta_a                 9.148e-05         0.005860       9.2159e-04
+gamma_age_a           -2.1595e-04      -5.8839e-04      -3.2297e-04
+gamma_west_a            1.547e-05       1.0663e-04      -6.3995e-04
+gamma_female_a         9.0234e-04         0.001144       2.6091e-04
+gamma_moved_a         -4.7279e-04      -2.4064e-04       -9.663e-05
+delta_b                  0.001545         0.006550       7.1077e-04
+gamma_age_b           -3.3437e-04      -5.5891e-04      -4.2945e-04
+gamma_west_b          -1.1055e-04       -6.851e-05      -6.6073e-04
+gamma_female_b         6.7547e-04       7.1462e-04       4.7001e-04
+gamma_moved_b         -4.9690e-04      -1.9272e-04        2.242e-05
+                        asc_uni_c      asc_ikura_c     asc_tamago_c
+asc_anago_a             -0.001457      -8.1968e-04      -6.7512e-04
+asc_maguro_a            -0.009641        -0.002253       7.2299e-04
+asc_ika_a               -0.001555      -7.1741e-04      -6.4320e-04
+asc_uni_a              -7.567e-05       3.5925e-04        -0.001229
+asc_ikura_a           -2.9268e-04        -0.001110      -5.9720e-04
+asc_tamago_a          -7.3845e-04      -9.0801e-04        -0.005400
+asc_toro_a              -0.005481        -0.001603       3.3607e-04
+asc_tekka_maki_a        -0.007633        -0.001816      -5.7548e-04
+asc_kappa_maki_a         0.001569        4.042e-05        -0.001777
+asc_anago_b           -1.3870e-04      -4.1907e-04        -0.001968
+asc_maguro_b             0.002409       4.8843e-04        -0.002773
+asc_ika_b             -6.3805e-04      -6.6278e-04      -6.9352e-04
+asc_uni_b               -0.003352        -0.001279       7.3798e-04
+asc_ikura_b            4.5812e-04      -9.2430e-04        -0.002116
+asc_tamago_b          -8.5118e-04      -9.6190e-04        -0.002998
+asc_toro_b               0.005192         0.001845        -0.005443
+asc_tekka_maki_b       7.1877e-04      -3.2381e-04        -0.002188
+asc_kappa_maki_b        -0.001248        -0.001068      -6.1629e-04
+asc_anago_c              0.007103         0.005635         0.005317
+asc_maguro_c             0.005621         0.005382         0.003883
+asc_ika_c                0.004931         0.004645         0.004588
+asc_uni_c                0.023652         0.008050         0.001870
+asc_ikura_c              0.008050         0.009887         0.004387
+asc_tamago_c             0.001870         0.004387         0.026564
+asc_toro_c               0.009204         0.006689         0.002221
+asc_tekka_maki_c         0.005007         0.005261         0.004798
+asc_kappa_maki_c         0.001166         0.003948         0.006862
+delta_a                 -0.004180        -0.001125        -0.001460
+gamma_age_a             -0.001186        1.294e-05       6.3486e-04
+gamma_west_a           2.8797e-04       5.4924e-04      -3.6627e-04
+gamma_female_a           0.002988       4.4758e-04      -8.0112e-04
+gamma_moved_a          -7.362e-05      -2.2589e-04       2.8716e-04
+delta_b                  0.003994         0.001626        -0.005055
+gamma_age_b             -0.001422      -1.1764e-04       9.3268e-04
+gamma_west_b          -4.5309e-04       2.5142e-04       2.6055e-04
+gamma_female_b         4.5991e-04      -2.6453e-04       2.5285e-04
+gamma_moved_b         -3.5307e-04      -1.1167e-04       4.1974e-04
+                       asc_toro_c asc_tekka_maki_c asc_kappa_maki_c
+asc_anago_a           -6.7746e-04      -6.5345e-04      -4.2091e-04
+asc_maguro_a            9.090e-05       6.3787e-04         0.001199
+asc_ika_a             -2.3342e-04      -4.1951e-04      -6.1394e-04
+asc_uni_a               -0.001864        -0.002185        -0.002024
+asc_ikura_a             -0.001063        -0.001018      -7.4887e-04
+asc_tamago_a           5.0383e-04        7.014e-05      -6.4564e-04
+asc_toro_a              -0.001125       -1.126e-05       6.1096e-04
+asc_tekka_maki_a         0.001931        -0.001221      -3.2791e-04
+asc_kappa_maki_a      -2.8193e-04        -0.001104        -0.014118
+asc_anago_b            7.7999e-04      -4.8699e-04        -0.001005
+asc_maguro_b             0.004607       3.5180e-04        -0.002826
+asc_ika_b             -2.9243e-04      -7.4377e-04      -7.1106e-04
+asc_uni_b               -0.001396        -0.001396       3.1385e-04
+asc_ikura_b              0.001421      -2.6238e-04        -0.001926
+asc_tamago_b          -8.3749e-04      -8.4747e-04      -8.2295e-04
+asc_toro_b               0.008248         0.002768        -0.004872
+asc_tekka_maki_b         0.002635      -9.3428e-04        -0.002677
+asc_kappa_maki_b        -0.001598        -0.001141        -0.005359
+asc_anago_c              0.006169         0.005557         0.003883
+asc_maguro_c             0.010045         0.007939         0.004857
+asc_ika_c                0.004404         0.005337         0.004912
+asc_uni_c                0.009204         0.005007         0.001166
+asc_ikura_c              0.006689         0.005261         0.003948
+asc_tamago_c             0.002221         0.004798         0.006862
+asc_toro_c               0.017867         0.007788         0.002981
+asc_tekka_maki_c         0.007788         0.010497         0.005934
+asc_kappa_maki_c         0.002981         0.005934         0.102112
+delta_a                  0.006841         0.004432         0.001808
+gamma_age_a           -7.9743e-04      -4.7622e-04      -1.4488e-04
+gamma_west_a           5.6201e-04       -9.554e-05      -4.9468e-04
+gamma_female_a           0.001691       7.0308e-04        -0.001513
+gamma_moved_a         -9.1388e-04      -1.2868e-04       4.2208e-04
+delta_b                  0.011304         0.004424        -0.001560
+gamma_age_b           -7.6188e-04      -4.6831e-04      -1.3979e-04
+gamma_west_b          -2.3396e-04      -1.2047e-04       1.9817e-04
+gamma_female_b        -2.3411e-04       5.8809e-04      -8.8558e-04
+gamma_moved_b         -7.6438e-04       -7.915e-05       5.3751e-04
+                          delta_a      gamma_age_a     gamma_west_a
+asc_anago_a           -1.7698e-04       1.2013e-04        2.960e-05
+asc_maguro_a             0.005084       6.6412e-04        4.468e-07
+asc_ika_a              8.3182e-04       1.4806e-04       5.1694e-04
+asc_uni_a               -0.005216       5.6510e-04       3.5621e-04
+asc_ikura_a             -0.001550        6.438e-05      -2.1010e-04
+asc_tamago_a             0.005240      -8.8107e-04       1.6197e-04
+asc_toro_a               0.001155       4.5591e-04      -1.9596e-04
+asc_tekka_maki_a         0.005661       7.7975e-04       8.6071e-04
+asc_kappa_maki_a       -5.428e-05       -8.262e-05       9.2562e-04
+asc_anago_b            5.3983e-04       -4.018e-05       1.2673e-04
+asc_maguro_b             0.002465      -3.8949e-04       4.6520e-04
+asc_ika_b              1.9254e-04        2.090e-05        9.992e-05
+asc_uni_b               -0.006138       9.8116e-04        -0.001232
+asc_ikura_b            4.8586e-04      -1.1165e-04       1.0157e-04
+asc_tamago_b           5.6588e-04       -8.947e-05        1.811e-05
+asc_toro_b               0.004703      -7.5376e-04       9.1610e-04
+asc_tekka_maki_b         0.001815      -2.2373e-04       2.8005e-04
+asc_kappa_maki_b       -5.533e-05        3.822e-05       -8.072e-05
+asc_anago_c             9.148e-05      -2.1595e-04        1.547e-05
+asc_maguro_c             0.005860      -5.8839e-04       1.0663e-04
+asc_ika_c              9.2159e-04      -3.2297e-04      -6.3995e-04
+asc_uni_c               -0.004180        -0.001186       2.8797e-04
+asc_ikura_c             -0.001125        1.294e-05       5.4924e-04
+asc_tamago_c            -0.001460       6.3486e-04      -3.6627e-04
+asc_toro_c               0.006841      -7.9743e-04       5.6201e-04
+asc_tekka_maki_c         0.004432      -4.7622e-04       -9.554e-05
+asc_kappa_maki_c         0.001808      -1.4488e-04      -4.9468e-04
+delta_a                  0.026408        -0.004976        -0.003400
+gamma_age_a             -0.004976         0.002208       1.1245e-04
+gamma_west_a            -0.003400       1.1245e-04         0.010877
+gamma_female_a          -0.005236       5.7198e-04       1.1903e-04
+gamma_moved_a           -0.003045      -4.7795e-04       4.7888e-04
+delta_b                  0.015597        -0.003284        -0.001403
+gamma_age_b             -0.002894         0.001393        4.460e-05
+gamma_west_b            -0.001870       1.0510e-04         0.006362
+gamma_female_b          -0.002441       3.3332e-04       -2.051e-05
+gamma_moved_b           -0.002032      -2.0174e-04       1.2362e-04
+                   gamma_female_a    gamma_moved_a          delta_b
+asc_anago_a           -5.6304e-04       2.3251e-04       3.1934e-04
+asc_maguro_a            -0.001342      -5.1046e-04         0.001529
+asc_ika_a               2.080e-05       2.4797e-04       3.0249e-04
+asc_uni_a             -9.4201e-04      -1.6664e-04      -4.1164e-04
+asc_ikura_a           -3.1636e-04        9.364e-05        7.059e-05
+asc_tamago_a           8.6132e-04        3.287e-05      -4.0732e-04
+asc_toro_a              -0.001197        4.087e-05       8.8781e-04
+asc_tekka_maki_a      -2.2046e-04      -6.7464e-04         0.002301
+asc_kappa_maki_a         0.001335       3.8507e-04      -4.9567e-04
+asc_anago_b             8.946e-05       -5.456e-05         0.001765
+asc_maguro_b           9.8341e-04      -4.7975e-04         0.005012
+asc_ika_b               7.640e-06       -7.372e-05      -1.4327e-04
+asc_uni_b               -0.002849       2.1462e-04         0.002334
+asc_ikura_b            2.7464e-04      -2.4414e-04         0.003107
+asc_tamago_b           1.3369e-04       -1.271e-05       1.3463e-04
+asc_toro_b               0.002044      -8.1254e-04         0.010966
+asc_tekka_maki_b       6.4298e-04      -3.0468e-04         0.002648
+asc_kappa_maki_b        1.009e-05        1.257e-05        -0.001442
+asc_anago_c            9.0234e-04      -4.7279e-04         0.001545
+asc_maguro_c             0.001144      -2.4064e-04         0.006550
+asc_ika_c              2.6091e-04       -9.663e-05       7.1077e-04
+asc_uni_c                0.002988       -7.362e-05         0.003994
+asc_ikura_c            4.4758e-04      -2.2589e-04         0.001626
+asc_tamago_c          -8.0112e-04       2.8716e-04        -0.005055
+asc_toro_c               0.001691      -9.1388e-04         0.011304
+asc_tekka_maki_c       7.0308e-04      -1.2868e-04         0.004424
+asc_kappa_maki_c        -0.001513       4.2208e-04        -0.001560
+delta_a                 -0.005236        -0.003045         0.015597
+gamma_age_a            5.7198e-04      -4.7795e-04        -0.003284
+gamma_west_a           1.1903e-04       4.7888e-04        -0.001403
+gamma_female_a           0.009913      -3.4440e-04        -0.001622
+gamma_moved_a         -3.4440e-04         0.009414        -0.002209
+delta_b                 -0.001622        -0.002209         0.029132
+gamma_age_b            1.8241e-04      -2.6223e-04        -0.005732
+gamma_west_b           -3.914e-05       2.1570e-04        -0.003983
+gamma_female_b           0.005478      -2.2398e-04        -0.006504
+gamma_moved_b         -4.0517e-04         0.005450        -0.003395
+                      gamma_age_b     gamma_west_b   gamma_female_b
+asc_anago_a            1.3884e-04        3.810e-05       -6.334e-05
+asc_maguro_a           7.4359e-04       3.5898e-04        7.317e-05
+asc_ika_a              -6.297e-05        9.026e-05        6.266e-06
+asc_uni_a              2.3009e-04        5.218e-05      -5.0705e-04
+asc_ikura_a            1.3263e-04       -6.835e-05      -1.2917e-04
+asc_tamago_a          -4.5265e-04       3.5574e-04       8.1125e-04
+asc_toro_a             5.4792e-04        7.815e-05       -9.724e-05
+asc_tekka_maki_a       2.2328e-04       1.3266e-04       3.6859e-04
+asc_kappa_maki_a      -6.1434e-04      -1.8801e-04       3.7121e-04
+asc_anago_b            -3.396e-05        1.743e-05      -4.7783e-04
+asc_maguro_b          -3.8345e-04       -3.482e-05      -2.7023e-04
+asc_ika_b              1.6820e-04       2.5977e-04      -1.6099e-04
+asc_uni_b                0.001428       -9.879e-05        -0.001332
+asc_ikura_b           -3.4927e-04      -2.6934e-04       2.7222e-04
+asc_tamago_b          -1.4680e-04       -7.465e-05      -1.3192e-04
+asc_toro_b              -0.001051       1.7309e-04       6.5168e-04
+asc_tekka_maki_b       -6.576e-05       1.2319e-04      -1.6862e-04
+asc_kappa_maki_b       1.3927e-04        2.305e-05        3.823e-05
+asc_anago_c           -3.3437e-04      -1.1055e-04       6.7547e-04
+asc_maguro_c          -5.5891e-04       -6.851e-05       7.1462e-04
+asc_ika_c             -4.2945e-04      -6.6073e-04       4.7001e-04
+asc_uni_c               -0.001422      -4.5309e-04       4.5991e-04
+asc_ikura_c           -1.1764e-04       2.5142e-04      -2.6453e-04
+asc_tamago_c           9.3268e-04       2.6055e-04       2.5285e-04
+asc_toro_c            -7.6188e-04      -2.3396e-04      -2.3411e-04
+asc_tekka_maki_c      -4.6831e-04      -1.2047e-04       5.8809e-04
+asc_kappa_maki_c      -1.3979e-04       1.9817e-04      -8.8558e-04
+delta_a                 -0.002894        -0.001870        -0.002441
+gamma_age_a              0.001393       1.0510e-04       3.3332e-04
+gamma_west_a            4.460e-05         0.006362       -2.051e-05
+gamma_female_a         1.8241e-04       -3.914e-05         0.005478
+gamma_moved_a         -2.6223e-04       2.1570e-04      -2.2398e-04
+delta_b                 -0.005732        -0.003983        -0.006504
+gamma_age_b              0.002667       1.3910e-04       6.2753e-04
+gamma_west_b           1.3910e-04         0.011328        6.006e-05
+gamma_female_b         6.2753e-04        6.006e-05         0.010524
+gamma_moved_b         -3.6264e-04       5.4449e-04      -3.7497e-04
+                    gamma_moved_b
+asc_anago_a            2.5638e-04
+asc_maguro_a           -1.392e-05
+asc_ika_a             -2.2207e-04
+asc_uni_a              3.0983e-04
+asc_ikura_a            3.3949e-04
+asc_tamago_a          -6.8576e-04
+asc_toro_a             4.9552e-04
+asc_tekka_maki_a      -8.6923e-04
+asc_kappa_maki_a        -0.001610
+asc_anago_b            1.7160e-04
+asc_maguro_b          -5.7405e-04
+asc_ika_b              -1.544e-05
+asc_uni_b                0.002130
+asc_ikura_b           -1.5999e-04
+asc_tamago_b          -1.4236e-04
+asc_toro_b            -6.7203e-04
+asc_tekka_maki_b      -3.4437e-04
+asc_kappa_maki_b       -2.548e-06
+asc_anago_c           -4.9690e-04
+asc_maguro_c          -1.9272e-04
+asc_ika_c               2.242e-05
+asc_uni_c             -3.5307e-04
+asc_ikura_c           -1.1167e-04
+asc_tamago_c           4.1974e-04
+asc_toro_c            -7.6438e-04
+asc_tekka_maki_c       -7.915e-05
+asc_kappa_maki_c       5.3751e-04
+delta_a                 -0.002032
+gamma_age_a           -2.0174e-04
+gamma_west_a           1.2362e-04
+gamma_female_a        -4.0517e-04
+gamma_moved_a            0.005450
+delta_b                 -0.003395
+gamma_age_b           -3.6264e-04
+gamma_west_b           5.4449e-04
+gamma_female_b        -3.7497e-04
+gamma_moved_b            0.011023
+
+Robust covariance matrix:
+                      asc_anago_a     asc_maguro_a        asc_ika_a
+asc_anago_a              0.006959         0.006056         0.002669
+asc_maguro_a             0.006056         0.023686         0.004199
+asc_ika_a                0.002669         0.004199         0.012360
+asc_uni_a                0.003922         0.004447         0.002200
+asc_ikura_a              0.003944         0.004690         0.001802
+asc_tamago_a             0.004037      -9.9464e-04         0.002579
+asc_toro_a               0.006117         0.013201         0.002579
+asc_tekka_maki_a         0.004822         0.010848         0.007043
+asc_kappa_maki_a       1.8784e-04        -0.005960         0.007021
+asc_anago_b           -6.4643e-04      -3.6381e-04        1.851e-05
+asc_maguro_b            -0.001073        -0.003647       2.6006e-04
+asc_ika_b             -2.3162e-04      -3.6817e-04      -7.1673e-04
+asc_uni_b                0.005754         0.012573        -0.005559
+asc_ikura_b           -1.0370e-04      -3.5369e-04        5.502e-05
+asc_tamago_b          -8.9292e-04      -9.2734e-04       4.2001e-04
+asc_toro_b            -9.1827e-04        -0.003309       6.0558e-04
+asc_tekka_maki_b      -9.0804e-04        -0.002323        9.810e-06
+asc_kappa_maki_b      -6.4772e-04      -6.0433e-04       -1.481e-05
+asc_anago_c             -0.001941        -0.003356      -7.5299e-04
+asc_maguro_c          -2.4082e-04       -3.309e-05       -1.377e-05
+asc_ika_c             -5.3575e-04        -0.001032        -0.002240
+asc_uni_c               -0.004099        -0.018348        -0.002134
+asc_ikura_c             -0.001309        -0.004184      -5.6514e-04
+asc_tamago_c          -1.7565e-04         0.003389      -5.9972e-04
+asc_toro_c            -9.9840e-04        -0.003384        9.394e-05
+asc_tekka_maki_c      -2.9828e-04         0.001095      -2.6974e-04
+asc_kappa_maki_c       7.8647e-04         0.005191      -6.0524e-04
+delta_a                  0.001322         0.005845        6.787e-05
+gamma_age_a            3.0177e-04         0.002118       6.7330e-04
+gamma_west_a           3.0242e-04       -3.361e-05         0.001443
+gamma_female_a          -0.002182        -0.004927      -3.8637e-04
+gamma_moved_a          6.4027e-04      -4.9248e-04       7.8549e-04
+delta_b                -2.342e-05      -9.6173e-04       7.4943e-04
+gamma_age_b            4.6749e-04         0.002140       -5.162e-05
+gamma_west_b           2.2846e-04       7.5305e-04       1.2127e-04
+gamma_female_b        -1.2297e-04      -4.1556e-04       -4.790e-05
+gamma_moved_b          6.5179e-04       6.7229e-04      -5.3224e-04
+                        asc_uni_a      asc_ikura_a     asc_tamago_a
+asc_anago_a              0.003922         0.003944         0.004037
+asc_maguro_a             0.004447         0.004690      -9.9464e-04
+asc_ika_a                0.002200         0.001802         0.002579
+asc_uni_a                0.010563         0.004717        -0.001931
+asc_ikura_a              0.004717         0.006075         0.001222
+asc_tamago_a            -0.001931         0.001222         0.058294
+asc_toro_a               0.005446         0.005729        -0.001158
+asc_tekka_maki_a         0.003208         0.002450         0.004032
+asc_kappa_maki_a         0.003993         0.001411         0.008086
+asc_anago_b           -1.6104e-04      -3.2549e-04        -0.001537
+asc_maguro_b            -0.001742        -0.001351         0.002841
+asc_ika_b             -5.2194e-04      -2.3223e-04       4.4670e-04
+asc_uni_b                0.009222         0.009039        -0.021191
+asc_ikura_b            9.0547e-04      -2.8547e-04        -0.001572
+asc_tamago_b            -0.001314        -0.001020        -0.001110
+asc_toro_b            -8.5643e-04        -0.001279         0.001979
+asc_tekka_maki_b        -0.001759        -0.001114         0.001931
+asc_kappa_maki_b        -0.001385      -8.8179e-04       4.3593e-04
+asc_anago_c           -3.2263e-04      -7.7822e-04      -9.7035e-04
+asc_maguro_c            -0.003259      -9.9110e-04         0.001748
+asc_ika_c               -0.001192      -4.1021e-04        1.096e-05
+asc_uni_c               -0.001814        -0.001999         0.003279
+asc_ikura_c            6.0473e-04        -0.001458      -7.1488e-04
+asc_tamago_c          -2.3387e-04       1.0976e-04        -0.007250
+asc_toro_c              -0.002913        -0.001514         0.002981
+asc_tekka_maki_c        -0.002922      -8.7555e-04       7.6986e-04
+asc_kappa_maki_c        -0.002691      -1.6202e-04      -8.6623e-04
+delta_a                 -0.006600      -5.8136e-04         0.008156
+gamma_age_a              0.001336        4.273e-06        -0.002229
+gamma_west_a             0.001297      -2.6964e-04      -5.8086e-04
+gamma_female_a          -0.002374      -9.6124e-04         0.001368
+gamma_moved_a         -2.6599e-04       3.2053e-04       4.8387e-04
+delta_b                 -0.002113      -5.7870e-04         0.002853
+gamma_age_b            6.7040e-04       3.8950e-04        -0.001319
+gamma_west_b           5.3437e-04        8.094e-05      -1.2416e-04
+gamma_female_b        -5.9521e-04       -5.103e-05       9.6450e-04
+gamma_moved_b          5.9497e-04       7.6845e-04        -0.001488
+                       asc_toro_a asc_tekka_maki_a asc_kappa_maki_a
+asc_anago_a              0.006117         0.004822       1.8784e-04
+asc_maguro_a             0.013201         0.010848        -0.005960
+asc_ika_a                0.002579         0.007043         0.007021
+asc_uni_a                0.005446         0.003208         0.003993
+asc_ikura_a              0.005729         0.002450         0.001411
+asc_tamago_a            -0.001158         0.004032         0.008086
+asc_toro_a               0.013223         0.006011        -0.005653
+asc_tekka_maki_a         0.006011         0.055415         0.008576
+asc_kappa_maki_a        -0.005653         0.008576         0.141811
+asc_anago_b           -4.9831e-04      -1.4072e-04       2.8562e-04
+asc_maguro_b            -0.003560      -1.1732e-04         0.003306
+asc_ika_b             -3.9327e-04      -6.7101e-04      -7.4134e-04
+asc_uni_b                0.017601        -0.009768        -0.027256
+asc_ikura_b           -2.1133e-04        9.668e-05      -3.2778e-04
+asc_tamago_b            -0.001491       4.0623e-04         0.001065
+asc_toro_b              -0.003583         0.001155         0.004051
+asc_tekka_maki_b        -0.002558        -0.001750         0.001236
+asc_kappa_maki_b        -0.001083      -3.5870e-04        -0.002933
+asc_anago_c             -0.002646        -0.002817         0.001292
+asc_maguro_c          -1.5924e-04       7.8405e-04        -0.001650
+asc_ika_c             -5.1113e-04        -0.001846        -0.001363
+asc_uni_c               -0.013096        -0.010431         0.010078
+asc_ikura_c             -0.003374        -0.002605         0.002209
+asc_tamago_c             0.002774      -7.2279e-04        -0.004715
+asc_toro_c              -0.004005       9.1437e-04         0.001844
+asc_tekka_maki_c       6.2046e-04        -0.001406        -0.002722
+asc_kappa_maki_c         0.003994       1.3568e-04        -0.018819
+delta_a                  0.002695         0.003203        -0.005763
+gamma_age_a              0.001323         0.002284      -2.3641e-04
+gamma_west_a          -3.4283e-04         0.002544         0.003181
+gamma_female_a          -0.004080        -0.001721         0.002855
+gamma_moved_a          4.9458e-04      -7.6869e-04         0.002146
+delta_b                 -0.001593         0.002406         0.001846
+gamma_age_b              0.001724       5.8543e-04        -0.001788
+gamma_west_b           4.6968e-04        7.811e-05      -5.0190e-04
+gamma_female_b        -2.3955e-04       -4.741e-05       1.1556e-04
+gamma_moved_b            0.001549        -0.001451        -0.002896
+                      asc_anago_b     asc_maguro_b        asc_ika_b
+asc_anago_a           -6.4643e-04        -0.001073      -2.3162e-04
+asc_maguro_a          -3.6381e-04        -0.003647      -3.6817e-04
+asc_ika_a               1.851e-05       2.6006e-04      -7.1673e-04
+asc_uni_a             -1.6104e-04        -0.001742      -5.2194e-04
+asc_ikura_a           -3.2549e-04        -0.001351      -2.3223e-04
+asc_tamago_a            -0.001537         0.002841       4.4670e-04
+asc_toro_a            -4.9831e-04        -0.003560      -3.9327e-04
+asc_tekka_maki_a      -1.4072e-04      -1.1732e-04      -6.7101e-04
+asc_kappa_maki_a       2.8562e-04         0.003306      -7.4134e-04
+asc_anago_b              0.005910         0.003848         0.001612
+asc_maguro_b             0.003848         0.011512         0.002320
+asc_ika_b                0.001612         0.002320         0.003628
+asc_uni_b                0.002108        -0.004892         0.001607
+asc_ikura_b              0.003124         0.004607         0.001241
+asc_tamago_b             0.002930         0.002313         0.001237
+asc_toro_b               0.005384         0.011718         0.001519
+asc_tekka_maki_b         0.003862         0.008237         0.002678
+asc_kappa_maki_b         0.001378       9.7453e-04         0.001545
+asc_anago_c             -0.001724       4.2941e-04      -6.1816e-04
+asc_maguro_c           5.8426e-04         0.003127      -5.2639e-04
+asc_ika_c             -6.8648e-04        -0.001324        -0.001641
+asc_uni_c              9.3982e-04         0.008260      -2.8143e-04
+asc_ikura_c           -3.1075e-04         0.001400      -3.6254e-04
+asc_tamago_c            -0.003720        -0.005956      -3.6355e-04
+asc_toro_c               0.002762         0.011090       4.5865e-04
+asc_tekka_maki_c      -3.9211e-04       6.0424e-04      -8.5559e-04
+asc_kappa_maki_c        -0.001039        -0.004498      -7.2239e-04
+delta_a                  0.001691         0.005395       1.7608e-04
+gamma_age_a           -2.5191e-04        -0.001346        7.428e-05
+gamma_west_a           2.8201e-04       9.4877e-04       1.8059e-04
+gamma_female_a         2.9807e-04         0.002531        6.998e-06
+gamma_moved_a         -2.0827e-04        -0.001177      -2.0055e-04
+delta_b                  0.004549         0.012384      -3.8102e-04
+gamma_age_b           -3.1098e-04        -0.001453       5.8142e-04
+gamma_west_b           -8.471e-05      -8.3750e-04       5.9093e-04
+gamma_female_b          -0.001550        -0.001370      -7.4145e-04
+gamma_moved_b           5.998e-05        -0.001804      -1.5761e-04
+                        asc_uni_b      asc_ikura_b     asc_tamago_b
+asc_anago_a              0.005754      -1.0370e-04      -8.9292e-04
+asc_maguro_a             0.012573      -3.5369e-04      -9.2734e-04
+asc_ika_a               -0.005559        5.502e-05       4.2001e-04
+asc_uni_a                0.009222       9.0547e-04        -0.001314
+asc_ikura_a              0.009039      -2.8547e-04        -0.001020
+asc_tamago_a            -0.021191        -0.001572        -0.001110
+asc_toro_a               0.017601      -2.1133e-04        -0.001491
+asc_tekka_maki_a        -0.009768        9.668e-05       4.0623e-04
+asc_kappa_maki_a        -0.027256      -3.2778e-04         0.001065
+asc_anago_b              0.002108         0.003124         0.002930
+asc_maguro_b            -0.004892         0.004607         0.002313
+asc_ika_b                0.001607         0.001241         0.001237
+asc_uni_b                0.077918         0.002457        -0.002715
+asc_ikura_b              0.002457         0.007972         0.002178
+asc_tamago_b            -0.002715         0.002178         0.005361
+asc_toro_b              -0.006030         0.007944         0.002764
+asc_tekka_maki_b        -0.001796         0.003960         0.002789
+asc_kappa_maki_b        -0.001639         0.001097         0.002779
+asc_anago_c             -0.003284      -1.1508e-04        -0.001285
+asc_maguro_c            -0.003201         0.001657      -4.7894e-04
+asc_ika_c             -8.9831e-04      -3.2116e-04      -2.4854e-04
+asc_uni_c               -0.014495         0.002685      -1.8724e-04
+asc_ikura_c             -0.003688      -8.2564e-04      -9.5161e-04
+asc_tamago_c             0.005917        -0.004141        -0.004041
+asc_toro_c              -0.006243         0.004530      -2.7408e-04
+asc_tekka_maki_c        -0.001873       3.6802e-04      -8.6558e-04
+asc_kappa_maki_c         0.005514        -0.002729        -0.001581
+delta_a                 -0.004672         0.002615         0.001071
+gamma_age_a              0.002020      -6.2692e-04      -2.6541e-04
+gamma_west_a            -0.002090       1.9318e-04        9.775e-06
+gamma_female_a          -0.006845         0.001024       4.7299e-04
+gamma_moved_a          3.1742e-04      -7.0747e-04       -8.434e-05
+delta_b                 -0.004983         0.007974         0.001842
+gamma_age_b              0.004196        -0.001459      -5.6803e-04
+gamma_west_b             0.001270        -0.001305      -6.5903e-04
+gamma_female_b          -0.002402       8.4031e-04      -5.6792e-04
+gamma_moved_b            0.005265      -7.2340e-04      -5.3203e-04
+                       asc_toro_b asc_tekka_maki_b asc_kappa_maki_b
+asc_anago_a           -9.1827e-04      -9.0804e-04      -6.4772e-04
+asc_maguro_a            -0.003309        -0.002323      -6.0433e-04
+asc_ika_a              6.0558e-04        9.810e-06       -1.481e-05
+asc_uni_a             -8.5643e-04        -0.001759        -0.001385
+asc_ikura_a             -0.001279        -0.001114      -8.8179e-04
+asc_tamago_a             0.001979         0.001931       4.3593e-04
+asc_toro_a              -0.003583        -0.002558        -0.001083
+asc_tekka_maki_a         0.001155        -0.001750      -3.5870e-04
+asc_kappa_maki_a         0.004051         0.001236        -0.002933
+asc_anago_b              0.005384         0.003862         0.001378
+asc_maguro_b             0.011718         0.008237       9.7453e-04
+asc_ika_b                0.001519         0.002678         0.001545
+asc_uni_b               -0.006030        -0.001796        -0.001639
+asc_ikura_b              0.007944         0.003960         0.001097
+asc_tamago_b             0.002764         0.002789         0.002779
+asc_toro_b               0.022755         0.008286      -5.2694e-04
+asc_tekka_maki_b         0.008286         0.010520         0.002258
+asc_kappa_maki_b      -5.2694e-04         0.002258         0.008507
+asc_anago_c              0.001469      -6.0651e-04        -0.001041
+asc_maguro_c             0.007776         0.001354        -0.001774
+asc_ika_c             -2.5371e-04        -0.001622      -5.0645e-04
+asc_uni_c                0.013162         0.004577        -0.001887
+asc_ikura_c              0.002370       1.9772e-04        -0.001278
+asc_tamago_c            -0.010583        -0.004633      -6.5381e-04
+asc_toro_c               0.016778         0.007292        -0.002693
+asc_tekka_maki_c         0.004176      -9.5290e-04        -0.001699
+asc_kappa_maki_c        -0.005532        -0.004455        -0.005400
+delta_a                  0.009676         0.003795      -5.9077e-04
+gamma_age_a             -0.002410      -8.3991e-04       1.6262e-04
+gamma_west_a             0.001480       6.0336e-04      -3.0687e-04
+gamma_female_a           0.004344         0.001683        4.419e-05
+gamma_moved_a           -0.001698      -8.2305e-04        1.772e-05
+delta_b                  0.022329         0.007350        -0.002633
+gamma_age_b             -0.003662      -5.2089e-04       3.4816e-04
+gamma_west_b          -7.4547e-04      -1.9622e-04      -5.9318e-04
+gamma_female_b         7.1187e-04      -9.9425e-04       -4.030e-05
+gamma_moved_b           -0.002201        -0.001237      -2.5381e-04
+                      asc_anago_c     asc_maguro_c        asc_ika_c
+asc_anago_a             -0.001941      -2.4082e-04      -5.3575e-04
+asc_maguro_a            -0.003356       -3.309e-05        -0.001032
+asc_ika_a             -7.5299e-04       -1.377e-05        -0.002240
+asc_uni_a             -3.2263e-04        -0.003259        -0.001192
+asc_ikura_a           -7.7822e-04      -9.9110e-04      -4.1021e-04
+asc_tamago_a          -9.7035e-04         0.001748        1.096e-05
+asc_toro_a              -0.002646      -1.5924e-04      -5.1113e-04
+asc_tekka_maki_a        -0.002817       7.8405e-04        -0.001846
+asc_kappa_maki_a         0.001292        -0.001650        -0.001363
+asc_anago_b             -0.001724       5.8426e-04      -6.8648e-04
+asc_maguro_b           4.2941e-04         0.003127        -0.001324
+asc_ika_b             -6.1816e-04      -5.2639e-04        -0.001641
+asc_uni_b               -0.003284        -0.003201      -8.9831e-04
+asc_ikura_b           -1.1508e-04         0.001657      -3.2116e-04
+asc_tamago_b            -0.001285      -4.7894e-04      -2.4854e-04
+asc_toro_b               0.001469         0.007776      -2.5371e-04
+asc_tekka_maki_b      -6.0651e-04         0.001354        -0.001622
+asc_kappa_maki_b        -0.001041        -0.001774      -5.0645e-04
+asc_anago_c              0.010300         0.004999         0.004550
+asc_maguro_c             0.004999         0.011725         0.005231
+asc_ika_c                0.004550         0.005231         0.013181
+asc_uni_c                0.010190         0.007719         0.005276
+asc_ikura_c              0.005945         0.004542         0.003899
+asc_tamago_c             0.006123         0.002252         0.003467
+asc_toro_c               0.006070         0.012903         0.003483
+asc_tekka_maki_c         0.005572         0.009892         0.005871
+asc_kappa_maki_c         0.002786         0.007182         0.004814
+delta_a               -9.3908e-04         0.009161         0.002341
+gamma_age_a           -6.6282e-04        -0.001588        -0.001061
+gamma_west_a          -1.1306e-04      -2.4361e-04        -0.001830
+gamma_female_a           0.002294         0.002227       8.1474e-04
+gamma_moved_a         -8.9889e-04      -1.9539e-04       1.4557e-04
+delta_b                  0.001804         0.011316         0.002105
+gamma_age_b             -0.001024        -0.001803        -0.001324
+gamma_west_b          -3.1979e-04      -5.9284e-04        -0.001773
+gamma_female_b           0.001764         0.001422         0.001265
+gamma_moved_b           -0.001040      -4.1631e-04       3.1596e-04
+                        asc_uni_c      asc_ikura_c     asc_tamago_c
+asc_anago_a             -0.004099        -0.001309      -1.7565e-04
+asc_maguro_a            -0.018348        -0.004184         0.003389
+asc_ika_a               -0.002134      -5.6514e-04      -5.9972e-04
+asc_uni_a               -0.001814       6.0473e-04      -2.3387e-04
+asc_ikura_a             -0.001999        -0.001458       1.0976e-04
+asc_tamago_a             0.003279      -7.1488e-04        -0.007250
+asc_toro_a              -0.013096        -0.003374         0.002774
+asc_tekka_maki_a        -0.010431        -0.002605      -7.2279e-04
+asc_kappa_maki_a         0.010078         0.002209        -0.004715
+asc_anago_b            9.3982e-04      -3.1075e-04        -0.003720
+asc_maguro_b             0.008260         0.001400        -0.005956
+asc_ika_b             -2.8143e-04      -3.6254e-04      -3.6355e-04
+asc_uni_b               -0.014495        -0.003688         0.005917
+asc_ikura_b              0.002685      -8.2564e-04        -0.004141
+asc_tamago_b          -1.8724e-04      -9.5161e-04        -0.004041
+asc_toro_b               0.013162         0.002370        -0.010583
+asc_tekka_maki_b         0.004577       1.9772e-04        -0.004633
+asc_kappa_maki_b        -0.001887        -0.001278      -6.5381e-04
+asc_anago_c              0.010190         0.005945         0.006123
+asc_maguro_c             0.007719         0.004542         0.002252
+asc_ika_c                0.005276         0.003899         0.003467
+asc_uni_c                0.039032         0.011144        -0.003476
+asc_ikura_c              0.011144         0.010865         0.004276
+asc_tamago_c            -0.003476         0.004276         0.031139
+asc_toro_c               0.018610         0.007293        -0.002508
+asc_tekka_maki_c         0.005414         0.004714         0.004741
+asc_kappa_maki_c        -0.004024         0.003299         0.008443
+delta_a                 -0.002108        -0.003108        -0.005296
+gamma_age_a             -0.004043        8.904e-05         0.002183
+gamma_west_a           5.5564e-04         0.001405      -6.1778e-04
+gamma_female_a           0.008057       6.3369e-04        -0.002075
+gamma_moved_a         -5.3576e-04      -2.2279e-04       9.3492e-04
+delta_b                  0.013716         0.001277        -0.012988
+gamma_age_b             -0.004709      -2.1349e-04         0.003034
+gamma_west_b            -0.001387       9.5153e-04         0.001103
+gamma_female_b           0.001583      -8.3179e-04       5.5732e-04
+gamma_moved_b           -0.001631      -2.1227e-04         0.001628
+                       asc_toro_c asc_tekka_maki_c asc_kappa_maki_c
+asc_anago_a           -9.9840e-04      -2.9828e-04       7.8647e-04
+asc_maguro_a            -0.003384         0.001095         0.005191
+asc_ika_a               9.394e-05      -2.6974e-04      -6.0524e-04
+asc_uni_a               -0.002913        -0.002922        -0.002691
+asc_ikura_a             -0.001514      -8.7555e-04      -1.6202e-04
+asc_tamago_a             0.002981       7.6986e-04      -8.6623e-04
+asc_toro_a              -0.004005       6.2046e-04         0.003994
+asc_tekka_maki_a       9.1437e-04        -0.001406       1.3568e-04
+asc_kappa_maki_a         0.001844        -0.002722        -0.018819
+asc_anago_b              0.002762      -3.9211e-04        -0.001039
+asc_maguro_b             0.011090       6.0424e-04        -0.004498
+asc_ika_b              4.5865e-04      -8.5559e-04      -7.2239e-04
+asc_uni_b               -0.006243        -0.001873         0.005514
+asc_ikura_b              0.004530       3.6802e-04        -0.002729
+asc_tamago_b          -2.7408e-04      -8.6558e-04        -0.001581
+asc_toro_b               0.016778         0.004176        -0.005532
+asc_tekka_maki_b         0.007292      -9.5290e-04        -0.004455
+asc_kappa_maki_b        -0.002693        -0.001699        -0.005400
+asc_anago_c              0.006070         0.005572         0.002786
+asc_maguro_c             0.012903         0.009892         0.007182
+asc_ika_c                0.003483         0.005871         0.004814
+asc_uni_c                0.018610         0.005414        -0.004024
+asc_ikura_c              0.007293         0.004714         0.003299
+asc_tamago_c            -0.002508         0.004741         0.008443
+asc_toro_c               0.027498         0.008990         0.003039
+asc_tekka_maki_c         0.008990         0.012428         0.009432
+asc_kappa_maki_c         0.003039         0.009432         0.105454
+delta_a                  0.011882         0.007548         0.006731
+gamma_age_a             -0.002629        -0.001223      -5.0280e-04
+gamma_west_a           9.9077e-04      -7.8950e-04        -0.001085
+gamma_female_a           0.003933         0.001132        -0.003510
+gamma_moved_a           -0.001976        4.490e-05       9.0645e-04
+delta_b                  0.022833         0.007395      -6.2915e-04
+gamma_age_b             -0.003011        -0.001341       2.2547e-04
+gamma_west_b            -0.001004      -6.5362e-04       9.3694e-04
+gamma_female_b        -7.0982e-04         0.001251        -0.001879
+gamma_moved_b           -0.002379        4.573e-06         0.001889
+                          delta_a      gamma_age_a     gamma_west_a
+asc_anago_a              0.001322       3.0177e-04       3.0242e-04
+asc_maguro_a             0.005845         0.002118       -3.361e-05
+asc_ika_a               6.787e-05       6.7330e-04         0.001443
+asc_uni_a               -0.006600         0.001336         0.001297
+asc_ikura_a           -5.8136e-04        4.273e-06      -2.6964e-04
+asc_tamago_a             0.008156        -0.002229      -5.8086e-04
+asc_toro_a               0.002695         0.001323      -3.4283e-04
+asc_tekka_maki_a         0.003203         0.002284         0.002544
+asc_kappa_maki_a        -0.005763      -2.3641e-04         0.003181
+asc_anago_b              0.001691      -2.5191e-04       2.8201e-04
+asc_maguro_b             0.005395        -0.001346       9.4877e-04
+asc_ika_b              1.7608e-04        7.428e-05       1.8059e-04
+asc_uni_b               -0.004672         0.002020        -0.002090
+asc_ikura_b              0.002615      -6.2692e-04       1.9318e-04
+asc_tamago_b             0.001071      -2.6541e-04        9.775e-06
+asc_toro_b               0.009676        -0.002410         0.001480
+asc_tekka_maki_b         0.003795      -8.3991e-04       6.0336e-04
+asc_kappa_maki_b      -5.9077e-04       1.6262e-04      -3.0687e-04
+asc_anago_c           -9.3908e-04      -6.6282e-04      -1.1306e-04
+asc_maguro_c             0.009161        -0.001588      -2.4361e-04
+asc_ika_c                0.002341        -0.001061        -0.001830
+asc_uni_c               -0.002108        -0.004043       5.5564e-04
+asc_ikura_c             -0.003108        8.904e-05         0.001405
+asc_tamago_c            -0.005296         0.002183      -6.1778e-04
+asc_toro_c               0.011882        -0.002629       9.9077e-04
+asc_tekka_maki_c         0.007548        -0.001223      -7.8950e-04
+asc_kappa_maki_c         0.006731      -5.0280e-04        -0.001085
+delta_a                  0.032609        -0.006208        -0.004150
+gamma_age_a             -0.006208         0.002858       3.2510e-04
+gamma_west_a            -0.004150       3.2510e-04         0.011411
+gamma_female_a          -0.004541      -2.5902e-04      -2.3858e-04
+gamma_moved_a           -0.003209      -4.3213e-04       4.3406e-04
+delta_b                  0.024331        -0.005880      -9.7995e-04
+gamma_age_b             -0.004533         0.002179        6.679e-05
+gamma_west_b            -0.002778       4.2341e-04         0.006560
+gamma_female_b          -0.002317        8.769e-05      -5.8976e-04
+gamma_moved_b           -0.002744        5.299e-05      -1.0319e-04
+                   gamma_female_a    gamma_moved_a          delta_b
+asc_anago_a             -0.002182       6.4027e-04       -2.342e-05
+asc_maguro_a            -0.004927      -4.9248e-04      -9.6173e-04
+asc_ika_a             -3.8637e-04       7.8549e-04       7.4943e-04
+asc_uni_a               -0.002374      -2.6599e-04        -0.002113
+asc_ikura_a           -9.6124e-04       3.2053e-04      -5.7870e-04
+asc_tamago_a             0.001368       4.8387e-04         0.002853
+asc_toro_a              -0.004080       4.9458e-04        -0.001593
+asc_tekka_maki_a        -0.001721      -7.6869e-04         0.002406
+asc_kappa_maki_a         0.002855         0.002146         0.001846
+asc_anago_b            2.9807e-04      -2.0827e-04         0.004549
+asc_maguro_b             0.002531        -0.001177         0.012384
+asc_ika_b               6.998e-06      -2.0055e-04      -3.8102e-04
+asc_uni_b               -0.006845       3.1742e-04        -0.004983
+asc_ikura_b              0.001024      -7.0747e-04         0.007974
+asc_tamago_b           4.7299e-04       -8.434e-05         0.001842
+asc_toro_b               0.004344        -0.001698         0.022329
+asc_tekka_maki_b         0.001683      -8.2305e-04         0.007350
+asc_kappa_maki_b        4.419e-05        1.772e-05        -0.002633
+asc_anago_c              0.002294      -8.9889e-04         0.001804
+asc_maguro_c             0.002227      -1.9539e-04         0.011316
+asc_ika_c              8.1474e-04       1.4557e-04         0.002105
+asc_uni_c                0.008057      -5.3576e-04         0.013716
+asc_ikura_c            6.3369e-04      -2.2279e-04         0.001277
+asc_tamago_c            -0.002075       9.3492e-04        -0.012988
+asc_toro_c               0.003933        -0.001976         0.022833
+asc_tekka_maki_c         0.001132        4.490e-05         0.007395
+asc_kappa_maki_c        -0.003510       9.0645e-04      -6.2915e-04
+delta_a                 -0.004541        -0.003209         0.024331
+gamma_age_a           -2.5902e-04      -4.3213e-04        -0.005880
+gamma_west_a          -2.3858e-04       4.3406e-04      -9.7995e-04
+gamma_female_a           0.011604      -6.4903e-04         0.001011
+gamma_moved_a         -6.4903e-04         0.009787        -0.003392
+delta_b                  0.001011        -0.003392         0.045273
+gamma_age_b           -8.0547e-04       -6.907e-05        -0.009231
+gamma_west_b          -7.4733e-04       2.7056e-04        -0.005389
+gamma_female_b           0.006069      -1.7295e-04        -0.006255
+gamma_moved_b         -9.8861e-04         0.005687        -0.005368
+                      gamma_age_b     gamma_west_b   gamma_female_b
+asc_anago_a            4.6749e-04       2.2846e-04      -1.2297e-04
+asc_maguro_a             0.002140       7.5305e-04      -4.1556e-04
+asc_ika_a              -5.162e-05       1.2127e-04       -4.790e-05
+asc_uni_a              6.7040e-04       5.3437e-04      -5.9521e-04
+asc_ikura_a            3.8950e-04        8.094e-05       -5.103e-05
+asc_tamago_a            -0.001319      -1.2416e-04       9.6450e-04
+asc_toro_a               0.001724       4.6968e-04      -2.3955e-04
+asc_tekka_maki_a       5.8543e-04        7.811e-05       -4.741e-05
+asc_kappa_maki_a        -0.001788      -5.0190e-04       1.1556e-04
+asc_anago_b           -3.1098e-04       -8.471e-05        -0.001550
+asc_maguro_b            -0.001453      -8.3750e-04        -0.001370
+asc_ika_b              5.8142e-04       5.9093e-04      -7.4145e-04
+asc_uni_b                0.004196         0.001270        -0.002402
+asc_ikura_b             -0.001459        -0.001305       8.4031e-04
+asc_tamago_b          -5.6803e-04      -6.5903e-04      -5.6792e-04
+asc_toro_b              -0.003662      -7.4547e-04       7.1187e-04
+asc_tekka_maki_b      -5.2089e-04      -1.9622e-04      -9.9425e-04
+asc_kappa_maki_b       3.4816e-04      -5.9318e-04       -4.030e-05
+asc_anago_c             -0.001024      -3.1979e-04         0.001764
+asc_maguro_c            -0.001803      -5.9284e-04         0.001422
+asc_ika_c               -0.001324        -0.001773         0.001265
+asc_uni_c               -0.004709        -0.001387         0.001583
+asc_ikura_c           -2.1349e-04       9.5153e-04      -8.3179e-04
+asc_tamago_c             0.003034         0.001103       5.5732e-04
+asc_toro_c              -0.003011        -0.001004      -7.0982e-04
+asc_tekka_maki_c        -0.001341      -6.5362e-04         0.001251
+asc_kappa_maki_c       2.2547e-04       9.3694e-04        -0.001879
+delta_a                 -0.004533        -0.002778        -0.002317
+gamma_age_a              0.002179       4.2341e-04        8.769e-05
+gamma_west_a            6.679e-05         0.006560      -5.8976e-04
+gamma_female_a        -8.0547e-04      -7.4733e-04         0.006069
+gamma_moved_a          -6.907e-05       2.7056e-04      -1.7295e-04
+delta_b                 -0.009231        -0.005389        -0.006255
+gamma_age_b              0.003739       5.9036e-04       1.1239e-04
+gamma_west_b           5.9036e-04         0.011732      -3.7216e-04
+gamma_female_b         1.1239e-04      -3.7216e-04         0.011573
+gamma_moved_b           9.075e-05       7.1818e-04      -2.0941e-04
+                    gamma_moved_b
+asc_anago_a            6.5179e-04
+asc_maguro_a           6.7229e-04
+asc_ika_a             -5.3224e-04
+asc_uni_a              5.9497e-04
+asc_ikura_a            7.6845e-04
+asc_tamago_a            -0.001488
+asc_toro_a               0.001549
+asc_tekka_maki_a        -0.001451
+asc_kappa_maki_a        -0.002896
+asc_anago_b             5.998e-05
+asc_maguro_b            -0.001804
+asc_ika_b             -1.5761e-04
+asc_uni_b                0.005265
+asc_ikura_b           -7.2340e-04
+asc_tamago_b          -5.3203e-04
+asc_toro_b              -0.002201
+asc_tekka_maki_b        -0.001237
+asc_kappa_maki_b      -2.5381e-04
+asc_anago_c             -0.001040
+asc_maguro_c          -4.1631e-04
+asc_ika_c              3.1596e-04
+asc_uni_c               -0.001631
+asc_ikura_c           -2.1227e-04
+asc_tamago_c             0.001628
+asc_toro_c              -0.002379
+asc_tekka_maki_c        4.573e-06
+asc_kappa_maki_c         0.001889
+delta_a                 -0.002744
+gamma_age_a             5.299e-05
+gamma_west_a          -1.0319e-04
+gamma_female_a        -9.8861e-04
+gamma_moved_a            0.005687
+delta_b                 -0.005368
+gamma_age_b             9.075e-05
+gamma_west_b           7.1818e-04
+gamma_female_b        -2.0941e-04
+gamma_moved_b            0.011432
+
+Classical correlation matrix:
+                      asc_anago_a     asc_maguro_a        asc_ika_a
+asc_anago_a              1.000000         0.384436         0.334166
+asc_maguro_a             0.384436         1.000000         0.260711
+asc_ika_a                0.334166         0.260711         1.000000
+asc_uni_a                0.521690         0.223251         0.229178
+asc_ikura_a              0.638877         0.337328         0.306769
+asc_tamago_a             0.163467         0.081490         0.149824
+asc_toro_a               0.623724         0.607217         0.294069
+asc_tekka_maki_a         0.183916         0.270138         0.208757
+asc_kappa_maki_a         0.064515         0.021139         0.136043
+asc_anago_b             -0.084626        -0.017593        -0.031132
+asc_maguro_b            -0.073068        -0.107609        -0.007376
+asc_ika_b               -0.057576        -0.032134        -0.117660
+asc_uni_b                0.190346         0.107462        -0.157429
+asc_ikura_b              0.003784        -0.010994        -0.040064
+asc_tamago_b            -0.105725        -0.046009        3.494e-05
+asc_toro_b              -0.019135        -0.028825        -0.005268
+asc_tekka_maki_b        -0.071862        -0.040629        -0.011687
+asc_kappa_maki_b        -0.069465        -0.033541        -0.019111
+asc_anago_c             -0.185882        -0.114530        -0.060020
+asc_maguro_c            -0.074571         0.004378        -0.020391
+asc_ika_c               -0.067643        -0.043768        -0.172943
+asc_uni_c               -0.117614        -0.468832        -0.089184
+asc_ikura_c             -0.102333        -0.169454        -0.063640
+asc_tamago_c            -0.051421         0.033175        -0.034809
+asc_toro_c              -0.062916         0.005086        -0.015403
+asc_tekka_maki_c        -0.079174         0.046561        -0.036116
+asc_kappa_maki_c        -0.016351         0.028055        -0.016947
+delta_a                 -0.013520         0.233986         0.045150
+gamma_age_a              0.031737         0.105705         0.027795
+gamma_west_a             0.003523        3.204e-05         0.043720
+gamma_female_a          -0.070201        -0.100833         0.001843
+gamma_moved_a            0.029748        -0.039346         0.022544
+delta_b                  0.023226         0.066991         0.015632
+gamma_age_b              0.033376         0.107693        -0.010756
+gamma_west_b             0.004444         0.025225         0.007481
+gamma_female_b          -0.007665         0.005334       5.3878e-04
+gamma_moved_b            0.030314      -9.9144e-04        -0.018657
+                        asc_uni_a      asc_ikura_a     asc_tamago_a
+asc_anago_a              0.521690         0.638877         0.163467
+asc_maguro_a             0.223251         0.337328         0.081490
+asc_ika_a                0.229178         0.306769         0.149824
+asc_uni_a                1.000000         0.643286        -0.017917
+asc_ikura_a              0.643286         1.000000         0.075866
+asc_tamago_a            -0.017917         0.075866         1.000000
+asc_toro_a               0.533671         0.653237         0.036547
+asc_tekka_maki_a         0.060647         0.111910         0.119751
+asc_kappa_maki_a         0.055227         0.057559         0.098152
+asc_anago_b              0.004671        -0.030366        -0.081392
+asc_maguro_b            -0.097207        -0.100138         0.032189
+asc_ika_b               -0.080486        -0.066737         0.001630
+asc_uni_b                0.311342         0.348743        -0.317420
+asc_ikura_b              0.128601        -0.006033        -0.101507
+asc_tamago_b            -0.152046        -0.131454        -0.086327
+asc_toro_b               0.027130        -0.032137        -0.020546
+asc_tekka_maki_b        -0.125818        -0.098246         0.027132
+asc_kappa_maki_b        -0.116760        -0.093369         0.016346
+asc_anago_c             -0.044642        -0.092764        -0.037963
+asc_maguro_c            -0.251142        -0.143432         0.023075
+asc_ika_c               -0.086822        -0.071027        -0.017950
+asc_uni_c               -0.004892        -0.024385        -0.020315
+asc_ikura_c              0.035917        -0.143037        -0.038636
+asc_tamago_c            -0.074933        -0.046949        -0.140173
+asc_toro_c              -0.138638        -0.101904         0.015947
+asc_tekka_maki_c        -0.212000        -0.127254         0.002896
+asc_kappa_maki_c        -0.062967        -0.030028        -0.008548
+delta_a                 -0.319059        -0.122231         0.136423
+gamma_age_a              0.119561         0.017555        -0.079336
+gamma_west_a             0.033954        -0.025813         0.006571
+gamma_female_a          -0.094058        -0.040714         0.036602
+gamma_moved_a           -0.017074         0.012367         0.001433
+delta_b                 -0.023976         0.005299        -0.010097
+gamma_age_b              0.044295         0.032909        -0.037087
+gamma_west_b             0.004874        -0.008228         0.014142
+gamma_female_b          -0.049136        -0.016133         0.033458
+gamma_moved_b            0.029338         0.041432        -0.027635
+                       asc_toro_a asc_tekka_maki_a asc_kappa_maki_a
+asc_anago_a              0.623724         0.183916         0.064515
+asc_maguro_a             0.607217         0.270138         0.021139
+asc_ika_a                0.294069         0.208757         0.136043
+asc_uni_a                0.533671         0.060647         0.055227
+asc_ikura_a              0.653237         0.111910         0.057559
+asc_tamago_a             0.036547         0.119751         0.098152
+asc_toro_a               1.000000         0.212249        -0.007276
+asc_tekka_maki_a         0.212249         1.000000         0.095807
+asc_kappa_maki_a        -0.007276         0.095807         1.000000
+asc_anago_b             -0.018974        -0.020027        -0.017580
+asc_maguro_b            -0.149328         0.015041         0.019028
+asc_ika_b               -0.063823        -0.023367        -0.027242
+asc_uni_b                0.427543        -0.182148        -0.212995
+asc_ikura_b              0.041612        -0.028839        -0.052165
+asc_tamago_b            -0.133335         0.009637         0.014699
+asc_toro_b              -0.055123         0.027526      -4.3382e-04
+asc_tekka_maki_b        -0.118771        -0.071025       5.1770e-04
+asc_kappa_maki_b        -0.092254        -0.011537        -0.099706
+asc_anago_c             -0.141893        -0.057810        -0.004768
+asc_maguro_c            -0.009603         0.068112        -0.020616
+asc_ika_c               -0.053773        -0.036832        -0.019682
+asc_uni_c               -0.394351        -0.213543         0.027727
+asc_ikura_c             -0.178348        -0.078564         0.001105
+asc_tamago_c             0.022816        -0.015192        -0.029646
+asc_toro_c              -0.093154         0.062159        -0.005734
+asc_tekka_maki_c        -0.001217        -0.051293        -0.029282
+asc_kappa_maki_c         0.021156        -0.004415        -0.120105
+delta_a                  0.078672         0.149889      -9.0802e-04
+gamma_age_a              0.107368         0.071401        -0.004781
+gamma_west_a            -0.020791         0.035508         0.024128
+gamma_female_a          -0.133030        -0.009527         0.036449
+gamma_moved_a            0.004661        -0.029917         0.010789
+delta_b                  0.057558         0.057993        -0.007895
+gamma_age_b              0.117413         0.018603        -0.032342
+gamma_west_b             0.008125         0.005363        -0.004802
+gamma_female_b          -0.010489         0.015459         0.009837
+gamma_moved_b            0.052226        -0.035622        -0.041702
+                      asc_anago_b     asc_maguro_b        asc_ika_b
+asc_anago_a             -0.084626        -0.073068        -0.057576
+asc_maguro_a            -0.017593        -0.107609        -0.032134
+asc_ika_a               -0.031132        -0.007376        -0.117660
+asc_uni_a                0.004671        -0.097207        -0.080486
+asc_ikura_a             -0.030366        -0.100138        -0.066737
+asc_tamago_a            -0.081392         0.032189         0.001630
+asc_toro_a              -0.018974        -0.149328        -0.063823
+asc_tekka_maki_a        -0.020027         0.015041        -0.023367
+asc_kappa_maki_a        -0.017580         0.019028        -0.027242
+asc_anago_b              1.000000         0.437957         0.410586
+asc_maguro_b             0.437957         1.000000         0.372190
+asc_ika_b                0.410586         0.372190         1.000000
+asc_uni_b                0.162557         0.003030         0.101782
+asc_ikura_b              0.423719         0.416593         0.341334
+asc_tamago_b             0.429341         0.336749         0.403655
+asc_toro_b               0.401822         0.593370         0.235053
+asc_tekka_maki_b         0.409598         0.513971         0.381141
+asc_kappa_maki_b         0.264194         0.203809         0.317321
+asc_anago_c             -0.201071         0.007421        -0.110031
+asc_maguro_c            -0.010308         0.138528        -0.090517
+asc_ika_c               -0.092583        -0.099704        -0.228766
+asc_uni_c               -0.013084         0.186412        -0.063630
+asc_ikura_c             -0.061143         0.058455        -0.102229
+asc_tamago_c            -0.175209        -0.202444        -0.065260
+asc_toro_c               0.084655         0.410163        -0.033553
+asc_tekka_maki_c        -0.068957         0.040861        -0.111339
+asc_kappa_maki_c        -0.045625        -0.105242        -0.034128
+delta_a                  0.048193         0.180487         0.018172
+gamma_age_a             -0.012406        -0.098646         0.006822
+gamma_west_a             0.017628         0.053081         0.014694
+gamma_female_a           0.013035         0.117541         0.001177
+gamma_moved_a           -0.008158        -0.058842        -0.011654
+delta_b                  0.150056         0.349463        -0.012874
+gamma_age_b             -0.009540        -0.088367         0.049957
+gamma_west_b             0.002376        -0.003893         0.037433
+gamma_female_b          -0.067573        -0.031346        -0.024068
+gamma_moved_b            0.023712        -0.065067        -0.002255
+                        asc_uni_b      asc_ikura_b     asc_tamago_b
+asc_anago_a              0.190346         0.003784        -0.105725
+asc_maguro_a             0.107462        -0.010994        -0.046009
+asc_ika_a               -0.157429        -0.040064        3.494e-05
+asc_uni_a                0.311342         0.128601        -0.152046
+asc_ikura_a              0.348743        -0.006033        -0.131454
+asc_tamago_a            -0.317420        -0.101507        -0.086327
+asc_toro_a               0.427543         0.041612        -0.133335
+asc_tekka_maki_a        -0.182148        -0.028839         0.009637
+asc_kappa_maki_a        -0.212995        -0.052165         0.014699
+asc_anago_b              0.162557         0.423719         0.429341
+asc_maguro_b             0.003030         0.416593         0.336749
+asc_ika_b                0.101782         0.341334         0.403655
+asc_uni_b                1.000000         0.211719        -0.020747
+asc_ikura_b              0.211719         1.000000         0.324147
+asc_tamago_b            -0.020747         0.324147         1.000000
+asc_toro_b               0.057813         0.466763         0.216382
+asc_tekka_maki_b         0.023975         0.354661         0.357526
+asc_kappa_maki_b        -0.007087         0.205253         0.331694
+asc_anago_c             -0.056296        -0.045156        -0.151268
+asc_maguro_c            -0.072005         0.033045        -0.102916
+asc_ika_c               -0.023866        -0.077423        -0.077048
+asc_uni_c               -0.086613         0.037653        -0.079125
+asc_ikura_c             -0.051113        -0.117496        -0.138298
+asc_tamago_c             0.017993        -0.164090        -0.262996
+asc_toro_c              -0.041513         0.134354        -0.089572
+asc_tekka_maki_c        -0.054143        -0.032370        -0.118253
+asc_kappa_maki_c         0.003903        -0.076186        -0.036818
+delta_a                 -0.150108         0.037791         0.049782
+gamma_age_a              0.082980        -0.030036        -0.027222
+gamma_west_a            -0.046926         0.012310         0.002482
+gamma_female_a          -0.113692         0.034867         0.019197
+gamma_moved_a            0.008790        -0.031806        -0.001873
+delta_b                  0.054341         0.230099         0.011277
+gamma_age_b              0.109929        -0.085494        -0.040642
+gamma_west_b            -0.003688        -0.031987        -0.010027
+gamma_female_b          -0.051590         0.033540        -0.018385
+gamma_moved_b            0.080631        -0.019262        -0.019385
+                       asc_toro_b asc_tekka_maki_b asc_kappa_maki_b
+asc_anago_a             -0.019135         -0.07186        -0.069465
+asc_maguro_a            -0.028825         -0.04063        -0.033541
+asc_ika_a               -0.005268         -0.01169        -0.019111
+asc_uni_a                0.027130         -0.12582        -0.116760
+asc_ikura_a             -0.032137         -0.09825        -0.093369
+asc_tamago_a            -0.020546          0.02713         0.016346
+asc_toro_a              -0.055123         -0.11877        -0.092254
+asc_tekka_maki_a         0.027526         -0.07103        -0.011537
+asc_kappa_maki_a      -4.3382e-04       5.1770e-04        -0.099706
+asc_anago_b              0.401822          0.40960         0.264194
+asc_maguro_b             0.593370          0.51397         0.203809
+asc_ika_b                0.235053          0.38114         0.317321
+asc_uni_b                0.057813          0.02397        -0.007087
+asc_ikura_b              0.466763          0.35466         0.205253
+asc_tamago_b             0.216382          0.35753         0.331694
+asc_toro_b               1.000000          0.40082         0.064731
+asc_tekka_maki_b         0.400821          1.00000         0.252083
+asc_kappa_maki_b         0.064731          0.25208         1.000000
+asc_anago_c              0.095385         -0.06969        -0.103444
+asc_maguro_c             0.386043          0.04708        -0.127342
+asc_ika_c               -0.046075         -0.11198        -0.064354
+asc_uni_c                0.279595          0.05431        -0.088763
+asc_ikura_c              0.153629         -0.03784        -0.117511
+asc_tamago_c            -0.276540         -0.15599        -0.041366
+asc_toro_c               0.511013          0.22904        -0.130791
+asc_tekka_maki_c         0.223709         -0.10597        -0.121845
+asc_kappa_maki_c        -0.126256         -0.09736        -0.183469
+delta_a                  0.239663          0.12982        -0.003725
+gamma_age_a             -0.132849         -0.05533         0.008899
+gamma_west_a             0.072743          0.03120        -0.008468
+gamma_female_a           0.170022          0.07505         0.001109
+gamma_moved_a           -0.069353         -0.03649         0.001418
+delta_b                  0.532070          0.18029        -0.092438
+gamma_age_b             -0.168517         -0.01480         0.029504
+gamma_west_b             0.013468          0.01345         0.002370
+gamma_female_b           0.052606         -0.01910         0.004077
+gamma_moved_b           -0.053009         -0.03812      -2.6547e-04
+                      asc_anago_c     asc_maguro_c        asc_ika_c
+asc_anago_a             -0.185882        -0.074571        -0.067643
+asc_maguro_a            -0.114530         0.004378        -0.043768
+asc_ika_a               -0.060020        -0.020391        -0.172943
+asc_uni_a               -0.044642        -0.251142        -0.086822
+asc_ikura_a             -0.092764        -0.143432        -0.071027
+asc_tamago_a            -0.037963         0.023075        -0.017950
+asc_toro_a              -0.141893        -0.009603        -0.053773
+asc_tekka_maki_a        -0.057810         0.068112        -0.036832
+asc_kappa_maki_a        -0.004768        -0.020616        -0.019682
+asc_anago_b             -0.201071        -0.010308        -0.092583
+asc_maguro_b             0.007421         0.138528        -0.099704
+asc_ika_b               -0.110031        -0.090517        -0.228766
+asc_uni_b               -0.056296        -0.072005        -0.023866
+asc_ikura_b             -0.045156         0.033045        -0.077423
+asc_tamago_b            -0.151268        -0.102916        -0.077048
+asc_toro_b               0.095385         0.386043        -0.046075
+asc_tekka_maki_b        -0.069686         0.047085        -0.111977
+asc_kappa_maki_b        -0.103444        -0.127342        -0.064354
+asc_anago_c              1.000000         0.563781         0.434288
+asc_maguro_c             0.563781         1.000000         0.438481
+asc_ika_c                0.434288         0.438481         1.000000
+asc_uni_c                0.477895         0.358080         0.279837
+asc_ikura_c              0.586422         0.530357         0.407749
+asc_tamago_c             0.337532         0.233451         0.245716
+asc_toro_c               0.477514         0.736270         0.287552
+asc_tekka_maki_c         0.561206         0.759176         0.454637
+asc_kappa_maki_c         0.125724         0.148919         0.134159
+delta_a                  0.005825         0.353323         0.049498
+gamma_age_a             -0.047556        -0.122692        -0.059995
+gamma_west_a             0.001535         0.010017        -0.053556
+gamma_female_a           0.093777         0.112587         0.022873
+gamma_moved_a           -0.050422        -0.024301        -0.008692
+delta_b                  0.093675         0.376004         0.036346
+gamma_age_b             -0.067001        -0.106045        -0.072586
+gamma_west_b            -0.010748        -0.006307        -0.054184
+gamma_female_b           0.068130         0.068250         0.039988
+gamma_moved_b           -0.048973        -0.017985         0.001864
+                        asc_uni_c      asc_ikura_c     asc_tamago_c
+asc_anago_a             -0.117614        -0.102333         -0.05142
+asc_maguro_a            -0.468832        -0.169454          0.03317
+asc_ika_a               -0.089184        -0.063640         -0.03481
+asc_uni_a               -0.004892         0.035917         -0.07493
+asc_ikura_a             -0.024385        -0.143037         -0.04695
+asc_tamago_a            -0.020315        -0.038636         -0.14017
+asc_toro_a              -0.394351        -0.178348          0.02282
+asc_tekka_maki_a        -0.213543        -0.078564         -0.01519
+asc_kappa_maki_a         0.027727         0.001105         -0.02965
+asc_anago_b             -0.013084        -0.061143         -0.17521
+asc_maguro_b             0.186412         0.058455         -0.20244
+asc_ika_b               -0.063630        -0.102229         -0.06526
+asc_uni_b               -0.086613        -0.051113          0.01799
+asc_ikura_b              0.037653        -0.117496         -0.16409
+asc_tamago_b            -0.079125        -0.138298         -0.26300
+asc_toro_b               0.279595         0.153629         -0.27654
+asc_tekka_maki_b         0.054311        -0.037844         -0.15599
+asc_kappa_maki_b        -0.088763        -0.117511         -0.04137
+asc_anago_c              0.477895         0.586422          0.33753
+asc_maguro_c             0.358080         0.530357          0.23345
+asc_ika_c                0.279837         0.407749          0.24572
+asc_uni_c                1.000000         0.526427          0.07461
+asc_ikura_c              0.526427         1.000000          0.27070
+asc_tamago_c             0.074609         0.270698          1.00000
+asc_toro_c               0.447737         0.503271          0.10194
+asc_tekka_maki_c         0.317740         0.516438          0.28734
+asc_kappa_maki_c         0.023731         0.124239          0.13175
+delta_a                 -0.167237        -0.069604         -0.05512
+gamma_age_a             -0.164066         0.002769          0.08290
+gamma_west_a             0.017954         0.052963         -0.02155
+gamma_female_a           0.195127         0.045210         -0.04937
+gamma_moved_a           -0.004934        -0.023415          0.01816
+delta_b                  0.152169         0.095789         -0.18170
+gamma_age_b             -0.179103        -0.022911          0.11082
+gamma_west_b            -0.027681         0.023757          0.01502
+gamma_female_b           0.029151        -0.025932          0.01512
+gamma_moved_b           -0.021867        -0.010697          0.02453
+                       asc_toro_c asc_tekka_maki_c asc_kappa_maki_c
+asc_anago_a             -0.062916        -0.079174        -0.016351
+asc_maguro_a             0.005086         0.046561         0.028055
+asc_ika_a               -0.015403        -0.036116        -0.016947
+asc_uni_a               -0.138638        -0.212000        -0.062967
+asc_ikura_a             -0.101904        -0.127254        -0.030028
+asc_tamago_a             0.015947         0.002896        -0.008548
+asc_toro_a              -0.093154        -0.001217         0.021156
+asc_tekka_maki_a         0.062159        -0.051293        -0.004415
+asc_kappa_maki_a        -0.005734        -0.029282        -0.120105
+asc_anago_b              0.084655        -0.068957        -0.045625
+asc_maguro_b             0.410163         0.040861        -0.105242
+asc_ika_b               -0.033553        -0.111339        -0.034128
+asc_uni_b               -0.041513        -0.054143         0.003903
+asc_ikura_b              0.134354        -0.032370        -0.076186
+asc_tamago_b            -0.089572        -0.118253        -0.036818
+asc_toro_b               0.511013         0.223709        -0.126256
+asc_tekka_maki_b         0.229042        -0.105968        -0.097363
+asc_kappa_maki_b        -0.130791        -0.121845        -0.183469
+asc_anago_c              0.477514         0.561206         0.125724
+asc_maguro_c             0.736270         0.759176         0.148919
+asc_ika_c                0.287552         0.454637         0.134159
+asc_uni_c                0.447737         0.317740         0.023731
+asc_ikura_c              0.503271         0.516438         0.124239
+asc_tamago_c             0.101937         0.287337         0.131749
+asc_toro_c               1.000000         0.568683         0.069798
+asc_tekka_maki_c         0.568683         1.000000         0.181248
+asc_kappa_maki_c         0.069798         0.181248         1.000000
+delta_a                  0.314957         0.266177         0.034815
+gamma_age_a             -0.126966        -0.098923        -0.009649
+gamma_west_a             0.040314        -0.008942        -0.014843
+gamma_female_a           0.127062         0.068924        -0.047550
+gamma_moved_a           -0.070466        -0.012945         0.013614
+delta_b                  0.495466         0.252996        -0.028599
+gamma_age_b             -0.110378        -0.088516        -0.008471
+gamma_west_b            -0.016445        -0.011047         0.005827
+gamma_female_b          -0.017072         0.055951        -0.027014
+gamma_moved_b           -0.054467        -0.007358         0.016022
+                          delta_a      gamma_age_a     gamma_west_a
+asc_anago_a             -0.013520         0.031737         0.003523
+asc_maguro_a             0.233986         0.105705        3.204e-05
+asc_ika_a                0.045150         0.027795         0.043720
+asc_uni_a               -0.319059         0.119561         0.033954
+asc_ikura_a             -0.122231         0.017555        -0.025813
+asc_tamago_a             0.136423        -0.079336         0.006571
+asc_toro_a               0.078672         0.107368        -0.020791
+asc_tekka_maki_a         0.149889         0.071401         0.035508
+asc_kappa_maki_a      -9.0802e-04        -0.004781         0.024128
+asc_anago_b              0.048193        -0.012406         0.017628
+asc_maguro_b             0.180487        -0.098646         0.053081
+asc_ika_b                0.018172         0.006822         0.014694
+asc_uni_b               -0.150108         0.082980        -0.046926
+asc_ikura_b              0.037791        -0.030036         0.012310
+asc_tamago_b             0.049782        -0.027222         0.002482
+asc_toro_b               0.239663        -0.132849         0.072743
+asc_tekka_maki_b         0.129817        -0.055333         0.031205
+asc_kappa_maki_b        -0.003725         0.008899        -0.008468
+asc_anago_c              0.005825        -0.047556         0.001535
+asc_maguro_c             0.353323        -0.122692         0.010017
+asc_ika_c                0.049498        -0.059995        -0.053556
+asc_uni_c               -0.167237        -0.164066         0.017954
+asc_ikura_c             -0.069604         0.002769         0.052963
+asc_tamago_c            -0.055121         0.082900        -0.021547
+asc_toro_c               0.314957        -0.126966         0.040314
+asc_tekka_maki_c         0.266177        -0.098923        -0.008942
+asc_kappa_maki_c         0.034815        -0.009649        -0.014843
+delta_a                  1.000000        -0.651690        -0.200617
+gamma_age_a             -0.651690         1.000000         0.022946
+gamma_west_a            -0.200617         0.022946         1.000000
+gamma_female_a          -0.323628         0.122266         0.011463
+gamma_moved_a           -0.193109        -0.104840         0.047325
+delta_b                  0.562312        -0.409449        -0.078816
+gamma_age_b             -0.344881         0.574102         0.008281
+gamma_west_b            -0.108147         0.021016         0.573123
+gamma_female_b          -0.146447         0.069149        -0.001917
+gamma_moved_b           -0.119113        -0.040895         0.011290
+                   gamma_female_a    gamma_moved_a          delta_b
+asc_anago_a             -0.070201         0.029748         0.023226
+asc_maguro_a            -0.100833        -0.039346         0.066991
+asc_ika_a                0.001843         0.022544         0.015632
+asc_uni_a               -0.094058        -0.017074        -0.023976
+asc_ikura_a             -0.040714         0.012367         0.005299
+asc_tamago_a             0.036602         0.001433        -0.010097
+asc_toro_a              -0.133030         0.004661         0.057558
+asc_tekka_maki_a        -0.009527        -0.029917         0.057993
+asc_kappa_maki_a         0.036449         0.010789        -0.007895
+asc_anago_b              0.013035        -0.008158         0.150056
+asc_maguro_b             0.117541        -0.058842         0.349463
+asc_ika_b                0.001177        -0.011654        -0.012874
+asc_uni_b               -0.113692         0.008790         0.054341
+asc_ikura_b              0.034867        -0.031806         0.230099
+asc_tamago_b             0.019197        -0.001873         0.011277
+asc_toro_b               0.170022        -0.069353         0.532070
+asc_tekka_maki_b         0.075046        -0.036492         0.180293
+asc_kappa_maki_b         0.001109         0.001418        -0.092438
+asc_anago_c              0.093777        -0.050422         0.093675
+asc_maguro_c             0.112587        -0.024301         0.376004
+asc_ika_c                0.022873        -0.008692         0.036346
+asc_uni_c                0.195127        -0.004934         0.152169
+asc_ikura_c              0.045210        -0.023415         0.095789
+asc_tamago_c            -0.049368         0.018159        -0.181696
+asc_toro_c               0.127062        -0.070466         0.495466
+asc_tekka_maki_c         0.068924        -0.012945         0.252996
+asc_kappa_maki_c        -0.047550         0.013614        -0.028599
+delta_a                 -0.323628        -0.193109         0.562312
+gamma_age_a              0.122266        -0.104840        -0.409449
+gamma_west_a             0.011463         0.047325        -0.078816
+gamma_female_a           1.000000        -0.035651        -0.095473
+gamma_moved_a           -0.035651         1.000000        -0.133383
+delta_b                 -0.095473        -0.133383         1.000000
+gamma_age_b              0.035480        -0.052338        -0.650387
+gamma_west_b            -0.003694         0.020888        -0.219252
+gamma_female_b           0.536373        -0.022502        -0.371471
+gamma_moved_b           -0.038761         0.535012        -0.189455
+                      gamma_age_b     gamma_west_b   gamma_female_b
+asc_anago_a              0.033376         0.004444        -0.007665
+asc_maguro_a             0.107693         0.025225         0.005334
+asc_ika_a               -0.010756         0.007481       5.3878e-04
+asc_uni_a                0.044295         0.004874        -0.049136
+asc_ikura_a              0.032909        -0.008228        -0.016133
+asc_tamago_a            -0.037087         0.014142         0.033458
+asc_toro_a               0.117413         0.008125        -0.010489
+asc_tekka_maki_a         0.018603         0.005363         0.015459
+asc_kappa_maki_a        -0.032342        -0.004802         0.009837
+asc_anago_b             -0.009540         0.002376        -0.067573
+asc_maguro_b            -0.088367        -0.003893        -0.031346
+asc_ika_b                0.049957         0.037433        -0.024068
+asc_uni_b                0.109929        -0.003688        -0.051590
+asc_ikura_b             -0.085494        -0.031987         0.033540
+asc_tamago_b            -0.040642        -0.010027        -0.018385
+asc_toro_b              -0.168517         0.013468         0.052606
+asc_tekka_maki_b        -0.014798         0.013450        -0.019100
+asc_kappa_maki_b         0.029504         0.002370         0.004077
+asc_anago_c             -0.067001        -0.010748         0.068130
+asc_maguro_c            -0.106045        -0.006307         0.068250
+asc_ika_c               -0.072586        -0.054184         0.039988
+asc_uni_c               -0.179103        -0.027681         0.029151
+asc_ikura_c             -0.022911         0.023757        -0.025932
+asc_tamago_c             0.110818         0.015020         0.015123
+asc_toro_c              -0.110378        -0.016445        -0.017072
+asc_tekka_maki_c        -0.088516        -0.011047         0.055951
+asc_kappa_maki_c        -0.008471         0.005827        -0.027014
+delta_a                 -0.344881        -0.108147        -0.146447
+gamma_age_a              0.574102         0.021016         0.069149
+gamma_west_a             0.008281         0.573123        -0.001917
+gamma_female_a           0.035480        -0.003694         0.536373
+gamma_moved_a           -0.052338         0.020888        -0.022502
+delta_b                 -0.650387        -0.219252        -0.371471
+gamma_age_b              1.000000         0.025309         0.118457
+gamma_west_b             0.025309         1.000000         0.005501
+gamma_female_b           0.118457         0.005501         1.000000
+gamma_moved_b           -0.066890         0.048728        -0.034815
+                    gamma_moved_b
+asc_anago_a              0.030314
+asc_maguro_a          -9.9144e-04
+asc_ika_a               -0.018657
+asc_uni_a                0.029338
+asc_ikura_a              0.041432
+asc_tamago_a            -0.027635
+asc_toro_a               0.052226
+asc_tekka_maki_a        -0.035622
+asc_kappa_maki_a        -0.041702
+asc_anago_b              0.023712
+asc_maguro_b            -0.065067
+asc_ika_b               -0.002255
+asc_uni_b                0.080631
+asc_ikura_b             -0.019262
+asc_tamago_b            -0.019385
+asc_toro_b              -0.053009
+asc_tekka_maki_b        -0.038117
+asc_kappa_maki_b      -2.6547e-04
+asc_anago_c             -0.048973
+asc_maguro_c            -0.017985
+asc_ika_c                0.001864
+asc_uni_c               -0.021867
+asc_ikura_c             -0.010697
+asc_tamago_c             0.024529
+asc_toro_c              -0.054467
+asc_tekka_maki_c        -0.007358
+asc_kappa_maki_c         0.016022
+delta_a                 -0.119113
+gamma_age_a             -0.040895
+gamma_west_a             0.011290
+gamma_female_a          -0.038761
+gamma_moved_a            0.535012
+delta_b                 -0.189455
+gamma_age_b             -0.066890
+gamma_west_b             0.048728
+gamma_female_b          -0.034815
+gamma_moved_b            1.000000
+
+Robust correlation matrix:
+                      asc_anago_a     asc_maguro_a        asc_ika_a
+asc_anago_a              1.000000         0.471689         0.287808
+asc_maguro_a             0.471689         1.000000         0.245405
+asc_ika_a                0.287808         0.245405         1.000000
+asc_uni_a                0.457396         0.281136         0.192520
+asc_ikura_a              0.606595         0.390974         0.207933
+asc_tamago_a             0.200428        -0.026768         0.096091
+asc_toro_a               0.637637         0.745943         0.201720
+asc_tekka_maki_a         0.245552         0.299426         0.269113
+asc_kappa_maki_a         0.005979        -0.102844         0.167693
+asc_anago_b             -0.100798        -0.030750         0.002166
+asc_maguro_b            -0.119830        -0.220882         0.021801
+asc_ika_b               -0.046093        -0.039715        -0.107029
+asc_uni_b                0.247101         0.292662        -0.179142
+asc_ikura_b             -0.013922        -0.025739         0.005542
+asc_tamago_b            -0.146183        -0.082294         0.051596
+asc_toro_b              -0.072970        -0.142531         0.036110
+asc_tekka_maki_b        -0.106121        -0.147151       8.6030e-04
+asc_kappa_maki_b        -0.084180        -0.042573        -0.001444
+asc_anago_c             -0.229300        -0.214844        -0.066735
+asc_maguro_c            -0.026659        -0.001986        -0.001144
+asc_ika_c               -0.055936        -0.058388        -0.175501
+asc_uni_c               -0.248675        -0.603445        -0.097171
+asc_ikura_c             -0.150495        -0.260806        -0.048769
+asc_tamago_c            -0.011932         0.124806        -0.030569
+asc_toro_c              -0.072171        -0.132598         0.005096
+asc_tekka_maki_c        -0.032073         0.063816        -0.021764
+asc_kappa_maki_c         0.029031         0.103870        -0.016764
+delta_a                  0.087783         0.210316         0.003381
+gamma_age_a              0.067661         0.257403         0.113279
+gamma_west_a             0.033937        -0.002045         0.121498
+gamma_female_a          -0.242772        -0.297157        -0.032262
+gamma_moved_a            0.077580        -0.032346         0.071418
+delta_b                 -0.001319        -0.029369         0.031681
+gamma_age_b              0.091649         0.227362        -0.007594
+gamma_west_b             0.025284         0.045175         0.010071
+gamma_female_b          -0.013702        -0.025099        -0.004005
+gamma_moved_b            0.073074         0.040856        -0.044775
+                        asc_uni_a      asc_ikura_a     asc_tamago_a
+asc_anago_a               0.45740         0.606595         0.200428
+asc_maguro_a              0.28114         0.390974        -0.026768
+asc_ika_a                 0.19252         0.207933         0.096091
+asc_uni_a                 1.00000         0.588758        -0.077827
+asc_ikura_a               0.58876         1.000000         0.064935
+asc_tamago_a             -0.07783         0.064935         1.000000
+asc_toro_a                0.46077         0.639189        -0.041694
+asc_tekka_maki_a          0.13260         0.133515         0.070949
+asc_kappa_maki_a          0.10316         0.048072         0.088938
+asc_anago_b              -0.02038        -0.054320        -0.082813
+asc_maguro_b             -0.15794        -0.161528         0.109678
+asc_ika_b                -0.08431        -0.049463         0.030716
+asc_uni_b                 0.32144         0.415434        -0.314432
+asc_ikura_b               0.09867        -0.041018        -0.072911
+asc_tamago_b             -0.17467        -0.178692        -0.062783
+asc_toro_b               -0.05524        -0.108750         0.054345
+asc_tekka_maki_b         -0.16685        -0.139294         0.077965
+asc_kappa_maki_b         -0.14607        -0.122653         0.019575
+asc_anago_c              -0.03093        -0.098376        -0.039600
+asc_maguro_c             -0.29284        -0.117426         0.066866
+asc_ika_c                -0.10098        -0.045838       3.9531e-04
+asc_uni_c                -0.08932        -0.129793         0.068737
+asc_ikura_c               0.05645        -0.179510        -0.028406
+asc_tamago_c             -0.01290         0.007980        -0.170162
+asc_toro_c               -0.17090        -0.117168         0.074448
+asc_tekka_maki_c         -0.25506        -0.100761         0.028603
+asc_kappa_maki_c         -0.08062        -0.006401        -0.011048
+delta_a                  -0.35560        -0.041303         0.187063
+gamma_age_a               0.24320         0.001025        -0.172692
+gamma_west_a              0.11809        -0.032384        -0.022522
+gamma_female_a           -0.21442        -0.114481         0.052614
+gamma_moved_a            -0.02616         0.041567         0.020258
+delta_b                  -0.09661        -0.034893         0.055541
+gamma_age_b               0.10668         0.081724        -0.089323
+gamma_west_b              0.04800         0.009587        -0.004748
+gamma_female_b           -0.05383        -0.006085         0.037133
+gamma_moved_b             0.05414         0.092208        -0.057629
+                       asc_toro_a asc_tekka_maki_a asc_kappa_maki_a
+asc_anago_a               0.63764         0.245552         0.005979
+asc_maguro_a              0.74594         0.299426        -0.102844
+asc_ika_a                 0.20172         0.269113         0.167693
+asc_uni_a                 0.46077         0.132602         0.103161
+asc_ikura_a               0.63919         0.133515         0.048072
+asc_tamago_a             -0.04169         0.070949         0.088938
+asc_toro_a                1.00000         0.222061        -0.130548
+asc_tekka_maki_a          0.22206         1.000000         0.096742
+asc_kappa_maki_a         -0.13055         0.096742         1.000000
+asc_anago_b              -0.05637        -0.007776         0.009866
+asc_maguro_b             -0.28858        -0.004645         0.081813
+asc_ika_b                -0.05678        -0.047323        -0.032682
+asc_uni_b                 0.54836        -0.148657        -0.259293
+asc_ikura_b              -0.02058         0.004600        -0.009748
+asc_tamago_b             -0.17709         0.023569         0.038632
+asc_toro_b               -0.20655         0.032537         0.071307
+asc_tekka_maki_b         -0.21692        -0.072489         0.032009
+asc_kappa_maki_b         -0.10207        -0.016521        -0.084445
+asc_anago_c              -0.22675        -0.117921         0.033798
+asc_maguro_c             -0.01279         0.030759        -0.040457
+asc_ika_c                -0.03872        -0.068315        -0.031531
+asc_uni_c                -0.57646        -0.224277         0.135461
+asc_ikura_c              -0.28151        -0.106171         0.056266
+asc_tamago_c              0.13668        -0.017400        -0.070961
+asc_toro_c               -0.21005         0.023424         0.029535
+asc_tekka_maki_c          0.04840        -0.053560        -0.064829
+asc_kappa_maki_c          0.10696         0.001775        -0.153887
+delta_a                   0.12979         0.075350        -0.084749
+gamma_age_a               0.21522         0.181490        -0.011743
+gamma_west_a             -0.02791         0.101159         0.079081
+gamma_female_a           -0.32940        -0.067882         0.070379
+gamma_moved_a             0.04348        -0.033007         0.057592
+delta_b                  -0.06509         0.048040         0.023036
+gamma_age_b               0.24516         0.040672        -0.077651
+gamma_west_b              0.03771         0.003063        -0.012305
+gamma_female_b           -0.01936        -0.001872         0.002853
+gamma_moved_b             0.12597        -0.057631        -0.071926
+                      asc_anago_b     asc_maguro_b        asc_ika_b
+asc_anago_a             -0.100798        -0.119830        -0.046093
+asc_maguro_a            -0.030750        -0.220882        -0.039715
+asc_ika_a                0.002166         0.021801        -0.107029
+asc_uni_a               -0.020382        -0.157943        -0.084309
+asc_ikura_a             -0.054320        -0.161528        -0.049463
+asc_tamago_a            -0.082813         0.109678         0.030716
+asc_toro_a              -0.056371        -0.288579        -0.056778
+asc_tekka_maki_a        -0.007776        -0.004645        -0.047323
+asc_kappa_maki_a         0.009866         0.081813        -0.032682
+asc_anago_b              1.000000         0.466552         0.348086
+asc_maguro_b             0.466552         1.000000         0.358953
+asc_ika_b                0.348086         0.358953         1.000000
+asc_uni_b                0.098219        -0.163329         0.095590
+asc_ikura_b              0.455188         0.480888         0.230675
+asc_tamago_b             0.520465         0.294436         0.280448
+asc_toro_b               0.464249         0.723995         0.167174
+asc_tekka_maki_b         0.489749         0.748458         0.433413
+asc_kappa_maki_b         0.194327         0.098473         0.278102
+asc_anago_c             -0.220922         0.039433        -0.101117
+asc_maguro_c             0.070187         0.269105        -0.080704
+asc_ika_c               -0.077779        -0.107485        -0.237320
+asc_uni_c                0.061880         0.389652        -0.023649
+asc_ikura_c             -0.038781         0.125146        -0.057744
+asc_tamago_c            -0.274233        -0.314553        -0.034203
+asc_toro_c               0.216639         0.623281         0.045917
+asc_tekka_maki_c        -0.045754         0.050516        -0.127416
+asc_kappa_maki_c        -0.041601        -0.129104        -0.036931
+delta_a                  0.121829         0.278445         0.016188
+gamma_age_a             -0.061292        -0.234594         0.023067
+gamma_west_a             0.034342         0.082779         0.028067
+gamma_female_a           0.035994         0.219019         0.001079
+gamma_moved_a           -0.027385        -0.110916        -0.033655
+delta_b                  0.278090         0.542463        -0.029729
+gamma_age_b             -0.066159        -0.221442         0.157863
+gamma_west_b            -0.010173        -0.072064         0.090575
+gamma_female_b          -0.187383        -0.118673        -0.114421
+gamma_moved_b            0.007297        -0.157225        -0.024472
+                        asc_uni_b      asc_ikura_b     asc_tamago_b
+asc_anago_a               0.24710        -0.013922        -0.146183
+asc_maguro_a              0.29266        -0.025739        -0.082294
+asc_ika_a                -0.17914         0.005542         0.051596
+asc_uni_a                 0.32144         0.098670        -0.174667
+asc_ikura_a               0.41543        -0.041018        -0.178692
+asc_tamago_a             -0.31443        -0.072911        -0.062783
+asc_toro_a                0.54836        -0.020583        -0.177091
+asc_tekka_maki_a         -0.14866         0.004600         0.023569
+asc_kappa_maki_a         -0.25929        -0.009748         0.038632
+asc_anago_b               0.09822         0.455188         0.520465
+asc_maguro_b             -0.16333         0.480888         0.294436
+asc_ika_b                 0.09559         0.230675         0.280448
+asc_uni_b                 1.00000         0.098577        -0.132834
+asc_ikura_b               0.09858         1.000000         0.333125
+asc_tamago_b             -0.13283         0.333125         1.000000
+asc_toro_b               -0.14322         0.589771         0.250247
+asc_tekka_maki_b         -0.06271         0.432451         0.371379
+asc_kappa_maki_b         -0.06365         0.133227         0.411474
+asc_anago_c              -0.11591        -0.012699        -0.172970
+asc_maguro_c             -0.10590         0.171358        -0.060407
+asc_ika_c                -0.02803        -0.031329        -0.029565
+asc_uni_c                -0.26284         0.152183        -0.012944
+asc_ikura_c              -0.12675        -0.088715        -0.124687
+asc_tamago_c              0.12012        -0.262797        -0.312720
+asc_toro_c               -0.13486         0.305972        -0.022573
+asc_tekka_maki_c         -0.06019         0.036973        -0.106043
+asc_kappa_maki_c          0.06083        -0.094122        -0.066490
+delta_a                  -0.09269         0.162209         0.080986
+gamma_age_a               0.13535        -0.131333        -0.067802
+gamma_west_a             -0.07010         0.020254         0.001250
+gamma_female_a           -0.22764         0.106505         0.059967
+gamma_moved_a             0.01149        -0.080092        -0.011644
+delta_b                  -0.08390         0.419744         0.118253
+gamma_age_b               0.24584        -0.267241        -0.126876
+gamma_west_b              0.04202        -0.134971        -0.083099
+gamma_female_b           -0.07997         0.087482        -0.072098
+gamma_moved_b             0.17642        -0.075776        -0.067959
+                       asc_toro_b asc_tekka_maki_b asc_kappa_maki_b
+asc_anago_a              -0.07297         -0.10612        -0.084180
+asc_maguro_a             -0.14253         -0.14715        -0.042573
+asc_ika_a                 0.03611       8.6030e-04        -0.001444
+asc_uni_a                -0.05524         -0.16685        -0.146070
+asc_ikura_a              -0.10875         -0.13929        -0.122653
+asc_tamago_a              0.05435          0.07797         0.019575
+asc_toro_a               -0.20655         -0.21692        -0.102070
+asc_tekka_maki_a          0.03254         -0.07249        -0.016521
+asc_kappa_maki_a          0.07131          0.03201        -0.084445
+asc_anago_b               0.46425          0.48975         0.194327
+asc_maguro_b              0.72400          0.74846         0.098473
+asc_ika_b                 0.16717          0.43341         0.278102
+asc_uni_b                -0.14322         -0.06271        -0.063653
+asc_ikura_b               0.58977          0.43245         0.133227
+asc_tamago_b              0.25025          0.37138         0.411474
+asc_toro_b                1.00000          0.53551        -0.037873
+asc_tekka_maki_b          0.53551          1.00000         0.238667
+asc_kappa_maki_b         -0.03787          0.23867         1.000000
+asc_anago_c               0.09594         -0.05826        -0.111155
+asc_maguro_c              0.47608          0.12191        -0.177615
+asc_ika_c                -0.01465         -0.13775        -0.047826
+asc_uni_c                 0.44163          0.22589        -0.103529
+asc_ikura_c               0.15073          0.01849        -0.132902
+asc_tamago_c             -0.39756         -0.25597        -0.040170
+asc_toro_c                0.67075          0.42872        -0.176098
+asc_tekka_maki_c          0.24835         -0.08334        -0.165284
+asc_kappa_maki_c         -0.11293         -0.13376        -0.180274
+delta_a                   0.35520          0.20489        -0.035469
+gamma_age_a              -0.29879         -0.15317         0.032979
+gamma_west_a              0.09186          0.05507        -0.031146
+gamma_female_a            0.26732          0.15229         0.004447
+gamma_moved_a            -0.11377         -0.08111         0.001942
+delta_b                   0.69569          0.33678        -0.134156
+gamma_age_b              -0.39700         -0.08306         0.061735
+gamma_west_b             -0.04563         -0.01766        -0.059377
+gamma_female_b            0.04387         -0.09010        -0.004061
+gamma_moved_b            -0.13648         -0.11279        -0.025737
+                      asc_anago_c     asc_maguro_c        asc_ika_c
+asc_anago_a              -0.22930        -0.026659         -0.05594
+asc_maguro_a             -0.21484        -0.001986         -0.05839
+asc_ika_a                -0.06674        -0.001144         -0.17550
+asc_uni_a                -0.03093        -0.292837         -0.10098
+asc_ikura_a              -0.09838        -0.117426         -0.04584
+asc_tamago_a             -0.03960         0.066866       3.9531e-04
+asc_toro_a               -0.22675        -0.012789         -0.03872
+asc_tekka_maki_a         -0.11792         0.030759         -0.06831
+asc_kappa_maki_a          0.03380        -0.040457         -0.03153
+asc_anago_b              -0.22092         0.070187         -0.07778
+asc_maguro_b              0.03943         0.269105         -0.10749
+asc_ika_b                -0.10112        -0.080704         -0.23732
+asc_uni_b                -0.11591        -0.105896         -0.02803
+asc_ikura_b              -0.01270         0.171358         -0.03133
+asc_tamago_b             -0.17297        -0.060407         -0.02957
+asc_toro_b                0.09594         0.476079         -0.01465
+asc_tekka_maki_b         -0.05826         0.121905         -0.13775
+asc_kappa_maki_b         -0.11116        -0.177615         -0.04783
+asc_anago_c               1.00000         0.454879          0.39045
+asc_maguro_c              0.45488         1.000000          0.42076
+asc_ika_c                 0.39045         0.420761          1.00000
+asc_uni_c                 0.50821         0.360828          0.23259
+asc_ikura_c               0.56202         0.402460          0.32579
+asc_tamago_c              0.34189         0.117834          0.17113
+asc_toro_c                0.36065         0.718586          0.18297
+asc_tekka_maki_c          0.49248         0.819454          0.45873
+asc_kappa_maki_c          0.08452         0.204259          0.12912
+delta_a                  -0.05124         0.468524          0.11290
+gamma_age_a              -0.12216        -0.274320         -0.17287
+gamma_west_a             -0.01043        -0.021061         -0.14924
+gamma_female_a            0.20985         0.190938          0.06588
+gamma_moved_a            -0.08953        -0.018240          0.01282
+delta_b                   0.08352         0.491164          0.08617
+gamma_age_b              -0.16498        -0.272381         -0.18861
+gamma_west_b             -0.02909        -0.050547         -0.14259
+gamma_female_b            0.16154         0.122039          0.10238
+gamma_moved_b            -0.09585        -0.035958          0.02574
+                        asc_uni_c      asc_ikura_c     asc_tamago_c
+asc_anago_a              -0.24868         -0.15050        -0.011932
+asc_maguro_a             -0.60345         -0.26081         0.124806
+asc_ika_a                -0.09717         -0.04877        -0.030569
+asc_uni_a                -0.08932          0.05645        -0.012895
+asc_ikura_a              -0.12979         -0.17951         0.007980
+asc_tamago_a              0.06874         -0.02841        -0.170162
+asc_toro_a               -0.57646         -0.28151         0.136684
+asc_tekka_maki_a         -0.22428         -0.10617        -0.017400
+asc_kappa_maki_a          0.13546          0.05627        -0.070961
+asc_anago_b               0.06188         -0.03878        -0.274233
+asc_maguro_b              0.38965          0.12515        -0.314553
+asc_ika_b                -0.02365         -0.05774        -0.034203
+asc_uni_b                -0.26284         -0.12675         0.120124
+asc_ikura_b               0.15218         -0.08871        -0.262797
+asc_tamago_b             -0.01294         -0.12469        -0.312720
+asc_toro_b                0.44163          0.15073        -0.397557
+asc_tekka_maki_b          0.22589          0.01849        -0.255973
+asc_kappa_maki_b         -0.10353         -0.13290        -0.040170
+asc_anago_c               0.50821          0.56202         0.341889
+asc_maguro_c              0.36083          0.40246         0.117834
+asc_ika_c                 0.23259          0.32579         0.171127
+asc_uni_c                 1.00000          0.54118        -0.099693
+asc_ikura_c               0.54118          1.00000         0.232472
+asc_tamago_c             -0.09969          0.23247         1.000000
+asc_toro_c                0.56804          0.42192        -0.085691
+asc_tekka_maki_c          0.24581          0.40572         0.240978
+asc_kappa_maki_c         -0.06272          0.09746         0.147331
+delta_a                  -0.05910         -0.16509        -0.166204
+gamma_age_a              -0.38281          0.01598         0.231367
+gamma_west_a              0.02633          0.12617        -0.032773
+gamma_female_a            0.37857          0.05644        -0.109142
+gamma_moved_a            -0.02741         -0.02161         0.053554
+delta_b                   0.32628          0.05758        -0.345911
+gamma_age_b              -0.38981         -0.03350         0.281186
+gamma_west_b             -0.06483          0.08428         0.057689
+gamma_female_b            0.07447         -0.07418         0.029358
+gamma_moved_b            -0.07722         -0.01905         0.086261
+                       asc_toro_c asc_tekka_maki_c asc_kappa_maki_c
+asc_anago_a             -0.072171        -0.032073         0.029031
+asc_maguro_a            -0.132598         0.063816         0.103870
+asc_ika_a                0.005096        -0.021764        -0.016764
+asc_uni_a               -0.170902        -0.255060        -0.080623
+asc_ikura_a             -0.117168        -0.100761        -0.006401
+asc_tamago_a             0.074448         0.028603        -0.011048
+asc_toro_a              -0.210050         0.048401         0.106962
+asc_tekka_maki_a         0.023424        -0.053560         0.001775
+asc_kappa_maki_a         0.029535        -0.064829        -0.153887
+asc_anago_b              0.216639        -0.045754        -0.041601
+asc_maguro_b             0.623281         0.050516        -0.129104
+asc_ika_b                0.045917        -0.127416        -0.036931
+asc_uni_b               -0.134864        -0.060190         0.060834
+asc_ikura_b              0.305972         0.036973        -0.094122
+asc_tamago_b            -0.022573        -0.106043        -0.066490
+asc_toro_b               0.670748         0.248350        -0.112928
+asc_tekka_maki_b         0.428717        -0.083336        -0.133763
+asc_kappa_maki_b        -0.176098        -0.165284        -0.180274
+asc_anago_c              0.360650         0.492476         0.084523
+asc_maguro_c             0.718586         0.819454         0.204259
+asc_ika_c                0.182968         0.458730         0.129120
+asc_uni_c                0.568040         0.245813        -0.062719
+asc_ikura_c              0.421916         0.405716         0.097456
+asc_tamago_c            -0.085691         0.240978         0.147331
+asc_toro_c               1.000000         0.486304         0.056437
+asc_tekka_maki_c         0.486304         1.000000         0.260552
+asc_kappa_maki_c         0.056437         0.260552         1.000000
+delta_a                  0.396796         0.374934         0.114790
+gamma_age_a             -0.296572        -0.205262        -0.028961
+gamma_west_a             0.055933        -0.066298        -0.031285
+gamma_female_a           0.220189         0.094235        -0.100347
+gamma_moved_a           -0.120429         0.004071         0.028215
+delta_b                  0.647135         0.311771        -0.009105
+gamma_age_b             -0.296914        -0.196805         0.011355
+gamma_west_b            -0.055913        -0.054132         0.026638
+gamma_female_b          -0.039789         0.104340        -0.053795
+gamma_moved_b           -0.134166       3.8363e-04         0.054407
+                          delta_a      gamma_age_a     gamma_west_a
+asc_anago_a              0.087783         0.067661         0.033937
+asc_maguro_a             0.210316         0.257403        -0.002045
+asc_ika_a                0.003381         0.113279         0.121498
+asc_uni_a               -0.355599         0.243203         0.118094
+asc_ikura_a             -0.041303         0.001025        -0.032384
+asc_tamago_a             0.187063        -0.172692        -0.022522
+asc_toro_a               0.129789         0.215224        -0.027910
+asc_tekka_maki_a         0.075350         0.181490         0.101159
+asc_kappa_maki_a        -0.084749        -0.011743         0.079081
+asc_anago_b              0.121829        -0.061292         0.034342
+asc_maguro_b             0.278445        -0.234594         0.082779
+asc_ika_b                0.016188         0.023067         0.028067
+asc_uni_b               -0.092691         0.135353        -0.070101
+asc_ikura_b              0.162209        -0.131333         0.020254
+asc_tamago_b             0.080986        -0.067802         0.001250
+asc_toro_b               0.355198        -0.298790         0.091859
+asc_tekka_maki_b         0.204886        -0.153168         0.055069
+asc_kappa_maki_b        -0.035469         0.032979        -0.031146
+asc_anago_c             -0.051239        -0.122157        -0.010428
+asc_maguro_c             0.468524        -0.274320        -0.021061
+asc_ika_c                0.112900        -0.172868        -0.149239
+asc_uni_c               -0.059100        -0.382806         0.026329
+asc_ikura_c             -0.165095         0.015979         0.126172
+asc_tamago_c            -0.166204         0.231367        -0.032773
+asc_toro_c               0.396796        -0.296572         0.055933
+asc_tekka_maki_c         0.374934        -0.205262        -0.066298
+asc_kappa_maki_c         0.114790        -0.028961        -0.031285
+delta_a                  1.000000        -0.643038        -0.215120
+gamma_age_a             -0.643038         1.000000         0.056926
+gamma_west_a            -0.215120         0.056926         1.000000
+gamma_female_a          -0.233438        -0.044975        -0.020733
+gamma_moved_a           -0.179628        -0.081702         0.041074
+delta_b                  0.633227        -0.516917        -0.043115
+gamma_age_b             -0.410555         0.666610         0.010226
+gamma_west_b            -0.142041         0.073119         0.566949
+gamma_female_b          -0.119275         0.015247        -0.051320
+gamma_moved_b           -0.142122         0.009270        -0.009035
+                   gamma_female_a    gamma_moved_a          delta_b
+asc_anago_a             -0.242772         0.077580        -0.001319
+asc_maguro_a            -0.297157        -0.032346        -0.029369
+asc_ika_a               -0.032262         0.071418         0.031681
+asc_uni_a               -0.214415        -0.026161        -0.096611
+asc_ikura_a             -0.114481         0.041567        -0.034893
+asc_tamago_a             0.052614         0.020258         0.055541
+asc_toro_a              -0.329395         0.043475        -0.065093
+asc_tekka_maki_a        -0.067882        -0.033007         0.048040
+asc_kappa_maki_a         0.070379         0.057592         0.023036
+asc_anago_b              0.035994        -0.027385         0.278090
+asc_maguro_b             0.219019        -0.110916         0.542463
+asc_ika_b                0.001079        -0.033655        -0.029729
+asc_uni_b               -0.227637         0.011495        -0.083895
+asc_ikura_b              0.106505        -0.080092         0.419744
+asc_tamago_b             0.059967        -0.011644         0.118253
+asc_toro_b               0.267322        -0.113768         0.695693
+asc_tekka_maki_b         0.152295        -0.081111         0.336777
+asc_kappa_maki_b         0.004447         0.001942        -0.134156
+asc_anago_c              0.209846        -0.089527         0.083525
+asc_maguro_c             0.190938        -0.018240         0.491164
+asc_ika_c                0.065876         0.012816         0.086168
+asc_uni_c                0.378574        -0.027412         0.326284
+asc_ikura_c              0.056436        -0.021606         0.057583
+asc_tamago_c            -0.109142         0.053554        -0.345911
+asc_toro_c               0.220189        -0.120429         0.647135
+asc_tekka_maki_c         0.094235         0.004071         0.311771
+asc_kappa_maki_c        -0.100347         0.028215        -0.009105
+delta_a                 -0.233438        -0.179628         0.633227
+gamma_age_a             -0.044975        -0.081702        -0.516917
+gamma_west_a            -0.020733         0.041074        -0.043115
+gamma_female_a           1.000000        -0.060902         0.044120
+gamma_moved_a           -0.060902         1.000000        -0.161130
+delta_b                  0.044120        -0.161130         1.000000
+gamma_age_b             -0.122287        -0.011418        -0.709554
+gamma_west_b            -0.064051         0.025250        -0.233820
+gamma_female_b           0.523730        -0.016250        -0.273264
+gamma_moved_b           -0.085834         0.537632        -0.235956
+                      gamma_age_b     gamma_west_b   gamma_female_b
+asc_anago_a              0.091649         0.025284        -0.013702
+asc_maguro_a             0.227362         0.045175        -0.025099
+asc_ika_a               -0.007594         0.010071        -0.004005
+asc_uni_a                0.106679         0.048003        -0.053832
+asc_ikura_a              0.081724         0.009587        -0.006085
+asc_tamago_a            -0.089323        -0.004748         0.037133
+asc_toro_a               0.245156         0.037710        -0.019365
+asc_tekka_maki_a         0.040672         0.003063        -0.001872
+asc_kappa_maki_a        -0.077651        -0.012305         0.002853
+asc_anago_b             -0.066159        -0.010173        -0.187383
+asc_maguro_b            -0.221442        -0.072064        -0.118673
+asc_ika_b                0.157863         0.090575        -0.114421
+asc_uni_b                0.245842         0.042020        -0.079971
+asc_ikura_b             -0.267241        -0.134971         0.087482
+asc_tamago_b            -0.126876        -0.083099        -0.072098
+asc_toro_b              -0.397002        -0.045626         0.043866
+asc_tekka_maki_b        -0.083055        -0.017662        -0.090105
+asc_kappa_maki_b         0.061735        -0.059377        -0.004061
+asc_anago_c             -0.164984        -0.029091         0.161541
+asc_maguro_c            -0.272381        -0.050547         0.122039
+asc_ika_c               -0.188610        -0.142590         0.102380
+asc_uni_c               -0.389808        -0.064834         0.074465
+asc_ikura_c             -0.033498         0.084282        -0.074178
+asc_tamago_c             0.281186         0.057689         0.029358
+asc_toro_c              -0.296914        -0.055913        -0.039789
+asc_tekka_maki_c        -0.196805        -0.054132         0.104340
+asc_kappa_maki_c         0.011355         0.026638        -0.053795
+delta_a                 -0.410555        -0.142041        -0.119275
+gamma_age_a              0.666610         0.073119         0.015247
+gamma_west_a             0.010226         0.566949        -0.051320
+gamma_female_a          -0.122287        -0.064051         0.523730
+gamma_moved_a           -0.011418         0.025250        -0.016250
+delta_b                 -0.709554        -0.233820        -0.273264
+gamma_age_b              1.000000         0.089140         0.017087
+gamma_west_b             0.089140         1.000000        -0.031939
+gamma_female_b           0.017087        -0.031939         1.000000
+gamma_moved_b            0.013881         0.062015        -0.018206
+                    gamma_moved_b
+asc_anago_a              0.073074
+asc_maguro_a             0.040856
+asc_ika_a               -0.044775
+asc_uni_a                0.054143
+asc_ikura_a              0.092208
+asc_tamago_a            -0.057629
+asc_toro_a               0.125968
+asc_tekka_maki_a        -0.057631
+asc_kappa_maki_a        -0.071926
+asc_anago_b              0.007297
+asc_maguro_b            -0.157225
+asc_ika_b               -0.024472
+asc_uni_b                0.176421
+asc_ikura_b             -0.075776
+asc_tamago_b            -0.067959
+asc_toro_b              -0.136482
+asc_tekka_maki_b        -0.112790
+asc_kappa_maki_b        -0.025737
+asc_anago_c             -0.095850
+asc_maguro_c            -0.035958
+asc_ika_c                0.025739
+asc_uni_c               -0.077222
+asc_ikura_c             -0.019047
+asc_tamago_c             0.086261
+asc_toro_c              -0.134166
+asc_tekka_maki_c       3.8363e-04
+asc_kappa_maki_c         0.054407
+delta_a                 -0.142122
+gamma_age_a              0.009270
+gamma_west_a            -0.009035
+gamma_female_a          -0.085834
+gamma_moved_a            0.537632
+delta_b                 -0.235956
+gamma_age_b              0.013881
+gamma_west_b             0.062015
+gamma_female_b          -0.018206
+gamma_moved_b            1.000000
+
+ 20 most extreme outliers in terms of lowest average per choice prediction:
+   ID Avg prob per choice
+ 3882          0.02345690
+ 4052          0.02646004
+ 4894          0.03232815
+ 4522          0.03797516
+ 2819          0.03842762
+ 2317          0.03935719
+ 2957          0.03982236
+ 2670          0.03983921
+ 1728          0.04155763
+ 3205          0.04179691
+ 4114          0.04241955
+ 2336          0.04277594
+ 4610          0.04391416
+ 1053          0.04433743
+ 3919          0.04472875
+   82          0.04489470
+ 1500          0.04543505
+ 2265          0.04563111
+  376          0.04565609
+ 2222          0.04583174
+
+Settings and functions used in model definition:
+
+apollo_control
+--------------
+                       Value                                                                                                                                                                                                  
+modelName              "APOLLO_M5_LC3"                                                                                                                                                                                        
+modelDescr             "Latent Class MNL, 3 classes, exploded ranks 1-3"                                                                                                                                                      
+indivID                "user_id"                                                                                                                                                                                              
+outputDirectory        "C:\\Users\\Matias Arriagada R\\Documents\\Universidad\\Quinto año universidad\\Noveno semestre\\Understanding Consumer Behavior Through Discrete Choice Models\\Tareas\\Tarea 3 Sushi/outputs/tables/"
+panelData              "TRUE"                                                                                                                                                                                                 
+seed                   "42"                                                                                                                                                                                                   
+noValidation           "FALSE"                                                                                                                                                                                                
+debug                  "FALSE"                                                                                                                                                                                                
+nCores                 "1"                                                                                                                                                                                                    
+workInLogs             "FALSE"                                                                                                                                                                                                
+mixing                 "FALSE"                                                                                                                                                                                                
+HB                     "FALSE"                                                                                                                                                                                                
+noDiagnostics          "FALSE"                                                                                                                                                                                                
+calculateLLC           "TRUE"                                                                                                                                                                                                 
+analyticHessian        "FALSE"                                                                                                                                                                                                
+dropLoopExpansion      "FALSE"                                                                                                                                                                                                
+dropRedefCheck         "FALSE"                                                                                                                                                                                                
+memorySaver            "FALSE"                                                                                                                                                                                                
+analyticGrad           "TRUE"                                                                                                                                                                                                 
+analyticGrad_manualSet "FALSE"                                                                                                                                                                                                
+overridePanel          "FALSE"                                                                                                                                                                                                
+preventOverridePanel   "FALSE"                                                                                                                                                                                                
+noModification         "FALSE"                                                                                                                                                                                                
+
+Hessian routines attempted
+--------------------------
+numerical jacobian of LL analytical gradient
+
+
+apollo_lcPars
+---------------
+function (apollo_beta, apollo_inputs) 
+{
+    lcpars <- list()
+    V <- list()
+    V[["class_a"]] <- delta_a + gamma_age_a * age_group + gamma_west_a * 
+        eastwest_current + gamma_female_a * gender + gamma_moved_a * 
+        moved
+    V[["class_b"]] <- delta_b + gamma_age_b * age_group + gamma_west_b * 
+        eastwest_current + gamma_female_b * gender + gamma_moved_b * 
+        moved
+    V[["class_c"]] <- 0
+    classAlloc_settings <- list(classes = c(class_a = 1, class_b = 2, 
+        class_c = 3), utilities = V)
+    lcpars[["pi_values"]] <- apollo_classAlloc(classAlloc_settings)
+    return(lcpars)
+}
+<bytecode: 0x00000180be82eb68>
+
+
+apollo_probabilities
+----------------------
+function (apollo_beta, apollo_inputs, functionality = "estimate") 
+{
+    apollo_attach(apollo_beta, apollo_inputs)
+    on.exit(apollo_detach(apollo_beta, apollo_inputs))
+    P <- list()
+    avail_list <- list(ebi = avail_1, anago = avail_2, maguro = avail_3, 
+        ika = avail_4, uni = avail_5, ikura = avail_6, tamago = avail_7, 
+        toro = avail_8, tekka_maki = avail_9, kappa_maki = avail_10)
+    V <- list()
+    V[["ebi"]] <- 0
+    V[["anago"]] <- asc_anago_a
+    V[["maguro"]] <- asc_maguro_a
+    V[["ika"]] <- asc_ika_a
+    V[["uni"]] <- asc_uni_a
+    V[["ikura"]] <- asc_ikura_a
+    V[["tamago"]] <- asc_tamago_a
+    V[["toro"]] <- asc_toro_a
+    V[["tekka_maki"]] <- asc_tekka_maki_a
+    V[["kappa_maki"]] <- asc_kappa_maki_a
+    s <- list(alternatives = ALT_CODES, avail = avail_list, choiceVar = choice, 
+        utilities = V, componentName = "class_a")
+    P[["class_a"]] <- apollo_mnl(s, functionality)
+    P[["class_a"]] <- apollo_panelProd(P[["class_a"]], apollo_inputs, 
+        functionality)
+    V <- list()
+    V[["ebi"]] <- 0
+    V[["anago"]] <- asc_anago_b
+    V[["maguro"]] <- asc_maguro_b
+    V[["ika"]] <- asc_ika_b
+    V[["uni"]] <- asc_uni_b
+    V[["ikura"]] <- asc_ikura_b
+    V[["tamago"]] <- asc_tamago_b
+    V[["toro"]] <- asc_toro_b
+    V[["tekka_maki"]] <- asc_tekka_maki_b
+    V[["kappa_maki"]] <- asc_kappa_maki_b
+    s <- list(alternatives = ALT_CODES, avail = avail_list, choiceVar = choice, 
+        utilities = V, componentName = "class_b")
+    P[["class_b"]] <- apollo_mnl(s, functionality)
+    P[["class_b"]] <- apollo_panelProd(P[["class_b"]], apollo_inputs, 
+        functionality)
+    V <- list()
+    V[["ebi"]] <- 0
+    V[["anago"]] <- asc_anago_c
+    V[["maguro"]] <- asc_maguro_c
+    V[["ika"]] <- asc_ika_c
+    V[["uni"]] <- asc_uni_c
+    V[["ikura"]] <- asc_ikura_c
+    V[["tamago"]] <- asc_tamago_c
+    V[["toro"]] <- asc_toro_c
+    V[["tekka_maki"]] <- asc_tekka_maki_c
+    V[["kappa_maki"]] <- asc_kappa_maki_c
+    s <- list(alternatives = ALT_CODES, avail = avail_list, choiceVar = choice, 
+        utilities = V, componentName = "class_c")
+    P[["class_c"]] <- apollo_mnl(s, functionality)
+    P[["class_c"]] <- apollo_panelProd(P[["class_c"]], apollo_inputs, 
+        functionality)
+    lc_settings <- list(inClassProb = P, classProb = pi_values)
+    P[["model"]] <- apollo_lc(lc_settings, apollo_inputs, functionality)
+    P <- apollo_prepareProb(P, apollo_inputs, functionality)
+    return(P)
+}

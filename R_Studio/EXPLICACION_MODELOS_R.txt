@@ -1,0 +1,232 @@
+================================================================================
+EXPLICACION DE LOS MODELOS EN R (Apollo) — HW03 Sushi
+Guia de estudio: que hace cada script, para que sirve y que concluir de el.
+Todos los numeros citados son los resultados reales de la ejecucion del
+2026-07-04 con R 4.5.3 y Apollo 0.3.7 (outputs en outputs/tables/).
+================================================================================
+
+--------------------------------------------------------------------------------
+0. COMO EJECUTAR
+--------------------------------------------------------------------------------
+Desde la carpeta R_Studio/ (en RStudio: Session > Set Working Directory >
+To Source File Location), en orden:
+
+  1) 01_apollo_mnl.R
+  2) 02_apollo_nested_logit.R
+  3) 03_apollo_latent_class.R      (tarda varios minutos)
+  4) 04_lc_postprocess.R
+
+Desde terminal (R no esta en el PATH de Windows):
+  "C:\Program Files\R\R-4.5.3\bin\Rscript.exe" 01_apollo_mnl.R
+
+Cada script deja en outputs/tables/ los archivos de Apollo
+(APOLLO_*_output.txt con el reporte completo, APOLLO_*_estimates.csv con
+coeficientes) mas un CSV de validacion cruzada contra Python.
+
+--------------------------------------------------------------------------------
+1. apollo_config.R  +  apollo_data_prep.R  (infraestructura, no estiman nada)
+--------------------------------------------------------------------------------
+QUE HACEN
+- config: define las 10 alternativas del Set A (codigos 1-10 = alt_id+1, con
+  ebi como referencia), los 3 nidos del Nested Logit (akami, seafood_other,
+  non_seafood), la semilla (42) y las rutas.
+- data_prep: lee Data/sushi3a_choice_long.csv y construye dos bases anchas:
+    database_first    -> 1 fila por usuario (5.000), su primera eleccion.
+    database_exploded -> 3 filas por usuario (15.000): la "explosion" del
+    ranking. La fila k dice "que elegiria si le quitan sus (k-1) favoritos":
+    etapa 1 con 10 disponibles, etapa 2 con 9, etapa 3 con 8. Las columnas
+    avail_1..avail_10 marcan la disponibilidad.
+
+PARA QUE SIRVEN
+El formato ancho (price_1..price_10, avail_1..avail_10) es el que Apollo
+exige. La explosion del ranking convierte informacion ya recolectada (el
+orden completo) en pseudo-elecciones adicionales: triplica los datos y, mas
+importante, revela SUSTITUCION observada (que elige la gente cuando su
+favorito no esta), que es lo que identifica los lambda del NL y las clases
+latentes.
+
+CONCLUSION
+No hay conclusion estadistica aqui; si el data_prep imprime
+"database_first: 5000 / database_exploded: 15000 (3 stages)" esta correcto.
+
+--------------------------------------------------------------------------------
+2. 01_apollo_mnl.R — M1, M2 y M3 (primera eleccion, Set A)
+--------------------------------------------------------------------------------
+QUE HACE
+Estima tres logit multinomiales encadenados:
+  M1: U_j = b_price*price_j + b_oil*oil_j + b_freq*freq_j       (3 parametros)
+  M2: U_j = ASC_j                                                (9 parametros)
+  M3: U_j = ASC_j + b_price_x_west*price_j*oeste
+                  + b_oil_x_age*oil_j*edad
+                  + b_oil_x_west*oil_j*oeste                     (12 parametros)
+
+PARA QUE SIRVE
+- Es la VALIDACION CRUZADA del pipeline Python: mismo modelo, otro motor de
+  maxima verosimilitud. Si ambos coinciden, la implementacion es correcta.
+- La cadena M1 c M2 c M3 resuelve el problema de identificacion del Set A:
+  los atributos son constantes por item, asi que ASCs completos + betas de
+  atributos juntos serian colineales (jamas se combinan). M1 pregunta
+  "cuanto explican los atributos", M2 "cuanto queda sin explicar", M3
+  "quien se desvia del promedio".
+
+COMO LEER EL OUTPUT DE APOLLO (APOLLO_*_output.txt)
+- "LL(final)": log-verosimilitud maximizada (mas cercana a 0 = mejor).
+- "Estimates": columna Estimate = coeficiente; t-ratio(0) = significancia
+  contra cero (|t| > 1,96 -> significativo al 5%).
+- "Rob.std.err.": errores estandar robustos (sandwich); usalos si difieren
+  mucho de los clasicos.
+
+RESULTADOS Y CONCLUSIONES (validado: diferencias de LL con Python <= 0,004)
+- M1: LL = -9.850,73. b_price = +0,581 (t 24). ¡POSITIVO! En esta encuesta
+  nadie paga: el precio funciona como señal de calidad (toro es caro Y el
+  favorito). Consecuencia: el "WTP" no es disposicion a pagar monetaria.
+  b_freq = +2,17: lo disponible/familiar se prefiere. b_oil = +0,085 (t 2,4).
+- M2: LL = -9.755,07. LR contra M1 = 191,3 (gl 6, p<1e-38): los 3 atributos
+  NO bastan; hay "calidad no observada" por item (prestigio, sabor). Ojo:
+  una OLS de los ASCs sobre los atributos da R2 = 0,95 -> explican el 95%.
+- M3: LL = -9.733,21. LR contra M2 = 43,7 (gl 3, p=1,7e-9): la heterogeneidad
+  demografica es real. El hallazgo estrella: b_oil_x_age = +0,089 (t 5,2),
+  los mayores prefieren sushi mas graso. Las 2 interacciones con "oeste"
+  son individualmente debiles (t -1,5 y -0,9) pero CONJUNTAMENTE
+  significativas (LR = 15,6, p = 4e-4); no se separan bien porque
+  corr(precio, grasa) = 0,82 en el Set A.
+- M3 ES EL MODELO PREFERIDO para interpretacion (mejor AIC en el Set A).
+
+PREGUNTA TIPICA DE DEFENSA: "¿por que no pusiste precio y ASCs juntos?"
+Respuesta: atributos constantes por item -> colinealidad perfecta con los
+ASCs; con 10 alternativas solo hay 9 grados de libertad entre-alternativas.
+
+--------------------------------------------------------------------------------
+3. 02_apollo_nested_logit.R — M2exp y M4b (ranking explotado)
+--------------------------------------------------------------------------------
+QUE HACE
+Sobre las 15.000 pseudo-elecciones estima:
+  M2exp: MNL con ASCs (benchmark en datos explotados). LL = -29.446,46.
+  M4b:   Nested Logit con 3 nidos y lambda_non_seafood FIJADO en 1.
+         LL = -29.159,71.
+Los nidos: akami = {maguro, toro, tekka_maki}; seafood_other = {ebi, anago,
+ika, uni, ikura}; non_seafood = {tamago, kappa_maki}. La eleccion de nidos
+NO es arbitraria: el dendrograma del EDA (correlacion de ranks entre
+usuarios) agrupa exactamente asi a los items.
+
+PARA QUE SIRVE
+El MNL asume IIA: si sube el precio de toro, TODOS los demas items ganan
+share en la misma proporcion. El NL lo relaja: lambda_m en (0,1] mide cuanta
+correlacion hay dentro del nido m (lambda = 1 -> MNL; lambda -> 0 ->
+sustitutos perfectos). Es el modelo que responde "¿a donde se va la demanda
+si falta toro?" — la base del Escenario A.
+
+RESULTADOS Y CONCLUSIONES
+- lambda_akami = 0,323 (t contra 1 = -26): maguro/toro/tekka_maki son
+  sustitutos MUY cercanos. Si toro escasea, la demanda migra dentro del
+  nido atun, no proporcionalmente.
+- lambda_seafood_other = 0,342 (t contra 1 = -6,9).
+- LR M2exp vs M4b = 573,5 (gl 2, p=3e-125): IIA RECHAZADO rotundamente.
+- ¿Por que M4b y no M4 con los 3 lambda libres? En Python el lambda del
+  nido non_seafood cae a 0,002: una FRONTERA del espacio de parametros
+  (tamago y kappa_maki actuan como un solo item). En esa frontera V/lambda
+  desborda y el optimizador de Apollo (BGW) da NaN; Python lo maneja con
+  reparametrizacion exponencial + logsumexp. Por eso: el M4 libre se
+  reporta desde Python (LL = -29.112,13; BIC lo prefiere en ajuste), pero
+  PARA PREDECIR se usa M4b — un lambda en la frontera no es un parametro
+  de sustitucion creible.
+
+PREGUNTA TIPICA: "¿que significa lambda = 0,33?"
+Respuesta: correlacion intra-nido alta (1 - lambda aproxima la correlacion
+de los errores); la elasticidad cruzada dentro del nido es ~3 veces la de
+fuera del nido.
+
+--------------------------------------------------------------------------------
+4. 03_apollo_latent_class.R — M5-LC: clases latentes (2 y 3 clases)
+--------------------------------------------------------------------------------
+QUE HACE
+Estima un Latent Class MNL sobre el panel explotado: la poblacion se modela
+como mezcla de S "tipos" de consumidor no observables. Cada clase tiene sus
+propios ASCs (gustos propios por los 10 items) y la probabilidad de
+pertenecer a cada clase depende de demografia observada:
+  pi_ns = exp(delta_s + g_edad*edad + g_oeste*oeste + g_mujer*mujer +
+          g_migro*migro) / suma
+El panel (3 pseudo-elecciones de la misma persona) es CLAVE: obliga a que
+los 3 ranks de un usuario vengan de la misma clase, y eso identifica las
+clases.
+
+PARA QUE SIRVE
+Es la "especificacion avanzada con variables latentes" que pide la pauta.
+A diferencia de M3 (que impone COMO entra la heterogeneidad: edad x grasa),
+el LC deja que los datos descubran los segmentos y luego los correlaciona
+con demografia. Es el puente directo a recomendaciones de segmentacion.
+
+RESULTADOS Y CONCLUSIONES (ejecucion real)
+- Seleccion: S=1 BIC 58.979 | S=2 BIC 58.107 | S=3 BIC 57.383 <- MEJOR.
+  (LC3: LL = -28.513,74 con 37 parametros.)
+- Las 3 clases (shares posteriores, perfil y firma de gustos):
+  * Clase a "gourmet premium" (33,7%): ama uni (+1,85), toro (+1,41),
+    ikura (+0,92); rechaza tamago/rolls. La de mayor edad (gamma_edad
+    +0,18, t 3,8) y 51% mujeres.
+  * Clase b "gusto ligero" (31,3%): TODOS los ASCs negativos -> su favorito
+    es ebi (la referencia); su mayor rechazo es uni (-2,19). La mas joven,
+    la mas occidental (gamma_oeste +0,36, t 3,3) y la mas femenina
+    (64%; gamma_mujer +0,81, t 7,9).
+  * Clase c "fanatico del atun" (34,9%): toro +2,84, maguro +1,46 y el
+    unico segmento con tekka_maki positivo. La mas masculina y oriental.
+- TRES CONVERGENCIAS que dan robustez al conjunto:
+  1) La clase c es el nido akami del NL "visto como tipo de persona".
+  2) La polarizacion de uni (amado por la clase a, odiado por la b) explica
+     la deriva de ASCs del chequeo de estabilidad de ranks.
+  3) El gradiente de edad de la membresia replica el b_oil_x_age de M3.
+
+PREGUNTA TIPICA: "¿por que ASCs por clase y no betas de atributos por clase?"
+Respuesta: misma restriccion de identificacion de siempre — los atributos
+son constantes por item; betas por clase serian colineales con los ASCs de
+la clase.
+
+--------------------------------------------------------------------------------
+5. 04_lc_postprocess.R — post-proceso del LC
+--------------------------------------------------------------------------------
+QUE HACE
+Sin re-estimar nada, reconstruye a mano la verosimilitud del LC desde los
+estimates guardados y calcula la probabilidad POSTERIOR de clase de cada
+usuario (regla de Bayes: w_ns = pi_ns * L_ns / suma). Con eso arma:
+  latent_class_selection.csv  (tabla S=1/2/3 con LL y BIC)
+  latent_class_profiles.csv   (share y perfil demografico de cada clase)
+  latent_class_results.csv    (todos los coeficientes LC2 y LC3)
+
+PARA QUE SIRVE
+- Verificacion independiente: la LL reconstruida coincide con la de Apollo
+  al centesimo (-28.513,74 = -28.513,74). Si alguien duda del codigo, esta
+  es la prueba de que el modelo esta bien implementado.
+- Los perfiles posteriores son los numeros de la tabla de clases del
+  informe y del slide de segmentos.
+
+--------------------------------------------------------------------------------
+6. RESUMEN DE LA VALIDACION CRUZADA PYTHON <-> APOLLO
+--------------------------------------------------------------------------------
+  Modelo   LL Python      LL Apollo      diferencia
+  M1       -9.850,73      -9.850,731     0,001
+  M2       -9.755,07      -9.755,069     0,001
+  M3       -9.733,21      -9.733,207     0,004
+  M2exp    -29.446,46     -29.446,46     0,00
+  M4b      -29.159,70     -29.159,71     0,01
+  M5-LC3   (solo Apollo)  -28.513,74     verificado a mano (04_lc_postprocess)
+
+Dos implementaciones independientes llegan al mismo optimo: los resultados
+del informe no dependen del software.
+
+--------------------------------------------------------------------------------
+7. QUE MODELO USAR PARA QUE (mapa rapido)
+--------------------------------------------------------------------------------
+  Pregunta                                  Modelo
+  ¿Cuanto explican precio/grasa/dispon.?    M1 (y M6 en Set B para validar)
+  ¿Ranking de "calidad percibida" por item? M2 (ASCs)
+  ¿Quien se desvia del promedio? (edad...)  M3  <- preferido del informe
+  ¿A donde migra la demanda? (sustitucion)  M4b (NL; escenario A)
+  ¿Que segmentos existen y de que tamaño?   M5-LC3 (segmentacion accionable)
+  ¿Prediccion de item nuevo / Set B?        M6 (solo atributos)
+
+RECORDATORIO DE INTERPRETACION GLOBAL: b_price > 0 en TODO el proyecto.
+No es un bug: es una encuesta de preferencia sin pago; el precio actua como
+señal de calidad. Por eso el WTP se reporta como trade-off relativo y los
+escenarios de precio se leen como ejercicios de "señal de calidad", no de
+costo. Este punto es la limitacion #1 del dataset y conviene decirla ANTES
+de que la pregunten.
+================================================================================

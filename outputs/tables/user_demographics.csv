@@ -1,0 +1,24 @@
+variable,value,count,pct
+gender,female,2627,52.54
+gender,male,2373,47.46
+age_group,30-39,1930,38.6
+age_group,20-29,1396,27.92
+age_group,40-49,970,19.4
+age_group,15-19,315,6.3
+age_group,50-59,308,6.16
+age_group,60+,81,1.62
+current region,Kanto_Shizuoka,2397,47.94
+current region,Kinki,978,19.56
+current region,Chukyo,412,8.24
+current region,Kyushu,254,5.08
+current region,Hokkaido,224,4.48
+current region,Chugoku,213,4.26
+current region,Tohoku,186,3.72
+current region,Hokuriku,142,2.84
+current region,Shikoku,88,1.76
+current region,Nagano_Yamanashi,87,1.74
+current region,Okinawa,19,0.38
+east/west (current),Eastern_Japan,3448,68.96
+east/west (current),Western_Japan,1552,31.04
+moved prefecture,0,3208,64.16
+moved prefecture,1,1792,35.84

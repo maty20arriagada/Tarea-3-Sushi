@@ -1,0 +1,9 @@
+model,attribute,wtp,se,ci_low,ci_high
+M1_attributes,b_oiliness,-0.1467,0.067,-0.278,-0.0155
+M1_attributes,b_freq_sold,-3.7387,0.2775,-4.2827,-3.1948
+M6_setB,b_oiliness,-1.6589,0.208,-2.0667,-1.2512
+M6_setB,b_freq_sold,-17.1744,1.6316,-20.3724,-13.9764
+M6_setB,b_maki,-2.3382,0.3786,-3.0803,-1.5961
+M6_setB,b_nonseafood,1.4981,0.3574,0.7975,2.1986
+
+# WARNING: b_price > 0 (M1 = 0.581, M6 = 0.251). In this survey price acts as a quality signal (quality-price confounding, plan SS10): respondents rank preference, they do not pay. WTP ratios above are NOT monetary willingness-to-pay; interpret only as relative attribute trade-offs, or report marginal utilities directly.

@@ -1,0 +1,14 @@
+current_region,ebi,anago,maguro,ika,uni,ikura,tamago,toro,tekka_maki,kappa_maki
+Hokkaido,30,8,21,5,60,26,5,63,5,1
+Tohoku,27,20,16,6,31,16,7,56,4,3
+Hokuriku,9,19,9,9,18,19,1,50,7,1
+Kanto_Shizuoka,180,245,201,78,357,272,101,904,40,19
+Nagano_Yamanashi,6,12,11,5,10,12,3,24,4,0
+Chukyo,40,47,38,25,44,50,20,130,17,1
+Kinki,103,133,64,69,126,88,39,327,22,7
+Chugoku,17,22,12,19,32,27,14,61,7,2
+Shikoku,9,12,6,2,9,11,6,29,3,1
+Kyushu,34,31,23,9,57,23,10,62,4,1
+Okinawa,3,1,3,1,3,1,0,7,0,0
+
+# chi2 test of independence: chi2=209.1 df=90 p=<0.001

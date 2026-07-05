@@ -1,0 +1,9 @@
+model,n_obs,n_params,LL,rho2,rho2_adj,AIC,BIC
+M1_attributes,5000,3,-9850.73,0.1444,0.1441,19707.5,19727.0
+M2_asc,5000,9,-9755.07,0.1527,0.1519,19528.1,19586.8
+M3_interactions,5000,12,-9733.21,0.1546,0.1535,19490.4,19568.6
+M3r_restricted,5000,10,-9741.0,0.1539,0.153,19502.0,19567.2
+M6_setB,5000,5,-7230.97,0.3719,0.3715,14471.9,14504.5
+
+# LL0 (equal shares) Set A = -11512.93; Set B = -11512.93
+# M6 estimated on Set B (sampled sets) - not LL-comparable with M1-M3

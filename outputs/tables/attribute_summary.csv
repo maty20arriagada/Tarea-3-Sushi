@@ -1,0 +1,11 @@
+item_name,english,price_norm,oiliness,freq_sold,first_choice_share_pct,mean_rank
+ebi,shrimp,1.8384,1.271,0.84,9.16,4.92
+anago,sea eel,1.9925,3.0736,0.88,11.0,5.22
+maguro,tuna,1.8747,2.2304,0.88,8.08,4.47
+ika,squid,1.5152,1.3116,0.92,4.56,5.9
+uni,sea urchin,3.2873,3.187,0.88,14.94,5.53
+ikura,salmon roe,2.6954,2.7351,0.88,10.9,5.1
+tamago,egg,1.0325,1.6319,0.84,4.12,6.86
+toro,fatty tuna,4.4855,3.4481,0.8,34.26,3.11
+tekka_maki,tuna roll,1.5798,1.7529,0.44,2.26,5.89
+kappa_maki,cucumber roll,1.02,0.2695,0.4,0.72,8.01

@@ -1,0 +1,16 @@
+item,item_english,share_base,share_MNL,share_NL,delta_MNL_pp,delta_NL_pp,own_elasticity,cross_elasticity
+ebi,shrimp,9.16,5.62,5.32,-3.54,-3.84,,-0.9659
+anago,sea eel,11.0,6.75,6.39,-4.25,-4.61,,-0.9659
+maguro,tuna,8.08,4.96,0.64,-3.12,-7.44,,-0.9659
+ika,squid,4.56,2.8,2.65,-1.76,-1.91,,-0.9659
+uni,sea urchin,14.94,9.17,8.68,-5.77,-6.26,,-0.9659
+ikura,salmon roe,10.9,6.69,6.34,-4.21,-4.56,,-0.9659
+tamago,egg,4.12,2.53,2.39,-1.59,-1.73,,-0.9659
+toro,fatty tuna,34.26,59.66,66.98,25.4,32.72,1.8534,
+tekka_maki,tuna roll,2.26,1.39,0.18,-0.87,-2.08,,-0.9659
+kappa_maki,cucumber roll,0.72,0.44,0.42,-0.28,-0.3,,-0.9659
+
+# WARNING: beta_price = +0.581 > 0 -> price is a quality signal in this stated-preference survey (no payment). A +40% price increase RAISES toro's utility (signals higher quality) rather than reducing it. The finding is the DIFFERENCE between MNL and NL substitution patterns, not the direction of the price effect. Own-elasticity and cross-elasticities are computed with the model's price coefficient; interpret as quality-signal elasticities.
+# MNL cross-elasticity (all identical due to IIA): -0.9659
+# NL: within-nest items (maguro, tekka_maki) lose MORE share than MNL predicts (lambda_akami = 0.325 < 1 -> closer substitutes).
+# NL simulation uses the M4b variant (lambda_non_seafood = 1): the free-M4 estimate (0.002) sits on the lambda->0 boundary and is not a credible substitution parameter for prediction (report, S C.1).

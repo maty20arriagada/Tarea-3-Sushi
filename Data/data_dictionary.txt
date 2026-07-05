@@ -1,0 +1,288 @@
+================================================================================
+DATA DICTIONARY — Sushi Preference Dataset (Kamishima, 2003)
+================================================================================
+
+ORIGIN
+------
+Dataset  : SUSHI Preference Data Sets
+Author   : Toshihiro Kamishima (National Institute of Advanced Industrial
+           Science and Technology, Japan)
+Paper    : Kamishima, T. (2003). "Nantonac Collaborative Filtering:
+           Recommendation Based on Order Responses." KDD2003, pp. 583-588.
+Source   : https://www.kamishima.net/sushi/
+License  : Research use only. Redistribution requires author permission.
+
+DATA TYPE
+---------
+Revealed preference (stated preference through questionnaire survey).
+5,000 real Japanese consumers ranked sushi types by preference (ranking method)
+and scored them on a 5-point scale (scoring method). The items are real sushi
+types with real market attributes (price, oiliness, style, etc.).
+
+================================================================================
+FILE LIST
+================================================================================
+
+Generated files in data/:
+
+  1. sushi_items.csv           — 100 sushi items with attributes
+  2. sushi_users.csv           — 5,000 users with demographics
+  3. sushi3a_choice_long.csv   — DISCRETE CHOICE: Set A (10 alt, full ranking)
+  4. sushi3b_choice_long.csv   — DISCRETE CHOICE: Set B (100 alt, sampled)
+  5. sushi3b_consideration_long.csv — DISCRETE CHOICE: Set B, real consideration set
+  6. sushi3b_score_long.csv    — Score matrix in long format (optional)
+
+Raw files in data/sushi_raw/:
+
+  sushi3.idata               — 100 items × 9 attributes
+  sushi3.udata               — 5,000 users × 11 demographics
+  sushi3a.5000.10.order      — 5,000 × 10 item rankings (Set A, 10 items)
+  sushi3b.5000.10.order      — 5,000 × 10 item rankings (Set B, 100 items)
+  sushi3b.5000.10.score      — 5,000 × 100 score matrix
+  README-en.txt              — Original documentation (English)
+
+================================================================================
+1. sushi_items.csv  (100 rows)
+================================================================================
+
+Column                Type      Description
+--------------------- --------- -------------------------------------------------
+item_id               int       Item ID (0-99), matching row in sushi3.idata
+name                  str       Name in Japanese romanized alphabet
+style                 int       0 = maki (roll), 1 = other (nigiri, etc.)
+style_label           str       "maki" or "other"
+major_group           int       0 = seafood, 1 = other (egg, meat, vegetables)
+major_group_label     str       "seafood" or "other"
+minor_group           int       0-11 (see MINOR GROUP LEGEND below)
+minor_group_label     str       Label for minor group
+oiliness              float     Taste oiliness, higher = MORE oily. RECODED as
+                                (4 - raw): the raw sushi3.idata scale is inverted
+                                (0 = most heavy/oily, per README-en.txt).
+                                Recoded range ≈ [0.27, 3.45]; e.g. toro 3.45,
+                                kappa_maki 0.27.
+freq_eat              float     How frequently eaten [1.0, 2.3], higher = more
+freq_eat_label        str       "high" if freq_eat >= 2.0 else "low"
+price_norm            float     Normalized market price [1.00, 4.49]
+freq_sold             float     Frequency sold in shops [0.20, 0.92]
+
+MINOR GROUP LEGEND
+  0  = aomono (blue-skinned fish: saba, aji, iwashi, sanma)
+  1  = akami (red meat fish: maguro, toro, katsuo)
+  2  = shiromi (white-meat fish: tai, hirame, suzuki)
+  3  = tare (baste-style: anago, unagi)
+  4  = clam_shell (hotategai, akagai, awabi, hamaguri)
+  5  = squid_octopus (ika, tako, geso)
+  6  = shrimp_crab (ebi, amaebi, kani, botanebi, tarabagani)
+  7  = roe (ikura, kazunoko, tobiko, mentaiko, tarako)
+  8  = other_seafood (uni, kanimiso, ankimo)
+  9  = egg (tamago)
+  10 = meat_other (gyusashi, basashi, kujira, kamo, sasami)
+  11 = vegetables (kappa_maki, nattou_maki, takuwan_maki, inari, ume_shiso_maki)
+
+================================================================================
+2. sushi_users.csv  (5,000 rows)
+================================================================================
+
+Column                    Type    Description
+------------------------- ------- -----------------------------------------------
+user_id                   int     Sequential user ID (1-5000)
+gender                    int     0 = male, 1 = female
+gender_label              str     "male" or "female"
+age_group                 int     0-5
+age_label                 str     Age bracket: 15-19, 20-29, 30-39, 40-49, 50-59, 60+
+time_taken_sec            int     Total seconds to fill questionnaire
+pref_childhood            int     Prefecture ID where lived longest before age 15
+region_childhood          int     Region ID where lived longest before age 15 (0-11)
+region_childhood_label    str     Region name (Hokkaido, Tohoku, Kanto, Kinki, etc.)
+eastwest_childhood        int     0 = Eastern Japan, 1 = Western Japan
+eastwest_childhood_label  str     "Eastern_Japan" or "Western_Japan"
+pref_current              int     Prefecture ID of current residence
+region_current            int     Region ID of current residence (0-11)
+region_current_label      str     Region name
+eastwest_current          int     0 = Eastern, 1 = Western (based on current residence)
+eastwest_current_label    str     "Eastern_Japan" or "Western_Japan"
+moved                     int     0 = childhood pref == current pref, 1 = different
+
+REGION LEGEND
+  0  = Hokkaido
+  1  = Tohoku            (Aomori, Iwate, Akita, Miyagi, Yamagata, Fukushima)
+  2  = Hokuriku           (Niigata, Toyama, Ishikawa, Fukui)
+  3  = Kanto_Shizuoka     (Ibaraki, Tochigi, Gunma, Saitama, Chiba, Tokyo, Kanagawa, Shizuoka)
+  4  = Nagano_Yamanashi   (Yamanashi, Nagano)
+  5  = Chukyo             (Aichi, Gifu, Mie)
+  6  = Kinki              (Shiga, Kyoto, Osaka, Nara, Wakayama, Hyogo)
+  7  = Chugoku            (Okayama, Hiroshima, Tottori, Shimane, Yamaguchi)
+  8  = Shikoku            (Ehime, Kagawa, Tokushima, Kochi)
+  9  = Kyushu             (Fukuoka, Nagasaki, Saga, Kumamoto, Kagoshima, Miyazaki, Oita)
+  10 = Okinawa
+  11 = Foreign
+
+NOTE: Rows 323, 617, 1431, 4667 correspond to the authors (Kamishima, Akaho,
+Kazawa, Fujiki respectively).
+
+================================================================================
+3. sushi3a_choice_long.csv — Discrete Choice: Set A
+================================================================================
+
+SET A ITEMS (10 alternatives, full ranking by all 5,000 users):
+
+  alt_id  name        (English)        master item_id in sushi_items.csv
+  ------  ----------  ---------------  ---------------------------------
+  0       ebi         shrimp           0
+  1       anago       sea eel          1
+  2       maguro      tuna             2
+  3       ika         squid            3
+  4       uni         sea urchin       4
+  5       ikura       salmon roe       6
+  6       tamago      egg              7
+  7       toro        fatty tuna       8
+  8       tekka_maki  tuna roll        26
+  9       kappa_maki  cucumber roll    29
+
+IMPORTANT — ID MAPPING: sushi3a.5000.10.order uses Set A's own numbering
+(alt_id, 0-9), which differs from the master 100-item numbering for IDs 5-9
+(master 5 = tako and master 9 = amaebi are NOT part of Set A). Attributes are
+joined via the mapping above. Use item_id to join against sushi_items.csv;
+use alt_id as the alternative index in choice models.
+
+FORMAT: Long format, one row per user-alternative pair
+  Total rows: 50000
+  Rows per user: 10 (all alternatives in Set A)
+  Choice sets: 5,000
+
+Column                Description
+--------------------- ----------------------------------------------------------
+choice_id             Choice occasion ID (= user_id in this case)
+user_id               User identifier (1-5000)
+alt_id                Set A alternative index (0-9, see mapping table above)
+item_id               Master item identifier (joins with sushi_items.csv)
+item_name             Sushi name
+chosen                1 if item was ranked #1 (most preferred), 0 otherwise
+rank                  Preference rank (1 = most preferred, ..., 10 = least)
+Item attributes:
+  style, style_label, major_group, major_group_label,
+  minor_group, minor_group_label, oiliness, price_norm, freq_sold
+User characteristics:
+  gender, gender_label, age_group, age_label,
+  childhood_region, childhood_region_label,
+  current_region, current_region_label,
+  eastwest_childhood, eastwest_childhood_label,
+  eastwest_current, eastwest_current_label,
+  moved, time_taken_sec
+
+CHOICE FREQUENCIES (Set A — most preferred item):
+  Users choose exactly 1 item. Since each user gives a full ranking of all 10
+  items, the chosen item is always the #1 in their personal ranking.
+
+================================================================================
+4. sushi3b_choice_long.csv — Discrete Choice: Set B (sampled)
+================================================================================
+
+SET B ITEMS (100 alternatives, each user ranked only 10 of them):
+  All 100 sushi types listed in sushi_items.csv.
+
+METHODOLOGY:
+  For each user, the #1 ranked item = chosen (chosen=1).
+  From the remaining 99 items (those the user did NOT rank), 9 are sampled
+  uniformly at random and included as non-chosen alternatives (chosen=0).
+  This follows McFadden's (1978) sampling-of-alternatives method: under the
+  Uniform Conditioning Property, MLE with sampled choice sets yields consistent
+  parameter estimates.
+
+  SEED = 42 for reproducibility.
+
+FORMAT: Identical columns to sushi3a_choice_long.csv, plus:
+  choice_set_type = "sampled"
+
+  Total rows: 50000
+  Rows per user: 10 (1 chosen + 9 sampled non-chosen)
+  Choice sets: 5,000
+
+================================================================================
+5. sushi3b_consideration_long.csv — Discrete Choice: Set B (consideration set)
+================================================================================
+
+METHODOLOGY:
+  For each user, all 10 items they actually ranked are included.
+  The #1 ranked = chosen (chosen=1), ranks 2-10 = not chosen (chosen=0).
+  This represents the user's REAL consideration set — the items they were
+  willing and able to evaluate.
+
+  Total rows: 50000
+  Rows per user: 10
+  Choice sets: 5,000
+
+FORMAT: Identical columns to sushi3a_choice_long.csv, plus:
+  choice_set_type = "consideration_set"
+
+================================================================================
+6. sushi3b_score_long.csv — Score matrix
+================================================================================
+
+Score data from the scoring method (Step 2 of the survey).
+Each user rated items on a 5-point scale:
+  0 = most disliked, 4 = most preferred, -1/blank = not rated.
+
+  Total rows: 500000
+  Columns: user_id, item_id, item_name, score, scored (1 if rated, 0 if not)
+
+================================================================================
+SUGGESTED NESTING STRUCTURES FOR NESTED LOGIT
+================================================================================
+
+The item attributes offer several natural nesting possibilities:
+
+1. Ingredient-based (minor_group): 12 nests
+   - High within-nest correlation expected (consumer substitutes within
+     the same protein type: tuna for tuna, white fish for white fish)
+
+2. Style-based (style): 2 nests — maki vs. other
+   - Roll vs. nigiri/gunkan consumers
+
+3. Price-based (price_norm tertiles):
+   - Economy, mid-range, premium
+
+4. Oiliness-based (oiliness tertiles):
+   - Lean, medium, fatty — health-conscious vs. taste-preferring consumers
+
+================================================================================
+MODELS THAT CAN BE ESTIMATED
+================================================================================
+
+| Model              | Packages    | Notes                                   |
+|--------------------|-------------|-----------------------------------------|
+| MNL (base)         | mlogit/Apollo | ASCs + taste parameters                |
+| MNL + interactions | mlogit/Apollo | price×age, oiliness×eastwest, etc.     |
+| Nested Logit       | mlogit/Apollo | Nests by ingredient, style, or price    |
+| Mixed Logit        | mlogit/Apollo | Heterogeneity in price sensitivity      |
+| Latent Class       | gmnl/Apollo   | Segments: traditionalist, adventurer, etc. |
+| Hybrid Choice      | Apollo        | Latent variable "culinary sophistication" |
+
+================================================================================
+REPRODUCIBILITY
+================================================================================
+
+  python scripts/process_sushi_dataset.py
+
+Processes raw files in data/sushi_raw/ → generates all CSVs in data/
+SEED = 42 for sampling. All outputs are deterministic.
+
+================================================================================
+KNOWN LIMITATIONS
+================================================================================
+
+1. The data comes from a questionnaire survey, not from actual purchase
+   transactions. This is "stated" rather than "revealed" preference.
+   However, respondents are real consumers evaluating real products with
+   real market attributes.
+
+2. Set A has only 10 alternatives. Useful for clean baseline models but
+   limits nesting depth.
+
+3. Set B sampling introduces a trade-off: fewer alternatives per choice set
+   (10 out of 100) reduces efficiency but is computationally lighter.
+
+4. Users 323, 617, 1431, 4667 are the paper authors. Their responses may
+   differ systematically from the general population.
+
+================================================================================

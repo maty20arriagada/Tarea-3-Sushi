@@ -1,0 +1,20 @@
+segment,n_users,share_kappa_base_pct,share_kappa_cf_pct,delta_pp
+Young East,2515,0.523,1.234,0.711
+Old East,933,0.337,0.797,0.46
+Young West,1126,0.701,1.65,0.949
+Old West,426,0.451,1.066,0.614
+All,5000,0.522,1.232,0.709
+delta_ebi,5000,7.468,7.412,-0.056
+delta_anago,5000,11.698,11.614,-0.083
+delta_maguro,5000,7.567,7.512,-0.055
+delta_ika,5000,3.767,3.739,-0.028
+delta_uni,5000,15.749,15.638,-0.111
+delta_ikura,5000,10.831,10.753,-0.078
+delta_tamago,5000,3.603,3.576,-0.027
+delta_toro,5000,36.81,36.553,-0.257
+delta_tekka_maki,5000,1.986,1.971,-0.015
+delta_kappa_maki,5000,0.522,1.232,0.709
+
+# Scenario B: kappa_maki -30% price + freq_sold boosted to p75.
+# beta_price = +0.581 > 0 -> price reduction reduces utility (quality signal). The modest share gain comes from the freq_sold increase (beta_freq = +2.17), which dominates the price reduction's negative utility effect.
+# freq_sold: base 0.40 -> cf 0.88

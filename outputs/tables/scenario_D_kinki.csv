@@ -1,0 +1,13 @@
+item,item_id,share_base_pct,share_cf_Kinki_only_pct,share_weighted_pct,delta_weighted_pp
+tai,11,2.0748,1.8584,2.0324,-0.0423
+saba,18,1.1286,1.0511,1.1134,-0.0152
+hamo,55,0.1302,0.1212,0.1284,-0.0018
+battera,91,0.118,0.1126,0.1169,-0.0011
+tai_Kinki_delta,11,2.0748,1.8584,2.0324,-0.2163
+saba_Kinki_delta,18,1.1286,1.0511,1.1134,-0.0775
+hamo_Kinki_delta,55,0.1302,0.1212,0.1284,-0.009
+battera_Kinki_delta,91,0.118,0.1126,0.1169,-0.0054
+
+# Scenario D: Kinki regional campaign (-20% price on battera, saba, tai, hamo).
+# M6 beta_price = +0.251 > 0 -> lower price = lower utility (quality-signal effect). Delta is small and negative: price changes have limited power in this dataset because price signals quality rather than representing cost.
+# N = 5000 total users (978 Kinki, 4022 non-Kinki).

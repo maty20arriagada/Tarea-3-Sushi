@@ -1,0 +1,278 @@
+Model run by Matias Arriagada R using Apollo 0.3.7 on R 4.5.3 for Windows.
+Please acknowledge the use of Apollo by citing Hess & Palma (2019)
+  DOI 10.1016/j.jocm.2019.100170
+  www.ApolloChoiceModelling.com
+
+Model name                                  : APOLLO_M2_asc
+Model description                           : MNL ASCs only, Set A first choice
+Model run at                                : 2026-07-04 22:46:42.673439
+Estimation method                           : bgw
+Estimation diagnosis                        : Relative function convergence (favorable)
+Optimisation diagnosis                      : Maximum found
+     hessian properties                     : Negative definite
+     maximum eigenvalue                     : -30.207281
+     reciprocal of condition number         : 0.0232522
+Number of individuals                       : 5000
+Number of rows in database                  : 5000
+Number of modelled outcomes                 : 5000
+
+Number of cores used                        :  1 
+Model without mixing
+
+LL(start)                                   : -11512.93
+LL at equal shares, LL(0)                   : -11512.93
+LL at observed shares, LL(C)                : -9755.07
+LL(final)                                   : -9755.07
+Rho-squared vs equal shares                  :  0.1527 
+Adj.Rho-squared vs equal shares              :  0.1519 
+Rho-squared vs observed shares               :  0 
+Adj.Rho-squared vs observed shares           :  0 
+AIC                                         :  19528.14 
+BIC                                         :  19586.79 
+
+Estimated parameters                        : 9
+Time taken (hh:mm:ss)                       :  00:00:0.72 
+     pre-estimation                         :  00:00:0.28 
+     estimation                             :  00:00:0.16 
+     post-estimation                        :  00:00:0.28 
+Iterations                                  :  8  
+
+Unconstrained optimisation.
+
+Estimates:
+                  Estimate        s.e.   t.rat.(0)    Rob.s.e. Rob.t.rat.(0)
+asc_ebi             0.0000          NA          NA          NA            NA
+asc_anago           0.1830     0.06326       2.894     0.06326         2.894
+asc_maguro         -0.1255     0.06825      -1.838     0.06825        -1.838
+asc_ika            -0.6975     0.08105      -8.606     0.08105        -8.606
+asc_uni             0.4892     0.05935       8.243     0.05935         8.243
+asc_ikura           0.1739     0.06339       2.744     0.06339         2.744
+asc_tamago         -0.7990     0.08389      -9.524     0.08389        -9.524
+asc_toro            1.3191     0.05260      25.077     0.05260        25.077
+asc_tekka_maki     -1.3995     0.10504     -13.324     0.10504       -13.324
+asc_kappa_maki     -2.5434     0.17309     -14.694     0.17309       -14.694
+
+
+Overview of choices for MNL model component :
+                                     ebi anago  maguro     ika     uni  ikura
+Times available                  5000.00  5000 5000.00 5000.00 5000.00 5000.0
+Times chosen                      458.00   550  404.00  228.00  747.00  545.0
+Percentage chosen overall           9.16    11    8.08    4.56   14.94   10.9
+Percentage chosen when available    9.16    11    8.08    4.56   14.94   10.9
+                                  tamago    toro tekka_maki kappa_maki
+Times available                  5000.00 5000.00    5000.00    5000.00
+Times chosen                      206.00 1713.00     113.00      36.00
+Percentage chosen overall           4.12   34.26       2.26       0.72
+Percentage chosen when available    4.12   34.26       2.26       0.72
+
+
+
+Classical covariance matrix:
+                    asc_anago     asc_maguro        asc_ika        asc_uni
+asc_anago            0.004002       0.002183       0.002183       0.002183
+asc_maguro           0.002183       0.004659       0.002183       0.002183
+asc_ika              0.002183       0.002183       0.006569       0.002183
+asc_uni              0.002183       0.002183       0.002183       0.003522
+asc_ikura            0.002183       0.002183       0.002183       0.002183
+asc_tamago           0.002183       0.002183       0.002183       0.002183
+asc_toro             0.002183       0.002183       0.002183       0.002183
+asc_tekka_maki       0.002183       0.002183       0.002183       0.002183
+asc_kappa_maki       0.002183       0.002183       0.002183       0.002183
+                    asc_ikura     asc_tamago       asc_toro asc_tekka_maki
+asc_anago            0.002183       0.002183       0.002183       0.002183
+asc_maguro           0.002183       0.002183       0.002183       0.002183
+asc_ika              0.002183       0.002183       0.002183       0.002183
+asc_uni              0.002183       0.002183       0.002183       0.002183
+asc_ikura            0.004018       0.002183       0.002183       0.002183
+asc_tamago           0.002183       0.007038       0.002183       0.002183
+asc_toro             0.002183       0.002183       0.002767       0.002183
+asc_tekka_maki       0.002183       0.002183       0.002183       0.011033
+asc_kappa_maki       0.002183       0.002183       0.002183       0.002183
+               asc_kappa_maki
+asc_anago            0.002183
+asc_maguro           0.002183
+asc_ika              0.002183
+asc_uni              0.002183
+asc_ikura            0.002183
+asc_tamago           0.002183
+asc_toro             0.002183
+asc_tekka_maki       0.002183
+asc_kappa_maki       0.029961
+
+Robust covariance matrix:
+                    asc_anago     asc_maguro        asc_ika        asc_uni
+asc_anago            0.004002       0.002183       0.002183       0.002183
+asc_maguro           0.002183       0.004659       0.002183       0.002183
+asc_ika              0.002183       0.002183       0.006569       0.002183
+asc_uni              0.002183       0.002183       0.002183       0.003522
+asc_ikura            0.002183       0.002183       0.002183       0.002183
+asc_tamago           0.002183       0.002183       0.002183       0.002183
+asc_toro             0.002183       0.002183       0.002183       0.002183
+asc_tekka_maki       0.002183       0.002183       0.002183       0.002183
+asc_kappa_maki       0.002183       0.002183       0.002183       0.002183
+                    asc_ikura     asc_tamago       asc_toro asc_tekka_maki
+asc_anago            0.002183       0.002183       0.002183       0.002183
+asc_maguro           0.002183       0.002183       0.002183       0.002183
+asc_ika              0.002183       0.002183       0.002183       0.002183
+asc_uni              0.002183       0.002183       0.002183       0.002183
+asc_ikura            0.004018       0.002183       0.002183       0.002183
+asc_tamago           0.002183       0.007038       0.002183       0.002183
+asc_toro             0.002183       0.002183       0.002767       0.002183
+asc_tekka_maki       0.002183       0.002183       0.002183       0.011033
+asc_kappa_maki       0.002183       0.002183       0.002183       0.002183
+               asc_kappa_maki
+asc_anago            0.002183
+asc_maguro           0.002183
+asc_ika              0.002183
+asc_uni              0.002183
+asc_ikura            0.002183
+asc_tamago           0.002183
+asc_toro             0.002183
+asc_tekka_maki       0.002183
+asc_kappa_maki       0.029961
+
+Classical correlation matrix:
+                    asc_anago     asc_maguro        asc_ika        asc_uni
+asc_anago              1.0000         0.5057         0.4258         0.5816
+asc_maguro             0.5057         1.0000         0.3947         0.5390
+asc_ika                0.4258         0.3947         1.0000         0.4539
+asc_uni                0.5816         0.5390         0.4539         1.0000
+asc_ikura              0.5445         0.5046         0.4250         0.5804
+asc_tamago             0.4114         0.3813         0.3211         0.4385
+asc_toro               0.6561         0.6081         0.5121         0.6994
+asc_tekka_maki         0.3286         0.3045         0.2565         0.3503
+asc_kappa_maki         0.1994         0.1848         0.1556         0.2125
+                    asc_ikura     asc_tamago       asc_toro asc_tekka_maki
+asc_anago              0.5445         0.4114         0.6561         0.3286
+asc_maguro             0.5046         0.3813         0.6081         0.3045
+asc_ika                0.4250         0.3211         0.5121         0.2565
+asc_uni                0.5804         0.4385         0.6994         0.3503
+asc_ikura              1.0000         0.4106         0.6548         0.3279
+asc_tamago             0.4106         1.0000         0.4948         0.2478
+asc_toro               0.6548         0.4948         1.0000         0.3952
+asc_tekka_maki         0.3279         0.2478         0.3952         1.0000
+asc_kappa_maki         0.1990         0.1504         0.2398         0.1201
+               asc_kappa_maki
+asc_anago              0.1994
+asc_maguro             0.1848
+asc_ika                0.1556
+asc_uni                0.2125
+asc_ikura              0.1990
+asc_tamago             0.1504
+asc_toro               0.2398
+asc_tekka_maki         0.1201
+asc_kappa_maki         1.0000
+
+Robust correlation matrix:
+                    asc_anago     asc_maguro        asc_ika        asc_uni
+asc_anago              1.0000         0.5057         0.4258         0.5816
+asc_maguro             0.5057         1.0000         0.3947         0.5390
+asc_ika                0.4258         0.3947         1.0000         0.4539
+asc_uni                0.5816         0.5390         0.4539         1.0000
+asc_ikura              0.5445         0.5046         0.4250         0.5804
+asc_tamago             0.4114         0.3813         0.3211         0.4385
+asc_toro               0.6561         0.6081         0.5121         0.6994
+asc_tekka_maki         0.3286         0.3045         0.2565         0.3503
+asc_kappa_maki         0.1994         0.1848         0.1556         0.2125
+                    asc_ikura     asc_tamago       asc_toro asc_tekka_maki
+asc_anago              0.5445         0.4114         0.6561         0.3286
+asc_maguro             0.5046         0.3813         0.6081         0.3045
+asc_ika                0.4250         0.3211         0.5121         0.2565
+asc_uni                0.5804         0.4385         0.6994         0.3503
+asc_ikura              1.0000         0.4106         0.6548         0.3279
+asc_tamago             0.4106         1.0000         0.4948         0.2478
+asc_toro               0.6548         0.4948         1.0000         0.3952
+asc_tekka_maki         0.3279         0.2478         0.3952         1.0000
+asc_kappa_maki         0.1990         0.1504         0.2398         0.1201
+               asc_kappa_maki
+asc_anago              0.1994
+asc_maguro             0.1848
+asc_ika                0.1556
+asc_uni                0.2125
+asc_ikura              0.1990
+asc_tamago             0.1504
+asc_toro               0.2398
+asc_tekka_maki         0.1201
+asc_kappa_maki         1.0000
+
+ 20 most extreme outliers in terms of lowest average per choice prediction:
+  row Avg prob per choice
+   82         0.007199978
+  104         0.007199978
+  328         0.007199978
+  628         0.007199978
+  790         0.007199978
+  820         0.007199978
+  832         0.007199978
+  861         0.007199978
+ 1024         0.007199978
+ 1372         0.007199978
+ 1457         0.007199978
+ 1728         0.007199978
+ 1756         0.007199978
+ 1827         0.007199978
+ 1880         0.007199978
+ 1901         0.007199978
+ 2149         0.007199978
+ 2222         0.007199978
+ 2404         0.007199978
+ 2547         0.007199978
+
+Settings and functions used in model definition:
+
+apollo_control
+--------------
+                       Value                                                                                                                                                                                                  
+modelName              "APOLLO_M2_asc"                                                                                                                                                                                        
+modelDescr             "MNL ASCs only, Set A first choice"                                                                                                                                                                    
+indivID                "user_id"                                                                                                                                                                                              
+outputDirectory        "C:\\Users\\Matias Arriagada R\\Documents\\Universidad\\Quinto año universidad\\Noveno semestre\\Understanding Consumer Behavior Through Discrete Choice Models\\Tareas\\Tarea 3 Sushi/outputs/tables/"
+panelData              "FALSE"                                                                                                                                                                                                
+seed                   "42"                                                                                                                                                                                                   
+debug                  "FALSE"                                                                                                                                                                                                
+nCores                 "1"                                                                                                                                                                                                    
+workInLogs             "FALSE"                                                                                                                                                                                                
+mixing                 "FALSE"                                                                                                                                                                                                
+HB                     "FALSE"                                                                                                                                                                                                
+noValidation           "FALSE"                                                                                                                                                                                                
+noDiagnostics          "FALSE"                                                                                                                                                                                                
+calculateLLC           "TRUE"                                                                                                                                                                                                 
+analyticHessian        "FALSE"                                                                                                                                                                                                
+dropLoopExpansion      "FALSE"                                                                                                                                                                                                
+dropRedefCheck         "FALSE"                                                                                                                                                                                                
+memorySaver            "FALSE"                                                                                                                                                                                                
+analyticGrad           "TRUE"                                                                                                                                                                                                 
+analyticGrad_manualSet "FALSE"                                                                                                                                                                                                
+overridePanel          "FALSE"                                                                                                                                                                                                
+preventOverridePanel   "FALSE"                                                                                                                                                                                                
+noModification         "FALSE"                                                                                                                                                                                                
+
+Hessian routines attempted
+--------------------------
+numerical jacobian of LL analytical gradient
+
+
+apollo_probabilities
+----------------------
+function (apollo_beta, apollo_inputs, functionality = "estimate") 
+{
+    apollo_attach(apollo_beta, apollo_inputs)
+    on.exit(apollo_detach(apollo_beta, apollo_inputs))
+    P <- list()
+    V <- list()
+    V[["ebi"]] <- asc_ebi
+    V[["anago"]] <- asc_anago
+    V[["maguro"]] <- asc_maguro
+    V[["ika"]] <- asc_ika
+    V[["uni"]] <- asc_uni
+    V[["ikura"]] <- asc_ikura
+    V[["tamago"]] <- asc_tamago
+    V[["toro"]] <- asc_toro
+    V[["tekka_maki"]] <- asc_tekka_maki
+    V[["kappa_maki"]] <- asc_kappa_maki
+    mnl_settings <- list(alternatives = ALT_CODES, avail = 1, 
+        choiceVar = choice, utilities = V)
+    P[["model"]] <- apollo_mnl(mnl_settings, functionality)
+    P <- apollo_prepareProb(P, apollo_inputs, functionality)
+    return(P)
+}

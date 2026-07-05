@@ -1,0 +1,5 @@
+parameter,coef,note
+intercept,-3.9163,descriptive OLS of 10 ASCs on item attributes; R2 = 0.948
+b_price_norm,0.4946,descriptive OLS of 10 ASCs on item attributes; R2 = 0.948
+b_oiliness,0.2307,descriptive OLS of 10 ASCs on item attributes; R2 = 0.948
+b_freq_sold,2.628,descriptive OLS of 10 ASCs on item attributes; R2 = 0.948

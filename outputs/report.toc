@@ -1,0 +1,35 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{2}{section.1}%
+\contentsline {section}{\numberline {2}Model Specification and Estimation (Sección A)}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Datos}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Estrategia de identificación}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}M1 --- MNL solo con atributos (Set A)}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}M2 --- MNL solo con ASCs (benchmark)}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}M3 --- MNL con ASCs + interacciones demográficas (modelo preferido)}{5}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}M4 --- Nested Logit sobre ranking explotado}{6}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}M5-LC --- Modelo de clases latentes}{8}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}M6 --- MNL de atributos sobre el Set B (validación externa)}{9}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Comparación de modelos}{10}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Validación cruzada Python--Apollo y robustez}{10}{subsection.2.10}%
+\contentsline {section}{\numberline {3}Parameter Interpretation and Behavioral Insights (Sección B)}{11}{section.3}%
+\contentsline {subsection}{\numberline {3.1}El precio como señal de calidad}{11}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Edad y preferencia por la grasa}{11}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Heterogeneidad regional Este--Oeste}{12}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Patrones de sustitución: IIA rechazado}{12}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Segmentos latentes de consumidores}{13}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Calidad no observada de los ítems}{13}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Limitaciones}{13}{subsection.3.7}%
+\contentsline {section}{\numberline {4}Scenario Analysis and Prediction (Sección C)}{14}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Escenario A --- Shock de oferta del toro (+40\% precio)}{14}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Escenario B --- Promoción saludable (kappa-maki)}{15}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Escenario C --- Entrada del California roll}{16}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Escenario D --- Campaña regional Kinki}{17}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Strategic and Public Policy Recommendations (Sección D)}{17}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Para cadenas de restaurantes y retail de sushi}{17}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Para la política de salud pública}{18}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Para la preservación cultural regional}{18}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Recomendaciones metodológicas para trabajo futuro}{18}{subsection.5.4}%
+\contentsline {section}{Bibliografía}{19}{section*.22}%
+\contentsline {section}{Linkografía}{19}{section*.23}%
+\contentsline {section}{\numberline {A}Apéndice: trade-offs relativos entre atributos}{20}{appendix.Alph1}%
+\contentsline {section}{\numberline {B}Apéndice: estructura del repositorio de código}{20}{appendix.Alph2}%

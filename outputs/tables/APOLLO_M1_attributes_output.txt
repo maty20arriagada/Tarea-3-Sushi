@@ -1,0 +1,177 @@
+Model run by Matias Arriagada R using Apollo 0.3.7 on R 4.5.3 for Windows.
+Please acknowledge the use of Apollo by citing Hess & Palma (2019)
+  DOI 10.1016/j.jocm.2019.100170
+  www.ApolloChoiceModelling.com
+
+Model name                                  : APOLLO_M1_attributes
+Model description                           : MNL attributes only, Set A first choice
+Model run at                                : 2026-07-04 22:46:41.404041
+Estimation method                           : bgw
+Estimation diagnosis                        : Relative function convergence (favorable)
+Optimisation diagnosis                      : Maximum found
+     hessian properties                     : Negative definite
+     maximum eigenvalue                     : -33.507611
+     reciprocal of condition number         : 0.00351147
+Number of individuals                       : 5000
+Number of rows in database                  : 5000
+Number of modelled outcomes                 : 5000
+
+Number of cores used                        :  1 
+Model without mixing
+
+LL(start)                                   : -11512.93
+LL at equal shares, LL(0)                   : -11512.93
+LL at observed shares, LL(C)                : -9755.07
+LL(final)                                   : -9850.73
+Rho-squared vs equal shares                  :  0.1444 
+Adj.Rho-squared vs equal shares              :  0.1441 
+Rho-squared vs observed shares               :  -0.0098 
+Adj.Rho-squared vs observed shares           :  -0.0092 
+AIC                                         :  19707.46 
+BIC                                         :  19727.01 
+
+Estimated parameters                        : 3
+Time taken (hh:mm:ss)                       :  00:00:1.11 
+     pre-estimation                         :  00:00:0.52 
+     estimation                             :  00:00:0.43 
+     post-estimation                        :  00:00:0.17 
+Iterations                                  :  9  
+
+Unconstrained optimisation.
+
+Estimates:
+           Estimate        s.e.   t.rat.(0)    Rob.s.e. Rob.t.rat.(0)
+b_price     0.58133     0.02410      24.121     0.02589        22.450
+b_oil       0.08531     0.03583       2.381     0.03838         2.223
+b_freq      2.17344     0.17189      12.645     0.15874        13.692
+
+
+Overview of choices for MNL model component :
+                                     ebi anago  maguro     ika     uni  ikura
+Times available                  5000.00  5000 5000.00 5000.00 5000.00 5000.0
+Times chosen                      458.00   550  404.00  228.00  747.00  545.0
+Percentage chosen overall           9.16    11    8.08    4.56   14.94   10.9
+Percentage chosen when available    9.16    11    8.08    4.56   14.94   10.9
+                                  tamago    toro tekka_maki kappa_maki
+Times available                  5000.00 5000.00    5000.00    5000.00
+Times chosen                      206.00 1713.00     113.00      36.00
+Percentage chosen overall           4.12   34.26       2.26       0.72
+Percentage chosen when available    4.12   34.26       2.26       0.72
+
+
+
+Classical covariance matrix:
+            b_price       b_oil      b_freq
+b_price  5.8082e-04 -7.4918e-04    0.001556
+b_oil   -7.4918e-04    0.001284   -0.002441
+b_freq     0.001556   -0.002441    0.029546
+
+Robust covariance matrix:
+            b_price       b_oil      b_freq
+b_price  6.7054e-04 -8.7803e-04    0.001643
+b_oil   -8.7803e-04    0.001473   -0.002775
+b_freq     0.001643   -0.002775    0.025199
+
+Classical correlation matrix:
+            b_price       b_oil      b_freq
+b_price      1.0000     -0.8676      0.3757
+b_oil       -0.8676      1.0000     -0.3963
+b_freq       0.3757     -0.3963      1.0000
+
+Robust correlation matrix:
+            b_price       b_oil      b_freq
+b_price      1.0000     -0.8834      0.3997
+b_oil       -0.8834      1.0000     -0.4555
+b_freq       0.3997     -0.4555      1.0000
+
+ 20 most extreme outliers in terms of lowest average per choice prediction:
+  row Avg prob per choice
+   82           0.0137121
+  104           0.0137121
+  328           0.0137121
+  628           0.0137121
+  790           0.0137121
+  820           0.0137121
+  832           0.0137121
+  861           0.0137121
+ 1024           0.0137121
+ 1372           0.0137121
+ 1457           0.0137121
+ 1728           0.0137121
+ 1756           0.0137121
+ 1827           0.0137121
+ 1880           0.0137121
+ 1901           0.0137121
+ 2149           0.0137121
+ 2222           0.0137121
+ 2404           0.0137121
+ 2547           0.0137121
+
+Settings and functions used in model definition:
+
+apollo_control
+--------------
+                       Value                                                                                                                                                                                                  
+modelName              "APOLLO_M1_attributes"                                                                                                                                                                                 
+modelDescr             "MNL attributes only, Set A first choice"                                                                                                                                                              
+indivID                "user_id"                                                                                                                                                                                              
+outputDirectory        "C:\\Users\\Matias Arriagada R\\Documents\\Universidad\\Quinto año universidad\\Noveno semestre\\Understanding Consumer Behavior Through Discrete Choice Models\\Tareas\\Tarea 3 Sushi/outputs/tables/"
+panelData              "FALSE"                                                                                                                                                                                                
+seed                   "42"                                                                                                                                                                                                   
+debug                  "FALSE"                                                                                                                                                                                                
+nCores                 "1"                                                                                                                                                                                                    
+workInLogs             "FALSE"                                                                                                                                                                                                
+mixing                 "FALSE"                                                                                                                                                                                                
+HB                     "FALSE"                                                                                                                                                                                                
+noValidation           "FALSE"                                                                                                                                                                                                
+noDiagnostics          "FALSE"                                                                                                                                                                                                
+calculateLLC           "TRUE"                                                                                                                                                                                                 
+analyticHessian        "FALSE"                                                                                                                                                                                                
+dropLoopExpansion      "FALSE"                                                                                                                                                                                                
+dropRedefCheck         "FALSE"                                                                                                                                                                                                
+memorySaver            "FALSE"                                                                                                                                                                                                
+analyticGrad           "TRUE"                                                                                                                                                                                                 
+analyticGrad_manualSet "FALSE"                                                                                                                                                                                                
+overridePanel          "FALSE"                                                                                                                                                                                                
+preventOverridePanel   "FALSE"                                                                                                                                                                                                
+noModification         "FALSE"                                                                                                                                                                                                
+
+Hessian routines attempted
+--------------------------
+numerical jacobian of LL analytical gradient
+
+
+apollo_probabilities
+----------------------
+function (apollo_beta, apollo_inputs, functionality = "estimate") 
+{
+    apollo_attach(apollo_beta, apollo_inputs)
+    on.exit(apollo_detach(apollo_beta, apollo_inputs))
+    P <- list()
+    V <- list()
+    V[["ebi"]] <- b_price * price_1 + b_oil * oil_1 + b_freq * 
+        freq_1
+    V[["anago"]] <- b_price * price_2 + b_oil * oil_2 + b_freq * 
+        freq_2
+    V[["maguro"]] <- b_price * price_3 + b_oil * oil_3 + b_freq * 
+        freq_3
+    V[["ika"]] <- b_price * price_4 + b_oil * oil_4 + b_freq * 
+        freq_4
+    V[["uni"]] <- b_price * price_5 + b_oil * oil_5 + b_freq * 
+        freq_5
+    V[["ikura"]] <- b_price * price_6 + b_oil * oil_6 + b_freq * 
+        freq_6
+    V[["tamago"]] <- b_price * price_7 + b_oil * oil_7 + b_freq * 
+        freq_7
+    V[["toro"]] <- b_price * price_8 + b_oil * oil_8 + b_freq * 
+        freq_8
+    V[["tekka_maki"]] <- b_price * price_9 + b_oil * oil_9 + 
+        b_freq * freq_9
+    V[["kappa_maki"]] <- b_price * price_10 + b_oil * oil_10 + 
+        b_freq * freq_10
+    mnl_settings <- list(alternatives = ALT_CODES, avail = 1, 
+        choiceVar = choice, utilities = V)
+    P[["model"]] <- apollo_mnl(mnl_settings, functionality)
+    P <- apollo_prepareProb(P, apollo_inputs, functionality)
+    return(P)
+}

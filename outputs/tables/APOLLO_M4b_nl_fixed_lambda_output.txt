@@ -1,0 +1,493 @@
+Model run by Matias Arriagada R using Apollo 0.3.7 on R 4.5.3 for Windows.
+Please acknowledge the use of Apollo by citing Hess & Palma (2019)
+  DOI 10.1016/j.jocm.2019.100170
+  www.ApolloChoiceModelling.com
+
+Model name                                  : APOLLO_M4b_nl_fixed_lambda
+Model description                           : NL with lambda_non_seafood = 1 (degenerate nest)
+Model run at                                : 2026-07-04 22:49:53.133381
+Estimation method                           : bgw
+Estimation diagnosis                        : Relative function convergence (favorable)
+Optimisation diagnosis                      : Maximum found
+     hessian properties                     : Negative definite
+     maximum eigenvalue                     : -8.397049
+     reciprocal of condition number         : 0.000231131
+Number of individuals                       : 5000
+Number of rows in database                  : 15000
+Number of modelled outcomes                 : 15000
+
+Number of cores used                        :  1 
+Model without mixing
+
+LL(start)                                   : -34795.25
+LL at equal shares, LL(0)                   : -32896.26
+LL at observed shares, LL(C)                : -29446.46
+LL(final)                                   : -29159.71
+Rho-squared vs equal shares                  :  0.1136 
+Adj.Rho-squared vs equal shares              :  0.1133 
+Rho-squared vs observed shares               :  0.0097 
+Adj.Rho-squared vs observed shares           :  0.0097 
+AIC                                         :  58341.41 
+BIC                                         :  58425.19 
+
+Estimated parameters                        : 11
+Time taken (hh:mm:ss)                       :  00:00:26.09 
+     pre-estimation                         :  00:00:0.85 
+     estimation                             :  00:00:3.77 
+     post-estimation                        :  00:00:21.47 
+Iterations                                  :  9  
+
+Unconstrained optimisation.
+
+Estimates:
+                        Estimate        s.e.   t.rat.(0)    Rob.s.e.
+asc_ebi                  0.00000          NA          NA          NA
+asc_anago                0.01282     0.01270      1.0094     0.01265
+asc_maguro              -0.09144     0.14865     -0.6151     0.15169
+asc_ika                 -0.18656     0.05362     -3.4792     0.05432
+asc_uni                  0.08451     0.02533      3.3368     0.02466
+asc_ikura                0.05523     0.01934      2.8558     0.01934
+asc_tamago              -1.93947     0.14769    -13.1322     0.15242
+asc_toro                 0.27618     0.14279      1.9342     0.14423
+asc_tekka_maki          -0.45477     0.15981     -2.8458     0.16398
+asc_kappa_maki          -3.04534     0.15733    -19.3567     0.16177
+lambda_akami             0.32254     0.02600     12.4047     0.02663
+lambda_seafood_other     0.34219     0.09509      3.5986     0.09690
+lambda_non_seafood       1.00000          NA          NA          NA
+                     Rob.t.rat.(0)
+asc_ebi                         NA
+asc_anago                   1.0137
+asc_maguro                 -0.6028
+asc_ika                    -3.4345
+asc_uni                     3.4266
+asc_ikura                   2.8555
+asc_tamago                -12.7242
+asc_toro                    1.9149
+asc_tekka_maki             -2.7734
+asc_kappa_maki            -18.8253
+lambda_akami               12.1114
+lambda_seafood_other        3.5314
+lambda_non_seafood              NA
+
+Nesting structure for NL model component :
+Nest: root (1)
+|-Nest: akami (0.3225)
+|  |-Alternative: maguro
+|  |-Alternative: toro
+|  '-Alternative: tekka_maki
+|-Nest: seafood_other (0.3422)
+|  |-Alternative: ebi
+|  |-Alternative: anago
+|  |-Alternative: ika
+|  |-Alternative: uni
+|  '-Alternative: ikura
+'-Nest: non_seafood (1)
+   |-Alternative: tamago
+   '-Alternative: kappa_maki
+
+
+Overview of choices for NL model component :
+                                      ebi    anago   maguro      ika      uni
+Times available                  13539.00 13371.00 13419.00 14222.00 12855.00
+Times chosen                      1610.00  1648.00  1974.00   992.00  1878.00
+Percentage chosen overall           10.73    10.99    13.16     6.61    12.52
+Percentage chosen when available    11.89    12.33    14.71     6.98    14.61
+                                   ikura   tamago     toro tekka_maki
+Times available                  13258.0 14409.00 10546.00   14519.00
+Times chosen                      1830.0   659.00  3379.00     805.00
+Percentage chosen overall           12.2     4.39    22.53       5.37
+Percentage chosen when available    13.8     4.57    32.04       5.54
+                                 kappa_maki
+Times available                    14862.00
+Times chosen                         225.00
+Percentage chosen overall              1.50
+Percentage chosen when available       1.51
+
+
+Classical covariance matrix:
+                                asc_anago           asc_maguro
+asc_anago                      1.6137e-04           5.9791e-04
+asc_maguro                     5.9791e-04             0.022097
+asc_ika                       -1.1248e-04            -0.007420
+asc_uni                        1.5572e-04             0.003310
+asc_ikura                      1.2986e-04             0.002280
+asc_tamago                     5.8755e-04             0.020706
+asc_toro                       5.8639e-04             0.020787
+asc_tekka_maki                 6.1006e-04             0.023307
+asc_kappa_maki                 5.8774e-04             0.020712
+lambda_akami                   -1.046e-05            -0.001137
+lambda_seafood_other           3.4382e-04             0.013761
+                                  asc_ika              asc_uni
+asc_anago                     -1.1248e-04           1.5572e-04
+asc_maguro                      -0.007420             0.003310
+asc_ika                          0.002875            -0.001083
+asc_uni                         -0.001083           6.4146e-04
+asc_ikura                     -7.1430e-04           4.1580e-04
+asc_tamago                      -0.007269             0.003245
+asc_toro                        -0.007251             0.003238
+asc_tekka_maki                  -0.007597             0.003386
+asc_kappa_maki                  -0.007271             0.003247
+lambda_akami                   1.5288e-04           -6.542e-05
+lambda_seafood_other            -0.004924             0.002126
+                                asc_ikura           asc_tamago
+asc_anago                      1.2986e-04           5.8755e-04
+asc_maguro                       0.002280             0.020706
+asc_ika                       -7.1430e-04            -0.007269
+asc_uni                        4.1580e-04             0.003245
+asc_ikura                      3.7404e-04             0.002236
+asc_tamago                       0.002236             0.021812
+asc_toro                         0.002231             0.020244
+asc_tekka_maki                   0.002332             0.021192
+asc_kappa_maki                   0.002236             0.020299
+lambda_akami                   -4.470e-05          -4.1867e-04
+lambda_seafood_other             0.001449             0.013483
+                                 asc_toro       asc_tekka_maki
+asc_anago                      5.8639e-04           6.1006e-04
+asc_maguro                       0.020787             0.023307
+asc_ika                         -0.007251            -0.007597
+asc_uni                          0.003238             0.003386
+asc_ikura                        0.002231             0.002332
+asc_tamago                       0.020244             0.021192
+asc_toro                         0.020388             0.021258
+asc_tekka_maki                   0.021258             0.025538
+asc_kappa_maki                   0.020252             0.021195
+lambda_akami                  -4.0772e-04            -0.001876
+lambda_seafood_other             0.013452             0.014085
+                           asc_kappa_maki         lambda_akami
+asc_anago                      5.8774e-04           -1.046e-05
+asc_maguro                       0.020712            -0.001137
+asc_ika                         -0.007271           1.5288e-04
+asc_uni                          0.003247           -6.542e-05
+asc_ikura                        0.002236           -4.470e-05
+asc_tamago                       0.020299          -4.1867e-04
+asc_toro                         0.020252          -4.0772e-04
+asc_tekka_maki                   0.021195            -0.001876
+asc_kappa_maki                   0.024752          -4.1665e-04
+lambda_akami                  -4.1665e-04           6.7607e-04
+lambda_seafood_other             0.013488          -2.7988e-04
+                     lambda_seafood_other
+asc_anago                      3.4382e-04
+asc_maguro                       0.013761
+asc_ika                         -0.004924
+asc_uni                          0.002126
+asc_ikura                        0.001449
+asc_tamago                       0.013483
+asc_toro                         0.013452
+asc_tekka_maki                   0.014085
+asc_kappa_maki                   0.013488
+lambda_akami                  -2.7988e-04
+lambda_seafood_other             0.009042
+
+Robust covariance matrix:
+                                asc_anago           asc_maguro
+asc_anago                      1.6001e-04           6.0822e-04
+asc_maguro                     6.0822e-04             0.023011
+asc_ika                       -1.3660e-04            -0.007755
+asc_uni                        1.5765e-04             0.003193
+asc_ikura                      1.2724e-04             0.002288
+asc_tamago                     6.1762e-04             0.021935
+asc_toro                       6.0964e-04             0.021429
+asc_tekka_maki                 6.2016e-04             0.024457
+asc_kappa_maki                 5.7260e-04             0.021984
+lambda_akami                   -5.579e-06            -0.001355
+lambda_seafood_other           3.5750e-04             0.014323
+                                  asc_ika              asc_uni
+asc_anago                     -1.3660e-04           1.5765e-04
+asc_maguro                      -0.007755             0.003193
+asc_ika                          0.002951            -0.001070
+asc_uni                         -0.001070           6.0828e-04
+asc_ikura                     -7.4301e-04           4.1609e-04
+asc_tamago                      -0.007729             0.003140
+asc_toro                        -0.007489             0.003138
+asc_tekka_maki                  -0.008015             0.003272
+asc_kappa_maki                  -0.007721             0.003143
+lambda_akami                   2.3503e-04           -6.832e-05
+lambda_seafood_other            -0.005119             0.002064
+                                asc_ikura           asc_tamago
+asc_anago                      1.2724e-04           6.1762e-04
+asc_maguro                       0.002288             0.021935
+asc_ika                       -7.4301e-04            -0.007729
+asc_uni                        4.1609e-04             0.003140
+asc_ikura                      3.7410e-04             0.002259
+asc_tamago                       0.002259             0.023233
+asc_toro                         0.002249             0.021105
+asc_tekka_maki                   0.002344             0.022751
+asc_kappa_maki                   0.002257             0.022089
+lambda_akami                   -4.615e-05          -6.9980e-04
+lambda_seafood_other             0.001465             0.014255
+                                 asc_toro       asc_tekka_maki
+asc_anago                      6.0964e-04           6.2016e-04
+asc_maguro                       0.021429             0.024457
+asc_ika                         -0.007489            -0.008015
+asc_uni                          0.003138             0.003272
+asc_ikura                        0.002249             0.002344
+asc_tamago                       0.021105             0.022751
+asc_toro                         0.020802             0.022081
+asc_tekka_maki                   0.022081             0.026888
+asc_kappa_maki                   0.021104             0.022865
+lambda_akami                  -5.9065e-04            -0.002110
+lambda_seafood_other             0.013844             0.014793
+                           asc_kappa_maki         lambda_akami
+asc_anago                      5.7260e-04           -5.579e-06
+asc_maguro                       0.021984            -0.001355
+asc_ika                         -0.007721           2.3503e-04
+asc_uni                          0.003143           -6.832e-05
+asc_ikura                        0.002257           -4.615e-05
+asc_tamago                       0.022089          -6.9980e-04
+asc_toro                         0.021104          -5.9065e-04
+asc_tekka_maki                   0.022865            -0.002110
+asc_kappa_maki                   0.026169          -7.3539e-04
+lambda_akami                  -7.3539e-04           7.0921e-04
+lambda_seafood_other             0.014270          -4.1348e-04
+                     lambda_seafood_other
+asc_anago                      3.5750e-04
+asc_maguro                       0.014323
+asc_ika                         -0.005119
+asc_uni                          0.002064
+asc_ikura                        0.001465
+asc_tamago                       0.014255
+asc_toro                         0.013844
+asc_tekka_maki                   0.014793
+asc_kappa_maki                   0.014270
+lambda_akami                  -4.1348e-04
+lambda_seafood_other             0.009390
+
+Classical correlation matrix:
+                                asc_anago           asc_maguro
+asc_anago                         1.00000               0.3166
+asc_maguro                        0.31663               1.0000
+asc_ika                          -0.16512              -0.9309
+asc_uni                           0.48399               0.8792
+asc_ikura                         0.52858               0.7930
+asc_tamago                        0.31317               0.9432
+asc_toro                          0.32328               0.9794
+asc_tekka_maki                    0.30052               0.9811
+asc_kappa_maki                    0.29408               0.8856
+lambda_akami                     -0.03167              -0.2941
+lambda_seafood_other              0.28463               0.9735
+                                  asc_ika              asc_uni
+asc_anago                         -0.1651              0.48399
+asc_maguro                        -0.9309              0.87922
+asc_ika                            1.0000             -0.79727
+asc_uni                           -0.7973              1.00000
+asc_ikura                         -0.6888              0.84886
+asc_tamago                        -0.9178              0.86761
+asc_toro                          -0.9471              0.89538
+asc_tekka_maki                    -0.8866              0.83660
+asc_kappa_maki                    -0.8619              0.81477
+lambda_akami                       0.1096             -0.09934
+lambda_seafood_other              -0.9658              0.88259
+                                asc_ikura           asc_tamago
+asc_anago                         0.52858               0.3132
+asc_maguro                        0.79304               0.9432
+asc_ika                          -0.68876              -0.9178
+asc_uni                           0.84886               0.8676
+asc_ikura                         1.00000               0.7827
+asc_tamago                        0.78270               1.0000
+asc_toro                          0.80776               0.9600
+asc_tekka_maki                    0.75446               0.8979
+asc_kappa_maki                    0.73502               0.8736
+lambda_akami                     -0.08889              -0.1090
+lambda_seafood_other              0.78785               0.9601
+                                 asc_toro       asc_tekka_maki
+asc_anago                          0.3233               0.3005
+asc_maguro                         0.9794               0.9811
+asc_ika                           -0.9471              -0.8866
+asc_uni                            0.8954               0.8366
+asc_ikura                          0.8078               0.7545
+asc_tamago                         0.9600               0.8979
+asc_toro                           1.0000               0.9316
+asc_tekka_maki                     0.9316               1.0000
+asc_kappa_maki                     0.9015               0.8430
+lambda_akami                      -0.1098              -0.4515
+lambda_seafood_other               0.9907               0.9269
+                           asc_kappa_maki         lambda_akami
+asc_anago                          0.2941             -0.03167
+asc_maguro                         0.8856             -0.29413
+asc_ika                           -0.8619              0.10965
+asc_uni                            0.8148             -0.09934
+asc_ikura                          0.7350             -0.08889
+asc_tamago                         0.8736             -0.10903
+asc_toro                           0.9015             -0.10982
+asc_tekka_maki                     0.8430             -0.45149
+asc_kappa_maki                     1.0000             -0.10185
+lambda_akami                      -0.1019              1.00000
+lambda_seafood_other               0.9016             -0.11320
+                     lambda_seafood_other
+asc_anago                          0.2846
+asc_maguro                         0.9735
+asc_ika                           -0.9658
+asc_uni                            0.8826
+asc_ikura                          0.7878
+asc_tamago                         0.9601
+asc_toro                           0.9907
+asc_tekka_maki                     0.9269
+asc_kappa_maki                     0.9016
+lambda_akami                      -0.1132
+lambda_seafood_other               1.0000
+
+Robust correlation matrix:
+                                asc_anago           asc_maguro
+asc_anago                         1.00000               0.3170
+asc_maguro                        0.31697               1.0000
+asc_ika                          -0.19880              -0.9411
+asc_uni                           0.50534               0.8534
+asc_ikura                         0.52008               0.7799
+asc_tamago                        0.32033               0.9487
+asc_toro                          0.33416               0.9795
+asc_tekka_maki                    0.29898               0.9832
+asc_kappa_maki                    0.27982               0.8959
+lambda_akami                     -0.01656              -0.3355
+lambda_seafood_other              0.29166               0.9744
+                                  asc_ika              asc_uni
+asc_anago                         -0.1988               0.5053
+asc_maguro                        -0.9411               0.8534
+asc_ika                            1.0000              -0.7986
+asc_uni                           -0.7986               1.0000
+asc_ikura                         -0.7072               0.8722
+asc_tamago                        -0.9335               0.8352
+asc_toro                          -0.9559               0.8821
+asc_tekka_maki                    -0.8999               0.8090
+asc_kappa_maki                    -0.8786               0.7878
+lambda_akami                       0.1625              -0.1040
+lambda_seafood_other              -0.9726               0.8637
+                                asc_ikura           asc_tamago
+asc_anago                         0.52008               0.3203
+asc_maguro                        0.77990               0.9487
+asc_ika                          -0.70718              -0.9335
+asc_uni                           0.87225               0.8352
+asc_ikura                         1.00000               0.7664
+asc_tamago                        0.76642               1.0000
+asc_toro                          0.80625               0.9600
+asc_tekka_maki                    0.73915               0.9103
+asc_kappa_maki                    0.72124               0.8959
+lambda_akami                     -0.08961              -0.1724
+lambda_seafood_other              0.78156               0.9651
+                                 asc_toro       asc_tekka_maki
+asc_anago                          0.3342               0.2990
+asc_maguro                         0.9795               0.9832
+asc_ika                           -0.9559              -0.8999
+asc_uni                            0.8821               0.8090
+asc_ikura                          0.8062               0.7391
+asc_tamago                         0.9600               0.9103
+asc_toro                           1.0000               0.9337
+asc_tekka_maki                     0.9337               1.0000
+asc_kappa_maki                     0.9045               0.8620
+lambda_akami                      -0.1538              -0.4832
+lambda_seafood_other               0.9905               0.9310
+                           asc_kappa_maki         lambda_akami
+asc_anago                          0.2798             -0.01656
+asc_maguro                         0.8959             -0.33550
+asc_ika                           -0.8786              0.16247
+asc_uni                            0.7878             -0.10401
+asc_ikura                          0.7212             -0.08961
+asc_tamago                         0.8959             -0.17240
+asc_toro                           0.9045             -0.15378
+asc_tekka_maki                     0.8620             -0.48316
+asc_kappa_maki                     1.0000             -0.17070
+lambda_akami                      -0.1707              1.00000
+lambda_seafood_other               0.9103             -0.16023
+                     lambda_seafood_other
+asc_anago                          0.2917
+asc_maguro                         0.9744
+asc_ika                           -0.9726
+asc_uni                            0.8637
+asc_ikura                          0.7816
+asc_tamago                         0.9651
+asc_toro                           0.9905
+asc_tekka_maki                     0.9310
+asc_kappa_maki                     0.9103
+lambda_akami                      -0.1602
+lambda_seafood_other               1.0000
+
+ 20 most extreme outliers in terms of lowest average per choice prediction:
+   ID Avg prob per choice
+ 3919          0.02710620
+ 2636          0.02736961
+ 4610          0.02736961
+ 1728          0.02988686
+ 4114          0.02992151
+ 1952          0.03002654
+ 3205          0.03006291
+  228          0.03311269
+ 3983          0.03328335
+ 1903          0.03360680
+ 2375          0.03360680
+ 3967          0.03360680
+ 1233          0.03368832
+ 3679          0.03368832
+ 4362          0.03368832
+ 3424          0.03655999
+ 2204          0.03695791
+   82          0.03782431
+ 1372          0.03782431
+  628          0.03783690
+
+Settings and functions used in model definition:
+
+apollo_control
+--------------
+                       Value                                                                                                                                                                                                  
+modelName              "APOLLO_M4b_nl_fixed_lambda"                                                                                                                                                                           
+modelDescr             "NL with lambda_non_seafood = 1 (degenerate nest)"                                                                                                                                                     
+indivID                "user_id"                                                                                                                                                                                              
+outputDirectory        "C:\\Users\\Matias Arriagada R\\Documents\\Universidad\\Quinto año universidad\\Noveno semestre\\Understanding Consumer Behavior Through Discrete Choice Models\\Tareas\\Tarea 3 Sushi/outputs/tables/"
+panelData              "TRUE"                                                                                                                                                                                                 
+seed                   "42"                                                                                                                                                                                                   
+debug                  "FALSE"                                                                                                                                                                                                
+nCores                 "1"                                                                                                                                                                                                    
+workInLogs             "FALSE"                                                                                                                                                                                                
+mixing                 "FALSE"                                                                                                                                                                                                
+HB                     "FALSE"                                                                                                                                                                                                
+noValidation           "FALSE"                                                                                                                                                                                                
+noDiagnostics          "FALSE"                                                                                                                                                                                                
+calculateLLC           "TRUE"                                                                                                                                                                                                 
+analyticHessian        "FALSE"                                                                                                                                                                                                
+dropLoopExpansion      "FALSE"                                                                                                                                                                                                
+dropRedefCheck         "FALSE"                                                                                                                                                                                                
+memorySaver            "FALSE"                                                                                                                                                                                                
+analyticGrad           "TRUE"                                                                                                                                                                                                 
+analyticGrad_manualSet "FALSE"                                                                                                                                                                                                
+overridePanel          "FALSE"                                                                                                                                                                                                
+preventOverridePanel   "FALSE"                                                                                                                                                                                                
+noModification         "FALSE"                                                                                                                                                                                                
+
+Hessian routines attempted
+--------------------------
+numerical jacobian of LL analytical gradient
+
+
+apollo_probabilities
+----------------------
+function (apollo_beta, apollo_inputs, functionality = "estimate") 
+{
+    apollo_attach(apollo_beta, apollo_inputs)
+    on.exit(apollo_detach(apollo_beta, apollo_inputs))
+    P <- list()
+    V <- list()
+    V[["ebi"]] <- asc_ebi
+    V[["anago"]] <- asc_anago
+    V[["maguro"]] <- asc_maguro
+    V[["ika"]] <- asc_ika
+    V[["uni"]] <- asc_uni
+    V[["ikura"]] <- asc_ikura
+    V[["tamago"]] <- asc_tamago
+    V[["toro"]] <- asc_toro
+    V[["tekka_maki"]] <- asc_tekka_maki
+    V[["kappa_maki"]] <- asc_kappa_maki
+    nlNests <- list(root = 1, akami = lambda_akami, seafood_other = lambda_seafood_other, 
+        non_seafood = lambda_non_seafood)
+    nlStructure <- list(root = c("akami", "seafood_other", "non_seafood"), 
+        akami = c("maguro", "toro", "tekka_maki"), seafood_other = c("ebi", 
+            "anago", "ika", "uni", "ikura"), non_seafood = c("tamago", 
+            "kappa_maki"))
+    nl_settings <- list(alternatives = ALT_CODES, avail = list(ebi = avail_1, 
+        anago = avail_2, maguro = avail_3, ika = avail_4, uni = avail_5, 
+        ikura = avail_6, tamago = avail_7, toro = avail_8, tekka_maki = avail_9, 
+        kappa_maki = avail_10), choiceVar = choice, utilities = V, 
+        nlNests = nlNests, nlStructure = nlStructure)
+    P[["model"]] <- apollo_nl(nl_settings, functionality)
+    P <- apollo_panelProd(P, apollo_inputs, functionality)
+    P <- apollo_prepareProb(P, apollo_inputs, functionality)
+    return(P)
+}
