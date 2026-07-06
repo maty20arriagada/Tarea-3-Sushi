@@ -16,5 +16,6 @@ delta_tekka_maki,5000,1.986,1.971,-0.015
 delta_kappa_maki,5000,0.522,1.232,0.709
 
 # Scenario B: kappa_maki -30% price + freq_sold boosted to p75.
-# beta_price = +0.581 > 0 -> price reduction reduces utility (quality signal). The modest share gain comes from the freq_sold increase (beta_freq = +2.17), which dominates the price reduction's negative utility effect.
+# beta_price = +0.581 > 0 -> price reduction reduces utility (quality signal). The share gain comes from the freq_sold increase (beta_freq = +2.173), which dominates the price reduction's negative utility effect.
 # freq_sold: base 0.40 -> cf 0.88
+# Attribute betas from the Set A attribute MNL (M1_attributes) with calibrated constants C_j on observed shares (Train, 2009).

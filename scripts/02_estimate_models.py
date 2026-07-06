@@ -7,7 +7,6 @@ First-choice MNL models (plan §4):
   M2  — alternative-specific constants only (ref: ebi), Set A      [9 params]
   M3  — ASCs + demographic interactions, Set A                     [12 params]
   M3r — M3 with non-significant interactions removed
-  M6  — attributes (+ maki / non-seafood dummies), Set B sampled   [5 params]
 
 Identification (plan §0.3): attributes are constant per item in Set A, so
 attribute betas and a full set of ASCs are perfectly collinear and are NEVER
@@ -167,11 +166,9 @@ def load_choice_arrays(csv_path, sort_within=None):
     return df, arrays, y, n
 
 
-print("Loading Set A / Set B...")
+print("Loading Set A...")
 dfa, A, ya, Na = load_choice_arrays(SETA_CSV, sort_within="alt_id")
-dfb, B, yb, Nb = load_choice_arrays(SETB_CSV)
 LL0_A = Na * np.log(1 / N_ALT)   # equal-shares null
-LL0_B = Nb * np.log(1 / N_ALT)
 
 # Set A stacked attribute tensor (N, 10, 3); identical across users by design
 Xattr_A = np.stack([A[c] for c in ATTRS], axis=2).astype(float)
@@ -238,15 +235,9 @@ else:
     m3r = None
     print("  all interactions significant at 5% -> no restricted variant needed")
 
-# ===========================================================================
-# M6 — attributes + type dummies (Set B, sampled choice sets)
-# ===========================================================================
-print("\nM6 — MNL attributes (Set B, 100-item universe, sampled sets)")
-maki = (B["style"] == 0).astype(float)               # style 0 = maki roll
-nonseafood = B["major_group"].astype(float)          # 1 = not seafood
-Xb = np.stack([B[c] for c in ATTRS] + [maki, nonseafood], axis=2).astype(float)
-m6_names = [f"b_{c}" for c in ATTRS] + ["b_maki", "b_nonseafood"]
-m6 = estimate_mnl(Xb, yb, m6_names, "M6_setB")
+# NOTE: the former M6 (attributes on the 100-item Set B) was removed. The
+# report no longer uses Set B; scenarios and WTP now source the price/oiliness/
+# freq betas directly from M1 (attributes on Set A). See 04_scenario_analysis.py.
 
 # ===========================================================================
 # LR tests along the nested chain
@@ -260,18 +251,16 @@ if m3r is not None:
 # WTP (delta method) — in units of normalized price, plan §4.1 caveat
 # ===========================================================================
 print("\nWTP (units of normalized price)")
-wtp_rows = wtp_delta(m1, "b_price_norm", ["b_oiliness", "b_freq_sold"]) + \
-           wtp_delta(m6, "b_price_norm",
-                     ["b_oiliness", "b_freq_sold", "b_maki", "b_nonseafood"])
+wtp_rows = wtp_delta(m1, "b_price_norm", ["b_oiliness", "b_freq_sold"])
 wtp_tab = pd.DataFrame(wtp_rows)
 print(wtp_tab.to_string(index=False))
 
 # ===========================================================================
 # Save tables
 # ===========================================================================
-models = [m for m in [m1, m2, m3, m3r, m6] if m is not None]
+models = [m for m in [m1, m2, m3, m3r] if m is not None]
 
-pd.concat([m1["table"], m6["table"]]).round(5).to_csv(
+m1["table"].round(5).to_csv(
     TABLES_DIR / "mnl_attributes_results.csv", index=False)
 
 m2_out = m2["table"].round(5)
@@ -293,28 +282,22 @@ with open(TABLES_DIR / "interactions_results.csv", "a", encoding="utf-8") as f:
 
 wtp_tab.to_csv(TABLES_DIR / "wtp_results.csv", index=False)
 b_price_a = m1["beta"][list(m1["names"]).index("b_price_norm")]
-b_price_b = m6["beta"][list(m6["names"]).index("b_price_norm")]
-if b_price_a > 0 or b_price_b > 0:
+if b_price_a > 0:
     with open(TABLES_DIR / "wtp_results.csv", "a", encoding="utf-8") as f:
         f.write(
             "\n# WARNING: b_price > 0 "
-            f"(M1 = {b_price_a:.3f}, M6 = {b_price_b:.3f}). In this survey "
-            "price acts as a quality signal (quality-price confounding, plan "
-            "SS10): respondents rank preference, they do not pay. WTP ratios "
-            "above are NOT monetary willingness-to-pay; interpret only as "
-            "relative attribute trade-offs, or report marginal utilities "
-            "directly.\n")
+            f"(M1 = {b_price_a:.3f}). In this survey price acts as a quality "
+            "signal (quality-price confounding): respondents rank preference, "
+            "they do not pay. WTP ratios above are NOT monetary "
+            "willingness-to-pay; interpret only as relative attribute "
+            "trade-offs, or report marginal utilities directly.\n")
     print("  NOTE: b_price > 0 -> WTP not interpretable as monetary trade-off "
           "(annotated in wtp_results.csv)")
 
-comparison = pd.DataFrame(
-    [fit_stats(m, LL0_A) for m in models if m is not m6] +
-    [fit_stats(m6, LL0_B)])
+comparison = pd.DataFrame([fit_stats(m, LL0_A) for m in models])
 comparison.to_csv(TABLES_DIR / "model_comparison.csv", index=False)
 with open(TABLES_DIR / "model_comparison.csv", "a", encoding="utf-8") as f:
-    f.write(f"\n# LL0 (equal shares) Set A = {LL0_A:.2f}; Set B = {LL0_B:.2f}\n"
-            f"# M6 estimated on Set B (sampled sets) - not LL-comparable "
-            f"with M1-M3\n")
+    f.write(f"\n# LL0 (equal shares) Set A = {LL0_A:.2f}\n")
 
 print("\nModel comparison:")
 print(comparison.to_string(index=False))

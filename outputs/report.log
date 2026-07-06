@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2026.5.22)  4 JUL 2026 23:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2026.5.22)  5 JUL 2026 21:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -533,7 +533,7 @@ Package: colortbl 2026/05/01 v1.0l Color table columns (DPC)
 \rownum=\count312
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 32.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 37
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 40
 .
 
 (C:\Users\Matias Arriagada R\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.f
@@ -553,26 +553,26 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Info: Redefining \. on input line 37.
-LaTeX Info: Redefining \% on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Info: Redefining \. on input line 40.
+LaTeX Info: Redefining \% on input line 40.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -634,7 +634,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 pstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 37.
+Package hyperref Info: Link coloring ON on input line 40.
  (report.out) (report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
@@ -642,12 +642,59 @@ Package hyperref Info: Link coloring ON on input line 37.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-<Imagenes/logo_dii.png, id=139, 425.59pt x 108.405pt>
+<Imagenes/logo_dii.png, id=115, 425.59pt x 108.405pt>
 File: Imagenes/logo_dii.png Graphic file (type png)
 <use Imagenes/logo_dii.png>
-Package pdftex.def Info: Imagenes/logo_dii.png  used on input line 44.
+Package pdftex.def Info: Imagenes/logo_dii.png  used on input line 47.
 (pdftex.def)             Requested size: 227.62206pt x 57.98038pt.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
+7.
 
+(C:\Users\Matias Arriagada R\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.
+fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
+7.
+
+(C:\Users\Matias Arriagada R\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.
+fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+57.
+
+(C:\Users\Matias Arriagada R\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy
+.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+57.
+
+(C:\Users\Matias Arriagada R\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex
+.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 57.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 57.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 57.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
+
+
+(C:\Users\Matias Arriagada R\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\u
+msa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
+
+
+(C:\Users\Matias Arriagada R\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\u
+msb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 
 [1
 
@@ -656,52 +703,13 @@ C:/Users/Matias Arriagada R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm
 -ec.enc} <./Imagenes/logo_dii.png>] (report.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
-.
-
-(C:\Users\Matias Arriagada R\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.
-fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
-.
-
-(C:\Users\Matias Arriagada R\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.
-fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-4.
-
-(C:\Users\Matias Arriagada R\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy
-.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-4.
-
-(C:\Users\Matias Arriagada R\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex
-.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 4.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
-
-(C:\Users\Matias Arriagada R\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\u
-msa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
-
-(C:\Users\Matias Arriagada R\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\u
-msb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
 \tf@toc=\write4
 \openout4 = `report.toc'.
 
@@ -712,195 +720,127 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.64 \newpage
+l.71 \newpage
               [1]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9
-4.
+Underfull \hbox (badness 10000) in paragraph at lines 77--79
+
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8
+3.
 
 (C:\Users\Matias Arriagada R\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.
 fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (9.1225pt too wide) in paragraph at lines 99--100
-\T1/lmr/m/n/12 nal-men-te, los atri-bu-tos ca-te-gó-ri-cos (\T1/lmtt/m/n/12 sty
-le\T1/lmr/m/n/12 : ma-ki/otro; \T1/lmtt/m/n/12 major_group\T1/lmr/m/n/12 : pesc
-ado-marisco/otro)
- []
 
-<figures/choice_shares_setA.png, id=190, 608.0316pt x 362.3136pt>
+[2]
+<figures/choice_shares_setA.png, id=169, 608.0316pt x 362.3136pt>
 File: figures/choice_shares_setA.png Graphic file (type png)
 <use figures/choice_shares_setA.png>
-Package pdftex.def Info: figures/choice_shares_setA.png  used on input line 103
+Package pdftex.def Info: figures/choice_shares_setA.png  used on input line 114
 .
-(pdftex.def)             Requested size: 341.43307pt x 203.45813pt.
-
-
-[2{C:/Users/Matias Arriagada R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm
-/lm-rm.enc}{C:/Users/Matias Arriagada R/AppData/Local/Programs/MiKTeX/fonts/enc
-/dvips/lm/lm-mathit.enc}]
-<figures/item_attribute_map.png, id=200, 482.2818pt x 422.5386pt>
+(pdftex.def)             Requested size: 327.7763pt x 195.32025pt.
+<figures/item_attribute_map.png, id=170, 482.2818pt x 422.5386pt>
 File: figures/item_attribute_map.png Graphic file (type png)
 <use figures/item_attribute_map.png>
-Package pdftex.def Info: figures/item_attribute_map.png  used on input line 110
+Package pdftex.def Info: figures/item_attribute_map.png  used on input line 121
 .
-(pdftex.def)             Requested size: 295.90588pt x 259.2633pt.
-
-Overfull \hbox (15.1992pt too wide) in paragraph at lines 118--119
-[]\T1/lmr/m/n/12 Una pro-pie-dad crí-ti-ca del di-se-ño del Set A es que los tr
-es atri-bu-tos con-ti-nuos (\T1/lmtt/m/n/12 price_norm\T1/lmr/m/n/12 ,
- []
+(pdftex.def)             Requested size: 282.24911pt x 247.2969pt.
 
 
-
-[3 <./figures/choice_shares_setA.png> <./figures/item_attribute_map.png>]
-<figures/attribute_correlation.png, id=209, 653.3208pt x 302.5704pt>
+[3{C:/Users/Matias Arriagada R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm
+/lm-mathit.enc}{C:/Users/Matias Arriagada R/AppData/Local/Programs/MiKTeX/fonts
+/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Matias Arriagada R/AppData/Local/Programs
+/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc} <./figures/choice_shares_setA.png>]
+<figures/attribute_correlation.png, id=185, 653.3208pt x 302.5704pt>
 File: figures/attribute_correlation.png Graphic file (type png)
 <use figures/attribute_correlation.png>
 Package pdftex.def Info: figures/attribute_correlation.png  used on input line 
-136.
-(pdftex.def)             Requested size: 250.38564pt x 115.96133pt.
+141.
+(pdftex.def)             Requested size: 227.62206pt x 105.41644pt.
+
+
+[4 <./figures/item_attribute_map.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 168.
+(Font)              <10.95> on input line 177.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 168.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 168.
+(Font)              <5> on input line 198.
 
 
-[4{C:/Users/Matias Arriagada R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm
-/lm-mathsy.enc} <./figures/attribute_correlation.png>]
-Overfull \hbox (18.3808pt too wide) detected at line 219
-[][][]\OML/lmm/m/it/12 U[] \OT1/lmr/m/n/12 = [][] + \OML/lmm/m/it/12 ^^L[] \OMS
-/lmsy/m/n/12 ^^A [][] ^^A [][] \OT1/lmr/m/n/12 + \OML/lmm/m/it/12 ^^L[] \OMS/lm
-sy/m/n/12 ^^A [][] ^^A [][] \OT1/lmr/m/n/12 + \OML/lmm/m/it/12 ^^L[] \OMS/lmsy/
-m/n/12 ^^A [][] ^^A [][] \OT1/lmr/m/n/12 + \OML/lmm/m/it/12 "[]
- []
-
-
-
-[5]
-<figures/substitution_dendrogram.png, id=236, 611.4042pt x 351.714pt>
+[5 <./figures/attribute_correlation.png>]
+<figures/substitution_dendrogram.png, id=205, 611.4042pt x 351.714pt>
 File: figures/substitution_dendrogram.png Graphic file (type png)
 <use figures/substitution_dendrogram.png>
 Package pdftex.def Info: figures/substitution_dendrogram.png  used on input lin
-e 262.
+e 212.
 (pdftex.def)             Requested size: 250.38564pt x 144.03731pt.
 
 
-[6]
+[6 <./figures/substitution_dendrogram.png>]
 
-[7 <./figures/substitution_dendrogram.png>]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 334.
-
-
-[8{C:/Users/Matias Arriagada R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm
+[7{C:/Users/Matias Arriagada R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm
 /lm-mathex.enc}]
 
+[8]
+
 [9]
-Overfull \hbox (7.09828pt too wide) in paragraph at lines 429--430
-[]\T1/lmr/bx/n/12 Validación cru-za-da con Apo-llo (R). \T1/lmr/m/n/12 To-dos l
-os mo-de-los prin-ci-pa-les se re-estimaron
- []
-
-
-
-[10]
-<figures/oiliness_by_eastwest.png, id=290, 611.4042pt x 366.6498pt>
+<figures/oiliness_by_eastwest.png, id=254, 611.4042pt x 366.6498pt>
 File: figures/oiliness_by_eastwest.png Graphic file (type png)
 <use figures/oiliness_by_eastwest.png>
-Package pdftex.def Info: figures/oiliness_by_eastwest.png  used on input line 4
-57.
-(pdftex.def)             Requested size: 295.90588pt x 177.45567pt.
+Package pdftex.def Info: figures/oiliness_by_eastwest.png  used on input line 3
+74.
+(pdftex.def)             Requested size: 282.24911pt x 169.26515pt.
 
 
-[11 <./figures/oiliness_by_eastwest.png>]
-<figures/eastwest_preferences.png, id=298, 644.1666pt x 366.6498pt>
+[10 <./figures/oiliness_by_eastwest.png>]
+<figures/eastwest_preferences.png, id=262, 644.1666pt x 366.6498pt>
 File: figures/eastwest_preferences.png Graphic file (type png)
 <use figures/eastwest_preferences.png>
-Package pdftex.def Info: figures/eastwest_preferences.png  used on input line 4
-77.
-(pdftex.def)             Requested size: 295.90588pt x 168.42596pt.
+Package pdftex.def Info: figures/eastwest_preferences.png  used on input line 3
+93.
+(pdftex.def)             Requested size: 282.24911pt x 160.64944pt.
 
 
-[12 <./figures/eastwest_preferences.png>]
-
-[13]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 529.
-<figures/scenario_A_nl_mnl.png, id=318, 722.7pt x 397.485pt>
+[11 <./figures/eastwest_preferences.png>]
+<figures/scenario_A_nl_mnl.png, id=273, 722.7pt x 397.485pt>
 File: figures/scenario_A_nl_mnl.png Graphic file (type png)
 <use figures/scenario_A_nl_mnl.png>
-Package pdftex.def Info: figures/scenario_A_nl_mnl.png  used on input line 535.
+Package pdftex.def Info: figures/scenario_A_nl_mnl.png  used on input line 444.
 
-(pdftex.def)             Requested size: 432.48051pt x 237.86206pt.
-
-Overfull \hbox (20.78333pt too wide) in paragraph at lines 544--563
- [][] 
- []
+(pdftex.def)             Requested size: 418.82375pt x 230.35344pt.
 
 
+[12]
 
-[14 <./figures/scenario_A_nl_mnl.png>]
-<figures/scenario_B_segments.png, id=328, 722.7pt x 397.485pt>
+[13 <./figures/scenario_A_nl_mnl.png>]
+<figures/scenario_B_segments.png, id=292, 722.7pt x 397.485pt>
 File: figures/scenario_B_segments.png Graphic file (type png)
 <use figures/scenario_B_segments.png>
-Package pdftex.def Info: figures/scenario_B_segments.png  used on input line 57
-3.
-(pdftex.def)             Requested size: 386.96027pt x 212.83128pt.
-
-Overfull \hbox (20.57755pt too wide) in paragraph at lines 582--596
- [][] 
- []
+Package pdftex.def Info: figures/scenario_B_segments.png  used on input line 48
+2.
+(pdftex.def)             Requested size: 373.3035pt x 205.3166pt.
 
 
+[14 <./figures/scenario_B_segments.png>]
 
-[15 <./figures/scenario_B_segments.png>]
+[15]
 
 [16]
-Overfull \hbox (7.28726pt too wide) in paragraph at lines 636--649
- [][] 
- []
-
-
-Overfull \hbox (11.93552pt too wide) in paragraph at lines 654--654
-[]\T1/lmr/bx/n/17.28 Strategic and Pu-blic Po-licy Re-com-men-da-tions (Sec-
- []
-
-
-Overfull \hbox (2.8578pt too wide) in paragraph at lines 660--661
-[]\T1/lmr/bx/n/12 Diseño de me-nú in-for-ma-do por sus-ti-tu-ción. \T1/lmr/m/n/
-12 El ha-llaz-go del Nes-ted Lo-git ($\OML/lmm/m/it/12 ^^U[] \OT1/lmr/m/n/12 =
- []
-
-
-
-[17]
-
-[18]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
-07.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
+50.
 
 (C:\Users\Matias Arriagada R\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.
 fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (135.02827pt too wide) in paragraph at lines 715--716
-[]\T1/lmr/m/n/12 Carpeta com-par-ti-da con da-tos y scripts: [] 
- []
 
-
-
-[19{C:/Users/Matias Arriagada R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
+[17{C:/Users/Matias Arriagada R/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
 m/lm-ts1.enc}]
-Overfull \hbox (1.70612pt too wide) in paragraph at lines 761--761
-[]  \T1/lmtt/m/n/12 01_apollo_mnl.R            M1, M2, M3 (validacion cruzada, 
-LL identicas)[] 
- []
 
+[18]
 
-
-[20] (report.aux
+[19] (report.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -909,16 +849,16 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 93C864C601DF0F996938C1FC2679FEAE;8721.
+(rerunfilecheck)             Checksum: 35273F4A5596738C2B1A3EBBC76D268C;7111.
  ) 
 Here is how much of TeX's memory you used:
- 14960 strings out of 473523
- 244030 string characters out of 5708302
- 666232 words of memory out of 5000000
- 37848 multiletter control sequences out of 15000+600000
- 677504 words of font info for 109 fonts, out of 8000000 for 9000
+ 14937 strings out of 473523
+ 243746 string characters out of 5708302
+ 665800 words of memory out of 5000000
+ 37840 multiletter control sequences out of 15000+600000
+ 677823 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,14n,79p,1215b,625s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,18n,79p,855b,597s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Matias Arriagada R/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /lm/lmbx10.pfb><C:/Users/Matias Arriagada R/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/lm/lmbx12.pfb><C:/Users/Matias Arriagada R/AppData/Local/Programs
@@ -943,9 +883,9 @@ a R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Mat
 ias Arriagada R/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
 <C:/Users/Matias Arriagada R/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
 m/lmtt12.pfb>
-Output written on report.pdf (21 pages, 886745 bytes).
+Output written on report.pdf (20 pages, 878866 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 101 named destinations out of 1000 (max. 500000)
- 318 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 458 PDF objects out of 1000 (max. 8388607)
+ 86 named destinations out of 1000 (max. 500000)
+ 270 words of extra memory for PDF output out of 10000 (max. 10000000)
 

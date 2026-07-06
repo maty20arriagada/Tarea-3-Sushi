@@ -25,7 +25,7 @@
 % --- info ---
 \title{Sushi Preference in Japan:\\A Discrete Choice Analysis}
 \subtitle{Understanding Consumer Behavior Through DCM --- HW03}
-\author{Mat\'ias Arriagada R.}
+\author{Mat\'ias Arriagada R. \and Vicente So\~nez I.}
 \date{July 2026}
 \institute{Universidad de Concepci\'on --- Dept.\ Ingenier\'ia Industrial}
 \titlegraphic{\hfill\includegraphics[height=1.4cm]{logo_dii.png}}
@@ -55,8 +55,7 @@
     \textbf{Data: SUSHI Dataset}
     \begin{itemize}
       \item 5,000 Japanese consumers (Kamishima, 2003)
-      \item \textbf{Set A}: 10 items, full ranking
-      \item \textbf{Set B}: 100 items, sampled sets
+      \item \textbf{Set A}: 10 items, full ranking (used throughout)
       \item Attributes: price, oiliness, freq.\ sold
       \item Demographics: age, gender, 12 regions
     \end{itemize}
@@ -86,20 +85,24 @@
 
   \begin{center}
     \begin{tabular}{c c c}
-      \textbf{M1} (3 betas) & $\subset$ & \textbf{M2} (9 ASCs) \\[4pt]
+      \textbf{MNL-attributes} (3 betas) & $\subset$ & \textbf{MNL-ASC} (9 ASCs) \\[4pt]
       ``How much do & & ``What do the \\
       attributes explain?'' & & attributes \emph{miss}?'' \\[8pt]
       \multicolumn{3}{c}{\textbf{$\downarrow$ LR test}} \\[4pt]
-      \multicolumn{3}{c}{\textbf{M3} (9 ASCs + demographic interactions)} \\[4pt]
+      \multicolumn{3}{c}{\textbf{M1} (9 ASCs + demographic interactions)} \\[4pt]
       \multicolumn{3}{c}{``Who deviates from the average?''}
     \end{tabular}
   \end{center}
+  \vspace{4pt}
+  \footnotesize The three headline models are \textbf{M1} (interactions),
+  \textbf{M2} (Nested Logit) and \textbf{M3} (Latent Class); the two baselines
+  above only anchor the LR chain.
 \end{frame}
 
 % =============================================================================
 % SLIDE 4 — M3 Results (Star: Age $\times$ Oil)
 % =============================================================================
-\begin{frame}{M3 — Preferred Model: Age Loves Oil}
+\begin{frame}{M1 — Preferred Model: Age Loves Oil}
   \begin{columns}[T]
     \column{0.52\textwidth}
     \textbf{Specification}
@@ -124,7 +127,7 @@
     \end{table}
 
     \vspace{2pt}
-    \footnotesize LL = $-9{,}733$\;\; $\rho^2 = 0.155$\;\; LR vs M2: $p = 10^{-9}$
+    \footnotesize LL = $-9{,}733$\;\; $\rho^2 = 0.155$\;\; LR vs MNL-ASC: $p = 10^{-9}$
 
     \column{0.44\textwidth}
     \begin{figure}
@@ -175,7 +178,7 @@
 % =============================================================================
 % SLIDE 6 — Nested Logit (IIA Rejected)
 % =============================================================================
-\begin{frame}{Beyond MNL: Nested Logit Rejects IIA}
+\begin{frame}{M2 — Nested Logit Rejects IIA}
   \begin{columns}[T]
     \column{0.45\textwidth}
     \textbf{Exploded ranking (ranks 1--3)}
@@ -202,22 +205,21 @@
         \toprule
         $\lambda$ parameter & Estimate & $t$ vs.\ 1 \\
         \midrule
-        $\boldsymbol{\lambda_{\text{akami}}}$            & \textbf{0.325} & $-26.1$ \\
-        $\boldsymbol{\lambda_{\text{seafood\_other}}}$   & \textbf{0.336} & $-12.6$ \\
-        $\boldsymbol{\lambda_{\text{non\_seafood}}}$     & \textbf{0.002} & $-115.7$ \\
+        $\boldsymbol{\lambda_{\text{akami}}}$            & \textbf{0.323} & $-26.1$ \\
+        $\boldsymbol{\lambda_{\text{seafood\_other}}}$   & \textbf{0.342} & $-6.9$ \\
+        $\lambda_{\text{non\_seafood}}$                  & 1.000 & (fixed) \\
         \bottomrule
       \end{tabular}
     \end{table}
 
     \vspace{2pt}
-    \footnotesize LR vs MNL = 668.7, $p \approx 0$\\
-    \footnotesize $\lambda_{\text{non\_seafood}}$ hits the $\lambda \to 0$
-    boundary (degenerate 2-item nest); predictions use the M4b variant
-    ($\lambda_{ns} = 1$).
+    \footnotesize LR vs MNL-exploded = 573.5, $p \approx 0$\\
+    \footnotesize A free $\lambda_{\text{non\_seafood}}$ hits the $\lambda \to 0$
+    boundary (degenerate 2-item nest), so it is fixed at 1.
 
     \vspace{6pt}
     \begin{center}
-      \Large \textbf{$\lambda < 1$ in every nest}\\[4pt]
+      \Large \textbf{$\lambda < 1$ in both free nests}\\[4pt]
       \normalsize Substitution is much stronger\\
       within nests than MNL predicts.
     \end{center}
@@ -227,7 +229,7 @@
 % =============================================================================
 % SLIDE 6b — Latent Class: who are the segments?
 % =============================================================================
-\begin{frame}{Three Latent Consumer Segments (LC-MNL, Apollo)}
+\begin{frame}{M3 — Three Latent Consumer Segments (LC-MNL, Apollo)}
   \textbf{Latent Class MNL} on the exploded ranking; class membership driven by
   age, region, gender, migration. BIC selects \textbf{3 classes}
   (LL $-28{,}514$ vs.\ $-29{,}446$ with 1 class).
@@ -277,60 +279,42 @@
 \end{frame}
 
 % =============================================================================
-% SLIDE 8 — Scenario C: California Roll Entry
+% SLIDE 8 — Scenario B: Healthy Promotion
 % =============================================================================
-\begin{frame}{Scenario C: Can an American Chain Enter Japan?}
+\begin{frame}{Scenario B: Can Price Make Sushi Healthier?}
   \begin{columns}[T]
     \column{0.48\textwidth}
-    \textbf{New item: California roll}
+    \textbf{Intervention: kappa-maki (cucumber roll)}
     \begin{itemize}
-      \item Price = 1.5, oiliness = 2.0
-      \item Style = maki, type = seafood
-      \item Model: M6 (100-item Set B)
+      \item $-30\%$ price
+      \item availability \texttt{freq\_sold} $0.40 \to 0.88$ (p75)
+      \item heterogeneity via M1 age $\times$ West
     \end{itemize}
 
     \vspace{6pt}
-    \begin{table}
-      \begin{tabular}{lr}
+    \begin{table}\small
+      \begin{tabular}{lccc}
         \toprule
-        Result & Value \\
+        Segment & Base \% & CF \% & $\Delta$ pp \\
         \midrule
-        Predicted share & \textbf{1.50\%} \\
-        Sensitivity range & 0.91\% -- 2.44\% \\
+        Young East & 0.52 & 1.23 & +0.71 \\
+        Young West & 0.70 & 1.65 & \textbf{+0.95} \\
+        \textbf{All} & \textbf{0.52} & \textbf{1.23} & \textbf{+0.71} \\
         \bottomrule
       \end{tabular}
     \end{table}
-
-    \vspace{4pt}
-    \footnotesize Sensitivity: $\pm 0.5$ on unobserved quality constant.
 
     \column{0.48\textwidth}
-    \textbf{Top cannibalised items}
-    \begin{table}
-      \begin{tabular}{lrr}
-        \toprule
-        Item & Loss (pp) \\
-        \midrule
-        Toro       & $-$0.14 \\
-        Uni        & $-$0.08 \\
-        Ikura      & $-$0.07 \\
-        Anago      & $-$0.07 \\
-        Maguro     & $-$0.07 \\
-        \bottomrule
-      \end{tabular}
-    \end{table}
-
-    \vspace{4pt}
-    \footnotesize Cannibalization proportional to shares (IIA).\\
-    \textbf{Caveat}: cannot assert ``cannibalizes maki''\\
-    without nest info for the hypothetical item.
+    \begin{figure}
+      \includegraphics[width=\textwidth]{scenario_B_segments.png}
+    \end{figure}
   \end{columns}
 
-  \vspace{6pt}
-  \begin{exampleblock}{Market insight}
-    1.5\% is non-trivial in a 100-item market. But the IIA assumption means\\
-    we predict proportional draw from all items --- a richer model is needed\\
-    to test whether it would specifically cannibalize other maki rolls.
+  \vspace{4pt}
+  \begin{exampleblock}{Health-policy insight}
+    Even $-30\%$ price + a big availability push lifts the healthiest item only
+    from 0.5\% to 1.2\%. And since $\beta_{\text{price}} > 0$, the \emph{discount
+    hurts} --- the gain comes entirely from availability ($\beta_{\text{freq}}$).
   \end{exampleblock}
 \end{frame}
 
@@ -343,11 +327,11 @@
     \textbf{For Industry}
     \begin{enumerate}
       \item \textbf{Menu design:} When toro sells out, stock up on maguro
-            and tekka\_maki --- not proportional restocking.
+            and tekka\_maki --- not proportional restocking (M2, $\lambda_{\text{akami}}=0.32$).
       \item \textbf{Regional targeting:} Premium fatty items $\rightarrow$
             older Eastern consumers. Light items $\rightarrow$ younger Western consumers.
-      \item \textbf{Market entry:} A California roll would capture $\approx 1.5\%$
-            share. Non-trivial for one new SKU.
+      \item \textbf{Segment offers:} Three latent segments (gourmet / light /
+            tuna-fanatic) are addressable by age, gender and region (M3).
     \end{enumerate}
 
     \column{0.48\textwidth}
@@ -380,9 +364,10 @@
       \item $\beta_{\text{price}} > 0$: price signals quality in this survey;
             WTP and price scenarios are \textbf{not monetary}.
       \item $\text{corr}(\text{price}, \text{oiliness}) = 0.82$ in Set A:
-            multicollinearity inflates SEs for West interactions.
+            multicollinearity inflates SEs, so price scenarios are read qualitatively.
       \item Rank explosion assumes stable preferences across ranking stages.
-      \item Set A is only 10 items; Set B extends to 100 but lacks ASC identification.
+      \item Fixed 10-item choice set: strong LR tests, but no generalisation
+            beyond Set A.
     \end{itemize}
   \end{alertblock}
 

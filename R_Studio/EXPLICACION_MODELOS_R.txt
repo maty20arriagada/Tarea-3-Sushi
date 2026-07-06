@@ -5,6 +5,34 @@ Todos los numeros citados son los resultados reales de la ejecucion del
 2026-07-04 con R 4.5.3 y Apollo 0.3.7 (outputs en outputs/tables/).
 ================================================================================
 
+********************************************************************************
+IMPORTANTE — RENUMERACION DE MODELOS EN EL INFORME (v3)
+********************************************************************************
+El informe final renumero los tres modelos protagonistas y ELIMINO el antiguo
+M6 (MNL sobre el Set B de 100 items) junto con los escenarios C (California
+roll) y D (Kinki), que dependian del Set B. El informe trabaja ahora 100% sobre
+el Set A. Los NOMBRES INTERNOS de este .txt y de los scripts NO cambiaron; usa
+esta tabla para mapear:
+
+  Nombre en el INFORME        Nombre en los SCRIPTS / este .txt
+  --------------------------  ---------------------------------
+  M1 (preferido, interacc.)   M3  (01_apollo_mnl.R)
+  M2 (Nested Logit)           M4b (02_apollo_nested_logit.R)
+  M3 (Latent Class, S=3)      LC3 (03_apollo_latent_class.R)
+  MNL-atributos               M1  (baseline de atributos)
+  MNL-ASC                     M2  (baseline de ASCs)
+  MNL-explotado               M2exp
+  M1r (restringido)           M3r
+  M2 (variante lambda libre)  M4
+  M3 con S=2                  LC2
+  [ELIMINADO del informe]     M6  (Set B) -- ya no se estima ni se cita
+
+Nota: los escenarios de precio (A toro, B kappa) ahora transfieren los betas
+del MNL-atributos del Set A (script "M1_attributes"), no de M6. Como
+corr(precio,grasa)=0.82 infla esos betas, los escenarios se leen
+cualitativamente (direccion y ranking de sustitucion), no como magnitudes.
+********************************************************************************
+
 --------------------------------------------------------------------------------
 0. COMO EJECUTAR
 --------------------------------------------------------------------------------

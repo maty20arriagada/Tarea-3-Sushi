@@ -3,6 +3,18 @@
 > **v2 (2026-07-04).** Revisión mayor tras auditoría de datos. Ver §0 antes de leer el resto:
 > dos bugs de datos corregidos y un problema de identificación que redefine la estrategia de modelos.
 
+> **v3 (2026-07-06).** Reestructuración del informe final por decisión del usuario. **M6 (MNL
+> sobre el Set B de 100 ítems) fue ELIMINADO del informe**, junto con los escenarios C
+> (California roll) y D (Kinki), que dependían del Set B. El informe trabaja ahora 100% sobre
+> el Set A con **dos escenarios** (A toro, B kappa). Los betas de los escenarios y el WTP se
+> transfieren del baseline **MNL-atributos** del Set A (β_precio=+0,58), con el caveat de
+> multicolinealidad (corr precio-grasa 0,82 → escenarios leídos cualitativamente). Los tres
+> modelos protagonistas se **renumeraron en los entregables** (no en el código): antiguo M3→**M1**,
+> M4b→**M2**, M5-LC3→**M3**; los baselines pasan a etiquetas descriptivas (MNL-atributos, MNL-ASC,
+> MNL-explotado). El mapeo informe↔script está en el Apéndice B del informe y en
+> `R_Studio/EXPLICACION_MODELOS_R.txt`. Las secciones §3–§10 de abajo describen el diseño
+> original (con M6/Set B) y se conservan como referencia histórica.
+
 ---
 
 ## 0. Registro de correcciones (v1 → v2)
@@ -493,15 +505,15 @@ EXPLODE_DEPTH <- 3   # ranks 1-3
 
 | Paso | Comando | Output |
 |---|---|---|
-| 6 | `python scripts/04_scenario_analysis.py` | Tablas 14–17 + figuras de escenarios |
+| 6 | `python scripts/04_scenario_analysis.py` | Escenarios A y B (tablas + figuras). C y D eliminados con M6 (v3) |
 
-### Fase 4 — Entregables (generados 2026-07-04; pendiente revisión final del autor)
+### Fase 4 — Entregables (v3, 2026-07-06; pendiente revisión final del autor)
 
 | Paso | Output | Estado |
 |---|---|---|
-| 7 | `outputs/report.pdf` (21 págs, español, portada estilo Tarea 1 con logo DII) | ✔ generado con números auditados contra los CSV (tabla M2 y WTP del borrador anterior estaban incorrectas — corregidas). **La prosa interpretativa debe ser revisada y hecha propia por el autor: la pauta prohíbe redactar el texto del informe con IA generativa** |
+| 7 | `outputs/report.pdf` (20 págs, español, portada Tarea 1 con logo DII) | ✔ v3: M6 y escenarios C/D eliminados; 3 modelos renumerados M1/M2/M3; layout arreglado (sin overfull); WTP y escenarios re-basados en MNL-atributos; Apéndice B con mapeo informe↔script. **La prosa interpretativa debe ser revisada y hecha propia por el autor: la pauta prohíbe redactar el texto del informe con IA generativa** |
 | 8 | **Link a carpeta compartida** con datos y scripts | ⚠ PENDIENTE — placeholder visible en informe (Linkografía) y presentación (slide final); reemplazar antes de entregar |
-| 9 | `outputs/presentation.pdf` (11 slides, inglés, executive pitch) | ✔ generado — incluye slide de segmentos LC y nota M4b; mismo pendiente de link |
+| 9 | `outputs/presentation.pdf` (11 slides, inglés, executive pitch) | ✔ v3: renumerado M1/M2/M3, slide de Escenario B en vez de C, λ del NL corregidos, co-autor añadido; mismo pendiente de link |
 
 ---
 
