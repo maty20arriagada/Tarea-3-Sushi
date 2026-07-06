@@ -17,7 +17,7 @@
 \contentsline {subsection}{\numberline {3.5}Segmentos latentes de consumidores}{11}{subsection.3.5}%
 \contentsline {subsection}{\numberline {3.6}Limitaciones}{12}{subsection.3.6}%
 \contentsline {section}{\numberline {4}Scenario Analysis and Prediction (Sección C)}{12}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Escenario A --- Shock de oferta del toro (+40\% precio)}{12}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.1}Escenario A --- Shock de precio del toro (+40\%)}{12}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Escenario B --- Promoción saludable (kappa-maki)}{14}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Strategic and Public Policy Recommendations (Sección D)}{15}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Para cadenas de restaurantes y retail de sushi}{15}{subsection.5.1}%

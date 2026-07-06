@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sushi &amp; Elección Discreta — Dashboard | Depto. Ingeniería Industrial UdeC</title>
+<meta name="description" content="Dashboard interactivo: los 10 tipos de sushi del estudio y los modelos de elección discreta (MNL, Nested Logit y Clases Latentes) que explican la preferencia del consumidor japonés.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="container">
+    <div class="brand"><img src="assets/logo_dii.png" alt="Depto. Ingeniería Industrial UdeC"><span>Sushi&nbsp;·&nbsp;Elección Discreta</span></div>
+    <div class="links">
+      <a href="#sushis">Los sushis</a>
+      <a href="#modelos">Modelos</a>
+      <a href="#hallazgos">Hallazgos</a>
+      <a href="#escenarios">Escenarios</a>
+      <a href="#segmentos">Segmentos</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="container">
+    <span class="kicker">🍣 Understanding Consumer Behavior · HW3 · 2026-1</span>
+    <h1>¿Qué mueve la preferencia de <span class="accent">sushi</span> en Japón?</h1>
+    <p>Un recorrido visual por los 10 tipos de sushi del estudio y por los tres modelos de elección discreta que revelan cómo eligen —y por qué— 5.000 consumidores reales.</p>
+    <div class="meta">
+      <span><b>Dataset:</b> Kamishima (2003) · 5.000 consumidores</span>
+      <span><b>Autores:</b> Matías Arriagada R. · Vicente Soñez I.</span>
+    </div>
+    <a class="scroll" href="#sushis">Explorar los sushis →</a>
+  </div>
+</header>
+
+<!-- ===== SUSHIS ===== -->
+<section class="section" id="sushis">
+  <div class="container">
+    <div class="eyebrow">El menú del estudio</div>
+    <h2>Los 10 tipos de sushi</h2>
+    <p class="lead">Cada consumidor ordenó estas 10 variedades de la más a la menos preferida. Ordenadas aquí por su cuota de primera preferencia (share).</p>
+    <figure class="figbanner">
+      <img src="assets/figs/shares.png" alt="Cuota de primera preferencia por tipo de sushi">
+      <figcaption>Cuota de primera preferencia (share) de cada sushi entre los 5.000 consumidores. El toro domina con 34,3%.</figcaption>
+    </figure>
+    <div class="sushi-grid" id="sushi-grid"></div>
+  </div>
+</section>
+
+<!-- ===== MODELOS ===== -->
+<section class="section" id="modelos" style="background:#fffdf9">
+  <div class="container">
+    <div class="eyebrow">La caja de herramientas</div>
+    <h2>Cómo se modeló la elección</h2>
+    <p class="lead">Un modelo de <b>elección discreta</b> traduce las decisiones observadas en preferencias medibles. Usamos tres, cada uno responde una pregunta distinta.</p>
+
+    <!-- M1 -->
+    <div class="model-card">
+      <div class="body">
+        <div class="model-num">1</div>
+        <h3>Logit Multinomial con interacciones</h3>
+        <div class="tagline">¿Quién se desvía del gusto promedio?</div>
+        <div class="plain"><b>En simple:</b> mide cuánto pesa cada sushi en promedio y cómo cambian los gustos según la <b>edad</b> y la <b>región</b> del consumidor.</div>
+        <div class="finding"><span class="dot"></span><span><b>El precio es señal de calidad.</b> β&nbsp;precio&nbsp;=&nbsp;+0,58: a mayor precio, mayor preferencia (Efecto Veblen).</span></div>
+        <div class="finding"><span class="dot"></span><span><b>La edad valora la grasa.</b> β&nbsp;grasa×edad&nbsp;=&nbsp;+0,089: los mayores prefieren sushi más graso.</span></div>
+        <div class="finding"><span class="dot"></span><span><b>Brecha Este–Oeste.</b> El Oeste se inclina por sabores más ligeros.</span></div>
+      </div>
+      <div class="fig"><img src="assets/figs/attrmap.png" alt="Mapa de atributos: precio vs. grasa"></div>
+    </div>
+
+    <!-- M2 -->
+    <div class="model-card">
+      <div class="body">
+        <div class="model-num">2</div>
+        <h3>Nested Logit (logit anidado)</h3>
+        <div class="tagline">¿A qué te cambias si falta tu favorito?</div>
+        <div class="plain"><b>En simple:</b> agrupa los sushis parecidos en <b>“nidos”</b>. Si tu favorito no está, primero te cambias a otro del mismo nido.</div>
+        <div class="finding"><span class="dot"></span><span><b>El nido del atún está muy unido.</b> λ&nbsp;=&nbsp;0,32 para toro, maguro y tekka: son sustitutos ~3× más cercanos de lo normal.</span></div>
+        <div class="finding"><span class="dot"></span><span><b>Se rompe el supuesto IIA.</b> La sustitución no es pareja entre todos los ítems: depende de la “familia” del sushi.</span></div>
+      </div>
+      <div class="fig"><img src="assets/figs/dendrogram.png" alt="Dendrograma de similitud entre sushis"></div>
+    </div>
+
+    <!-- M3 -->
+    <div class="model-card">
+      <div class="body">
+        <div class="model-num">3</div>
+        <h3>Modelo de Clases Latentes</h3>
+        <div class="tagline">¿Qué grupos ocultos de consumidores hay?</div>
+        <div class="plain"><b>En simple:</b> descubre <b>segmentos</b> de consumidores con gustos distintos, sin conocerlos de antemano, a partir de cómo ordenan los sushis.</div>
+        <div class="finding"><span class="dot"></span><span><b>Tres segmentos casi iguales:</b> gourmet premium, gusto ligero y fanático del atún (ver más abajo).</span></div>
+        <div class="finding"><span class="dot"></span><span><b>El criterio BIC lo confirma:</b> 3 grupos explican los datos mejor que 1 o 2.</span></div>
+      </div>
+      <div class="fig"><img src="assets/figs/segments3d.png" alt="Segmentos latentes en 3D"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HALLAZGOS ===== -->
+<section class="section" id="hallazgos">
+  <div class="container">
+    <div class="eyebrow">Lo que aprendimos</div>
+    <h2>Cinco hallazgos clave</h2>
+    <p class="lead">Traducidos a lenguaje de negocio, sin ecuaciones.</p>
+    <div class="find-grid">
+      <div class="find"><div class="ico">🏷️</div><h4>El precio vende calidad</h4><p>Contra la intuición económica, lo más caro es lo más elegido: el precio actúa como señal de estatus (Efecto Veblen). <span class="stat">β&nbsp;=&nbsp;+0,58</span></p></div>
+      <div class="find"><div class="ico">🎣</div><h4>La edad ama la grasa</h4><p>A mayor edad, más utilidad del sushi graso (toro, anago), aun controlando el gusto medio. <span class="stat">β&nbsp;=&nbsp;+0,089</span></p></div>
+      <div class="find"><div class="ico">🗾</div><h4>Este vs. Oeste</h4><p>El Oeste de Japón prefiere sabores ligeros; el Este, los grasos e intensos. Una brecha cultural real y medible.</p></div>
+      <div class="find"><div class="ico">🔗</div><h4>Sustitución por nido</h4><p>Si falta el toro, la demanda migra a otro atún (maguro, tekka), no a un sushi cualquiera. <span class="stat">λ&nbsp;=&nbsp;0,32</span></p></div>
+      <div class="find"><div class="ico">👥</div><h4>Tres segmentos</h4><p>El mercado se divide en gourmets premium, paladares ligeros y fanáticos del atún, de tamaños casi iguales.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ESCENARIOS ===== -->
+<section class="section" id="escenarios" style="background:#fffdf9">
+  <div class="container">
+    <div class="eyebrow">Simulaciones "¿qué pasaría si…?"</div>
+    <h2>Dos escenarios contrafactuales</h2>
+    <p class="lead">Usando el modelo, simulamos intervenciones de mercado y medimos su impacto.</p>
+    <div class="scn-grid">
+      <div class="scn">
+        <div class="head">
+          <div class="k">Escenario A</div>
+          <h3>¿Y si sube el precio del toro?</h3>
+          <p>Un alza de +40%. Por el efecto Veblen, encarecerlo lo hace <b>aún más deseado</b>, y canibaliza a sus vecinos de nido.</p>
+        </div>
+        <div class="figwrap"><img src="assets/figs/scenarioA.png" alt="Escenario A: shock de precio del toro"></div>
+        <div class="foot">
+          <div><span class="big">67%</span><span class="lbl">share del toro (Nested Logit)</span></div>
+          <div><span class="big">−7,5&nbsp;pp</span><span class="lbl">maguro, canibalizado</span></div>
+        </div>
+      </div>
+      <div class="scn">
+        <div class="head">
+          <div class="k">Escenario B</div>
+          <h3>¿Se puede empujar lo saludable?</h3>
+          <p>Rebaja de precio + más disponibilidad del rollo de pepino. Lo que mueve la aguja es la <b>disponibilidad</b>, no el precio.</p>
+        </div>
+        <div class="figwrap"><img src="assets/figs/scenarioB.png" alt="Escenario B: promoción del kappa-maki"></div>
+        <div class="foot">
+          <div><span class="big">×2,4</span><span class="lbl">crece el share del kappa</span></div>
+          <div><span class="big">+0,9&nbsp;pp</span><span class="lbl">jóvenes del Oeste (mayor respuesta)</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEGMENTOS ===== -->
+<section class="section" id="segmentos">
+  <div class="container">
+    <div class="eyebrow">A quién le hablas</div>
+    <h2>Los tres segmentos de consumidor</h2>
+    <p class="lead">Descubiertos por el modelo de clases latentes. Cada uno pide una estrategia distinta.</p>
+    <div class="seg-grid">
+      <div class="seg g1">
+        <div class="top"><div class="share">33,7%</div><h3>Gourmet premium</h3><div class="sub">mayor edad · 51% mujeres</div></div>
+        <div class="body">
+          <div class="row"><span class="lab">Favoritos</span><span class="val">uni, toro, ikura</span></div>
+          <div class="row"><span class="lab">Rechaza</span><span class="val">huevo y rolls</span></div>
+          <div class="row"><span class="lab">Palanca</span><span class="val">productos premium de alto valor</span></div>
+        </div>
+      </div>
+      <div class="seg g2">
+        <div class="top"><div class="share">31,3%</div><h3>Gusto ligero</h3><div class="sub">joven · Oeste · 64% mujeres</div></div>
+        <div class="body">
+          <div class="row"><span class="lab">Favoritos</span><span class="val">ebi y sabores suaves</span></div>
+          <div class="row"><span class="lab">Rechaza</span><span class="val">uni (erizo)</span></div>
+          <div class="row"><span class="lab">Palanca</span><span class="val">opciones ligeras y disponibilidad</span></div>
+        </div>
+      </div>
+      <div class="seg g3">
+        <div class="top"><div class="share">34,9%</div><h3>Fanático del atún</h3><div class="sub">más masculino · Este</div></div>
+        <div class="body">
+          <div class="row"><span class="lab">Favoritos</span><span class="val">toro, maguro, tekka</span></div>
+          <div class="row"><span class="lab">Rechaza</span><span class="val">rollo de pepino</span></div>
+          <div class="row"><span class="lab">Palanca</span><span class="val">abastecimiento premium de atún</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="brand"><span class="chip"><img src="assets/logo_dii.png" alt="DII UdeC"></span></div>
+        <p style="margin-top:14px;max-width:260px">Departamento de Ingeniería Industrial<br>Universidad de Concepción</p>
+      </div>
+      <div>
+        <h4>El trabajo</h4>
+        <p>Understanding Consumer Behavior<br>through Discrete Choice Models</p>
+        <p>Homework Assignment N.º 3 · 2026-1</p>
+        <p>Prof. Ph.D. Sebastián Astroza Tagle</p>
+      </div>
+      <div>
+        <h4>Autores</h4>
+        <p>Matías Arriagada R.</p>
+        <p>Vicente Soñez I.</p>
+      </div>
+      <div>
+        <h4>Recursos</h4>
+        <p><a href="https://github.com/maty20arriagada/Tarea-3-Sushi">Repositorio del proyecto ↗</a></p>
+        <p><a href="https://www.kamishima.net/sushi/">Dataset original (Kamishima) ↗</a></p>
+      </div>
+    </div>
+    <div class="fine">Dashboard académico · Datos: SUSHI Preference Dataset (Kamishima, 2003) · Modelos estimados en Python (scipy) y R/Apollo. Ilustraciones propias.</div>
+  </div>
+</footer>
+
+<script>
+/* ---------- SVG sushi art (self-contained, on-brand) ---------- */
+const RICE="#f3efe6", RSTROKE="#e4dac6", NORI="#2b3039";
+function svg(inner){return `<svg viewBox="0 0 150 112" xmlns="http://www.w3.org/2000/svg">${inner}</svg>`;}
+function nigiri(top,extra=""){return svg(`
+  <ellipse cx="75" cy="90" rx="58" ry="12" fill="#00000010"/>
+  <rect x="16" y="60" width="118" height="40" rx="20" fill="${RICE}" stroke="${RSTROKE}"/>
+  <rect x="11" y="42" width="128" height="36" rx="17" fill="${top}"/>
+  <ellipse cx="64" cy="51" rx="42" ry="7" fill="#ffffff" opacity=".16"/>${extra}`);}
+function maki(fill){return svg(`
+  <ellipse cx="75" cy="98" rx="44" ry="9" fill="#00000010"/>
+  <circle cx="75" cy="56" r="45" fill="${NORI}"/>
+  <circle cx="75" cy="56" r="37" fill="${RICE}"/>
+  <circle cx="75" cy="56" r="18" fill="${fill}"/>
+  <circle cx="62" cy="45" r="2.4" fill="${RSTROKE}"/><circle cx="89" cy="49" r="2.4" fill="${RSTROKE}"/>
+  <circle cx="59" cy="65" r="2.4" fill="${RSTROKE}"/><circle cx="91" cy="64" r="2.4" fill="${RSTROKE}"/>`);}
+function gunkan(topFill,inner=""){return svg(`
+  <ellipse cx="75" cy="94" rx="50" ry="11" fill="#00000010"/>
+  <rect x="28" y="46" width="94" height="50" rx="12" fill="${RICE}" stroke="${RSTROKE}"/>
+  <rect x="24" y="42" width="102" height="58" rx="12" fill="none" stroke="${NORI}" stroke-width="8"/>
+  <rect x="32" y="48" width="86" height="20" rx="9" fill="${topFill}"/>${inner}`);}
+
+const marbling=`<path d="M30 55 q28 -8 56 0" stroke="#fff" opacity=".4" fill="none" stroke-width="2.5" stroke-linecap="round"/><path d="M44 63 q22 -6 44 0" stroke="#fff" opacity=".3" fill="none" stroke-width="2" stroke-linecap="round"/>`;
+const stripes=`<path d="M38 46 l10 26" stroke="#d9584e" stroke-width="4" stroke-linecap="round"/><path d="M62 44 l10 30" stroke="#d9584e" stroke-width="4" stroke-linecap="round"/><path d="M86 46 l10 26" stroke="#d9584e" stroke-width="4" stroke-linecap="round"/>`;
+const noriBand=`<rect x="66" y="40" width="18" height="40" rx="3" fill="${NORI}"/>`;
+const glaze=`<path d="M28 50 q47 -8 94 0" stroke="#e2b473" opacity=".55" fill="none" stroke-width="3" stroke-linecap="round"/>`;
+const beads=`<g fill="#ef8b3c">${[[46,55],[58,52],[70,56],[82,52],[94,55],[52,60],[64,60],[76,60],[88,60]].map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="4.2"/>`).join("")}</g>`;
+const uniBumps=`<g fill="#f2b45f">${[[46,54],[60,52],[74,55],[88,53],[102,55]].map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="5"/>`).join("")}</g>`;
+
+/* ---------- data (attributes from sushi_items.csv) ---------- */
+const SUSHI=[
+ {n:"Toro",es:"Atún graso",share:34.3,price:4.49,oil:3.45,nest:"akami",art:nigiri("#e79a92",marbling),
+  d:"Ventre graso del atún. El más caro y el más elegido: encarna el efecto Veblen del estudio."},
+ {n:"Uni",es:"Erizo de mar",share:14.9,price:3.29,oil:3.19,nest:"seafood",art:gunkan("#efe6d4",uniBumps),
+  d:"Cremoso e intenso. El ítem más polarizante: adorado por los gourmets, rechazado por el gusto ligero."},
+ {n:"Anago",es:"Anguila de mar",share:11.0,price:1.99,oil:3.07,nest:"seafood",art:nigiri("#8a5a37",glaze),
+  d:"Anguila glaseada, dulce y untuosa (estilo tare)."},
+ {n:"Ikura",es:"Huevas de salmón",share:10.9,price:2.70,oil:2.74,nest:"seafood",art:gunkan("#efe8da",beads),
+  d:"Servidas en gunkan; premium y con estallido salino."},
+ {n:"Ebi",es:"Camarón",share:9.2,price:1.84,oil:1.27,nest:"seafood",art:nigiri("#f4bdb4",stripes),
+  d:"Suave y familiar. Ítem de referencia y favorito del segmento de gusto ligero."},
+ {n:"Maguro",es:"Atún magro",share:8.1,price:1.87,oil:2.23,nest:"akami",art:nigiri("#c0392b"),
+  d:"Sustituto natural del toro dentro del nido del atún."},
+ {n:"Ika",es:"Calamar",share:4.6,price:1.52,oil:1.31,nest:"seafood",art:nigiri("#eee9dd"),
+  d:"Textura limpia y sabor sutil. Sobre-rinde en el Oeste de Japón."},
+ {n:"Tamago",es:"Tortilla de huevo",share:4.1,price:1.03,oil:1.63,nest:"veg",art:nigiri("#f2ce5b",noriBand),
+  d:"Dulce y sin pescado: el 'plan B' junto al kappa."},
+ {n:"Tekka-maki",es:"Rollo de atún",share:2.3,price:1.58,oil:1.75,nest:"akami",art:maki("#c0392b"),
+  d:"Atún en formato maki; pertenece al nido del atún."},
+ {n:"Kappa-maki",es:"Rollo de pepino",share:0.7,price:1.02,oil:0.27,nest:"veg",art:maki("#6e9b54"),
+  d:"El ítem más ligero; protagonista del escenario de promoción saludable."},
+];
+const NEST={akami:["akami","Nido: atún"],seafood:["seafood","Nido: mar"],veg:["veg","Nido: sin pescado"]};
+const pc=(v,lo,hi)=>Math.max(6,Math.min(100,Math.round((v-lo)/(hi-lo)*100)));
+
+document.getElementById("sushi-grid").innerHTML=SUSHI.map(s=>{
+  const price=pc(s.price,1,4.5), oil=pc(s.oil,0.2,3.5), pop=pc(s.share,0,34.3);
+  const nk=NEST[s.nest];
+  return `<article class="sushi-card">
+    <div class="sushi-art">${s.art}</div>
+    <div class="name"><h3>${s.n}</h3><span class="share">${s.share.toString().replace('.',',')}%</span></div>
+    <div class="es">${s.es}</div>
+    <p class="desc">${s.d}</p>
+    <div class="bars">
+      <div class="bar-row"><span>Precio</span><span class="bar price"><span style="width:${price}%"></span></span></div>
+      <div class="bar-row"><span>Grasa</span><span class="bar oil"><span style="width:${oil}%"></span></span></div>
+      <div class="bar-row"><span>Popular.</span><span class="bar pop"><span style="width:${pop}%"></span></span></div>
+    </div>
+    <div class="tags"><span class="tag ${nk[0]}">${nk[1]}</span></div>
+  </article>`;
+}).join("");
+</script>
+</body>
+</html>
